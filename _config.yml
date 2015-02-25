@@ -1,45 +1,33 @@
 # your informations
 author:
-  name: Bernardo Pacheco
-  description: Software engineer
-  picture: /assets/images/avatar.jpg
+  name: Yannick Pereira-Reis
+  description: Frontend and Backend web developer
+  picture: /assets/images/avatar.png
 
 # site description
-description: Thoughts and writings about software engineering by Bernardo Pacheco.
+description: Thoughts and writings about software engineering by Yannick Pereira-Reis.
 
 # site url
-url: http://bernardopacheco.net
+url: http://ypereirareis.github.io
 
 # site title
-title: Bernardo Pacheco
+title: Yannick Pereira-Reis
 
 # site version
 version: 1.0.0
 
 # number of posts per page
-paginate: 10
+paginate: 5
 
 # your github username
-github_username: bernardopacheco
+github_username: ypereirareis
 
 # set true to include or false to exclude share option
 share:
   twitter: true
-  facebook: true
   google_plus: true
   linkedin: true
-  disqus: true
 
-# if share.facebook is true, provide your facebook app id
-facebook_app_id: 730635297031262
-
-# if share.disqus is true, provide your disqus shortname, the api key and the number of comments to display
-disqus_username: bernardopacheco
-disqus_api_key: o2szu05bLNqiXiRvqe2oFvIHYYVR24eVkQiGs5WHcj0VUnvF8GCqD9HQUZErwCe7
-disqus_recent_comments_to_display: 5
-
-# google analytics ID
-google_analytics_id: UA-58186085-1
 
 markdown: kramdown
 highlighter: pygments
