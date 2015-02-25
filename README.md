@@ -1,31 +1,87 @@
-## Bernardo Pacheco website
+# **Yannick PEREIRA-REIS**  
+> **France > Rhône-Alpes > Lyon/Villeurbanne**
 
-* Site: [bernardopacheco.net](http://bernardopacheco.net)
+> **Frontend and Backend developer**  
 
-If you are interested in making your blog from this project, check out how [I made my blog with GitHub, Jekyll and Material Design](http://bernardopacheco.net/how-i-made-my-blog-with-github-jekyll-and-material-design/) post.
+> **Ingénieur informatique INSA Lyon**
 
-> Please, feel free to learn, read, and use any code from this website. All content despite being hosted openly is subject to copyright of Bernardo Pacheco.
+> PHP, Symfony2, AngularJS, ReactJS, CasperJS/PhantomJS, Elasticsearch, Vagrant, Ansible, Docker, AWS, Jenkins, Satis, Scrum, Git/Gitlab, Atoum, Jasmine, Behat, Protractor,...
 
-## License
+* [LinkedIn](https://fr.linkedin.com/in/yannickpereirareis)
+* [GitHub](https://github.com/ypereirareis)
+* [Twitter](https://twitter.com/yannickpr69)
+* [VagrantCloud/Atlas](https://atlas.hashicorp.com/ypereirareis/boxes/debian-elasticsearch-amd64)
+* [Docker](https://registry.hub.docker.com/u/ypereirareis/docker-elk-and-plugins/)
 
-#### The MIT License (MIT)
+### Kptive Studio *(Août 2014 / aujourd'hui)*
+> **Ingénieur Développement Symfony2/AngularJS**  
+> *France > Lyon*
 
-Copyright (c) 2014 Bernardo Pacheco
+Conception, architecture et développement logiciel en :
+* PHP avec Symfony2 (Akeneo, Sylius,...)
+* JavaScript avec AngularJS / ReactJS
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+Mise en place de process et d'outils.
+Méthodologie SCRUM.
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+Gestion de la qualité :
+* CI Jenkins
+* Tests unitaires (atoum, jasmine) et fonctionnels (behat, protractor)
+* Gestion de configuration (git)
+* Revue de code (git + gitlab)
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+Langages / Outils / Frameworks :
+* PHP
+* Symfony 2
+* ngularJS / ReactJs / jQuery
+* Bower / Gulp / Grunt / Browserify and JSPM (jspm.io)
+* Vagrant / ansible
+* Jenkins
+* Satis
+* Docker
+* AWS
+
+### PMSIpilot *(Juin 2013 / Août 2014)*
+> **Ingénieur Développement Symfony2/AngularJS**  
+> *France > Lyon*
+
+Fonctionnement avec la méthode SCRUM :
+- PO/SM
+- Planiffication/backlog/planning poker
+- Morning meeting
+- Rétrospective
+
+Suivi de processus de gestion de la qualité :
+- Intégration continue
+- Tests unitaires (atoum) et fonctionnels
+- Gestion de version/configuration (git)
+- Revue de code (git + gitlab)
+- Jenkins
+
+Langages/Outils:
+- PHP
+- PostgreSQL
+- Symfony 2
+- Composer
+- AngularJS / jQuery
+- Bower / Grunt
+- SSO
+- Web Services / SOA
+- LAMP
+- Vagrant
+
+### Brainsonic / Tangane *(Juin 2010 / Juin 2013)*
+> **Ingénieur Développement Symfony1.4+/C# ASP/MVC**  
+> *France > Lyon*
+
+> Tangane est "devenue" Brainsonic début 2013.  
+
+Réalisation d'applications web diverses :
+* **Applications en environnement Windows :** .NET, ASP/MVC, SqlServer, FullAjax, TU  
+* **Applications en environnement LAMP :** PHP, Symfony 1.4 et Symfony 2.x, Magento, WordPress
+
+Utilisation de Frameworks et d'outils de type jQuery, Prototype, AngularJS, SCSS, LESS,...  
+Administration de plateforme LAMP (installation, configuration vhosts)
+
+**Méthode SCRUM et gestion de la qualité :** git, jenkins, Code Review, tests unitaires et fonctionnels.
+
