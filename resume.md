@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Resume | Yannick Pereira-Reis
-permalink: /resume/
+permalink: /website/resume/
 ---
 # Yannick Pereira-Reis
 

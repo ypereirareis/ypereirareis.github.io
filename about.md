@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About | Yannick Pereira-Reis
-permalink: /about/
+permalink: /website/about/
 ---
 # About
 
