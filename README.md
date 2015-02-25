@@ -14,7 +14,7 @@
 * [Docker](https://registry.hub.docker.com/u/ypereirareis/docker-elk-and-plugins/)
 
 ### Kptive Studio *(Août 2014 / aujourd'hui)*
-> **Ingénieur Développement Symfonys/AngularJS**  
+> **Ingénieur Développement Symfony2/AngularJS**  
 > *France > Lyon*
 
 Conception, architecture et développement logiciel en :
@@ -42,7 +42,7 @@ Langages / Outils / Frameworks :
 * AWS
 
 ### PMSIpilot *(Juin 2013 / Août 2014)*
-> **Ingénieur Développement Symfonys/AngularJS**  
+> **Ingénieur Développement Symfony2/AngularJS**  
 > *France > Lyon*
 
 Fonctionnement avec la méthode SCRUM :
@@ -71,7 +71,7 @@ Langages/Outils:
 - Vagrant
 
 ### Brainsonic / Tangane *(Juin 2010 / Juin 2013)*
-> **Ingénieur Développement Symfonys/AngularJS**  
+> **Ingénieur Développement Symfony1.4+/C# ASP/MVC**  
 > *France > Lyon*
 
 > Tangane est "devenue" Brainsonic début 2013.  
