@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+
+    {% include header.html %}
+
+    <div id="page-wrap">
+        <div id="page-content">
+            <div id="content">
+                {{ content }}
+            </div>
+            <aside class="visible-lg-block">
+                  <section>
+
+                    <h3>Recent Posts</h3>
+
+                    <ul>
+                    {% for post in site.posts limit:5 %}
+                    <li>
+                      <a href="{{ post.url }}">{{ post.title }}</a>
+                    </li>
+                    {% endfor %}
+                    </ul>
+
+                  </section>
+                  <!-- recent posts -->
+
+                  {% if site.share.disqus %}
+                  <section id="recent-comments-section">
+
+                    <h3>Recent Comments</h3>
+
+                  </section>
+                  <!-- recent comments -->
+                  {% endif %}
+            </aside>
+            <div style="clear: both"></div>
+        </div>
+    </div>
+
+    {% if site.share.twitter or site.share.facebook or site.share.google_plus or site.share.linkedin or site.share.disqus %}
+    <script src="/assets/{{ site.github_username }}-{{ site.version }}.js"></script>
+    {% endif %}
+
+    {% if site.share.disqus %}
+    <script type="text/javascript">
+
+        // Disqus count
+
+        var disqus_shortname = '{{ site.disqus_username }}';
+
+        (function() {
+
+          var s = document.createElement('script');
+
+          s.type = 'text/javascript';
+          s.async = true;
+          s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+
+          ( document.getElementsByTagName('HEAD')[ 0 ] || document.getElementsByTagName('BODY')[ 0 ] ).appendChild( s );
+        }());
+
+    </script>
+    {% endif %}
+
+  </body>
+
+</html>

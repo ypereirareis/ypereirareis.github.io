@@ -1,0 +1,76 @@
+---
+layout: default
+---
+
+<section id="post">
+
+  <article class="post">
+
+    <h1 class="post-title">
+      <a>{{ page.title }}</a>
+    </h1>
+    <!-- title -->
+
+    <div class="post-meta">
+      <ul class="list-inline">
+        <li>
+            {{ page.date | date: "%B" }}
+            {{ page.date | date: "%d" }},
+            {{ page.date | date: "%Y" }}
+        </li>
+        <li>
+          {% if site.share.disqus %}
+          <a href="{{ site.url }}{{ page.url }}/#disqus_thread" data-disqus-identifier="{{ page.path }}"></a>
+          {% endif %}
+        </li>
+        <li>
+          <a href="//github.com/{{ site.github_username }}/{{ site.github_username }}.github.io/blob/master/{{ page.path }}" target="_blank"><i class="fa fa-github"></i>&nbsp;Edit this post on GitHub</a>
+        </li>
+      </ul>
+    </div>
+    <!-- meta -->
+
+    <section class="post-content">
+      {{ content }}
+    </section>
+    <!-- content -->
+
+    {% if site.share.twitter or site.share.facebook or site.share.google_plus or site.share.linkedin %}
+      {% assign isPage = true %}
+      {% include share.html %}
+    {% endif %}
+    <!-- share -->
+
+    <footer class="post-footer">
+      {% if site.share.disqus %}
+      <div id="disqus_thread"></div>
+      {% endif %}
+    </footer>
+
+  </article>
+
+</section>
+
+{% if site.share.disqus %}
+<script type="text/javascript">
+
+  // Disqus widget
+
+  var disqus_identifier = '{{ page.path }}',
+    disqus_shortname = '{{ site.disqus_username }}',
+    disqus_title = '{{ page.title }}',
+    disqus_url = '{{ page.url | prepend: site.url }}';
+
+  (function() {
+
+    var dsq = document.createElement('script');
+
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+    ( document.getElementsByTagName('head')[ 0 ] || document.getElementsByTagName('body')[ 0 ] ).appendChild( dsq );
+  })();
+
+</script>
+{% endif %}

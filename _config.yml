@@ -1,0 +1,34 @@
+# your informations
+author:
+  name: Yannick Pereira-Reis
+  description: Frontend and Backend web developer
+  picture: /assets/images/avatar.png
+
+# site description
+description: Thoughts and writings about software engineering by Yannick Pereira-Reis.
+
+# site url
+url: http://ypereirareis.github.io
+
+# site title
+title: Yannick Pereira-Reis
+
+# site version
+version: 1.0.0
+
+# number of posts per page
+paginate: 5
+
+# your github username
+github_username: ypereirareis
+
+# set true to include or false to exclude share option
+share:
+  twitter: true
+  google_plus: true
+  linkedin: true
+
+
+markdown: kramdown
+highlighter: pygments
+exclude: [ 'README.md', 'src/', 'node_modules', 'bower_components', 'package.json', 'bower.json', 'Gruntfile.js' ]
