@@ -1,7 +1,7 @@
 # **Yannick PEREIRA-REIS**  
 > **France > Rhône-Alpes > Lyon/Villeurbanne**
 
-> **Frontend and Backend developper**  
+> **Frontend and Backend developer**  
 
 > **Ingénieur informatique INSA Lyon**
 
