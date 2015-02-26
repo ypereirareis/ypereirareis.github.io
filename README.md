@@ -33,7 +33,7 @@ Gestion de la qualité :
 Langages / Outils / Frameworks :
 * PHP
 * Symfony 2
-* ngularJS / ReactJs / jQuery
+* AngularJS / ReactJs / jQuery
 * Bower / Gulp / Grunt / Browserify and JSPM (jspm.io)
 * Vagrant / ansible
 * Jenkins
@@ -47,7 +47,7 @@ Langages / Outils / Frameworks :
 
 Fonctionnement avec la méthode SCRUM :
 - PO/SM
-- Planiffication/backlog/planning poker
+- Planification/backlog/planning poker
 - Morning meeting
 - Rétrospective
 
