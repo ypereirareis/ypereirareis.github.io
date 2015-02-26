@@ -6,9 +6,9 @@ description: Vagrant elasticsearch cluster made easy.
 
 As a big fan of [elasticsearch](http://www.elasticsearch.org/), I very often use this extraordinary tool to make POCs, test applications like [logstash](http://logstash.net/) and [Kibana](http://www.elasticsearch.org/overview/kibana/), or more generally, to discover the lastest possibilities allowed by elasticsearch (percolator, aggregations, sharding, scalability,…).
 
-But, it's often very complicated to set up a full elasticsearch cluster for a POC, a simple test or a dev environement.
+But, it's often very complicated to set up a full elasticsearch cluster for a POC, a simple test or a dev environment.
 
-On the other side, it's very easy to use the minimalist configuration setted up by default when using elasticsearch, but it's quickly limited when we want to deal with problematics like:
+On the other side, it's very easy to use the minimalist configuration set up by default when using elasticsearch, but it's quickly limited when we want to deal with problematics like:
 
 - Sharding on many physical nodes (routing, filters, rack, …).
 - Network cluster configuration (unicast, multicast, ip:port, …)
