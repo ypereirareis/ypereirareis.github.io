@@ -17,30 +17,31 @@ On the other side, it's very easy to use the minimalist configuration setted up 
 - Network failure simulation
 - …
 
-So I decided to create a project allowing everybody who wants to experiment these kind of simulations, to do so.
+**So I decided to create a project allowing everybody who wants to experiment these kind of simulations, to do so:**
 
 [https://github.com/ypereirareis/vagrant-elasticsearch-cluster](https://github.com/ypereirareis/vagrant-elasticsearch-cluster)
 
 This project gives you the ability to start a cluster in seconds with a single simple bash command :
 
-```
+
+{% highlight bash %}
 vagrant up
-```
+{% endhighlight %}
 
 You should see something like:
 
-```
+{% highlight bash %}
 $ vagrant up
 Cluster size: 5
 Cluster IP: 10.0.0.0
 Bringing machine 'vm1' up with 'virtualbox' provider...
 Bringing machine 'vm2' up with 'virtualbox' provider...
 ...
-```
+{% endhighlight %}
 
 ## How to start the cluster
 
 Simply clone this repo:
-https://github.com/ypereirareis/vagrant-elasticsearch-cluster
+[https://github.com/ypereirareis/vagrant-elasticsearch-cluster](https://github.com/ypereirareis/vagrant-elasticsearch-cluster)
 
 And follow `README.md` file instructions.
