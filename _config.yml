@@ -34,6 +34,8 @@ share:
 
 markdown: kramdown
 highlighter: pygments
+lsi:         false
+excerpt_separator: "\n\n"
 exclude: [ 'README.md', 'src/', 'node_modules', 'bower_components', 'package.json', 'bower.json', 'Gruntfile.js' ]
 
 
