@@ -60,7 +60,7 @@ Langages / Outils / Frameworks :
 Fonctionnement avec la méthode SCRUM :
 
 - PO/SM
-- Planiffication/backlog/planning poker
+- Planification/backlog/planning poker
 - Morning meeting
 - Rétrospective
 
