@@ -37,4 +37,4 @@ highlighter: pygments
 exclude: [ 'README.md', 'src/', 'node_modules', 'bower_components', 'package.json', 'bower.json', 'Gruntfile.js' ]
 
 
-permalink: pretty
+permalink: /blog/:year/:month/:day/:title.html
