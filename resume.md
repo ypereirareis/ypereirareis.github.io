@@ -12,12 +12,39 @@ permalink: /website/resume/
 
 PHP, **Symfony2**, **AngularJS**, ReactJS, CasperJS/PhantomJS, **Elasticsearch**, Vagrant, Ansible, Docker, AWS, Jenkins, Satis, Scrum, Git/Gitlab, **Atoum**, Jasmine, Behat, Protractor,...
 
-* [LinkedIn](https://fr.linkedin.com/in/yannickpereirareis)
+Pour plus de détails :
+
+* [Mes expériences professionnelles](#xp)
+* [Ma formation](#formation)
+* [Mes passions](#passions)
+
+## Présentation
+
+Passionné depuis de nombreuses années (+10 ans) par le développement web, je suis en recherche permanente de nouveaux challenges.
+
+Au delà des technologies, j'accorde une immense importance à mon environnement et mon cadre de travail (valeurs, communication, partage, rigueur, ambiance,...).
+
+En veille technologique permanente, mes compétences évolues au rythme des évolutions technologiques et méthodologiques.
+
+En ce moment :
+
+* ReactJS
+* jspm.io
+* Docker
+* [RxJS](https://github.com/Reactive-Extensions/RxJS) et concepts de la programmation réactive
+
+Pour me trouver ou me suivre sur le web :
+
 * [GitHub](https://github.com/ypereirareis)
 * [Twitter](https://twitter.com/yannickpr69)
+* [LinkedIn](https://fr.linkedin.com/in/yannickpereirareis)
 * [VagrantCloud/Atlas](https://atlas.hashicorp.com/ypereirareis/boxes/debian-elasticsearch-amd64)
 * [Docker](https://registry.hub.docker.com/u/ypereirareis/docker-elk-and-plugins/)
 
+
+<a id="xp"></a>
+
+# **Expériences professionnelles**
 
 ## [Kptive Studio](http://kptivestudio.com/fr/) *(Août 2014 / aujourd'hui)*
 
@@ -100,15 +127,43 @@ Formation des utilisateurs et des développeurs suite à l'acquisition par [Sage
 **Ingénieur Développement Symfony1.4+/C# ASP/MVC** |
 *Lyon*
 
-Tangane est "devenue" Brainsonic début 2013.
+Tangane est "devenue" Brainsonic fin 2012.
 
 Réalisation d'applications web diverses :
-
 
 * **Applications en environnement Windows :** .NET, ASP/MVC, SqlServer, FullAjax, TU
 * **Applications en environnement LAMP :** PHP, Symfony 1.4 et Symfony 2, Magento, WordPress
 
 Utilisation de Frameworks et d'outils de type jQuery, Prototype, [AngularJS](https://angularjs.org/), SCSS, LESS,...
-Administration de plateforme LAMP (installation, configuration vhosts)
+
+Administration de plateforme LAMP (installation, configuration vhosts, sécurisation, monitoring,...)
 
 **Méthode SCRUM et gestion de la qualité :** git, jenkins, Code Review, tests unitaires et fonctionnels.
+
+<a id="formation"></a>
+
+# **Formation**
+
+## [INSA Lyon](http://www.insa-lyon.fr/) *(2007 / 2010)*
+
+**Diplôme d'ingénieur en informatique.**
+
+* 3 dernières années du cycle ingénieur INSA après avoir fait un DUT informatique.
+* J'ai réalisé mon stage de fin d'étude chez [Brainsonic / Tangane](http://www.brainsonic.com/), qui m'a ensuite embauché.
+
+## [IUT 2 Grenoble](http://www.iut2.upmf-grenoble.fr/) *(2005 / 2007)*
+
+**DUT informatique**
+
+## [BAC Scientifique GAP](http://www.lyc-briand-gap.ac-aix-marseille.fr/spip/) *(2005)*
+
+**Mention : bien**
+
+<a id="passions"></a>
+
+# **Passions**
+
+* Informatique
+* Lecture (policiers, biographies)
+* VTT (randonnées)
+* Cuisine (bons petits plats mijotés)
