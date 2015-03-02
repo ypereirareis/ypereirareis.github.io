@@ -72,17 +72,17 @@ During the building process, many private repositories are called with git comma
 
 ## The problems
 
-1. **The Jenkins server must have:**
+* **Problem 1 -** The Jenkins server must have:
     * an SSH key usable with the private Gitlab repositories
     * a correct host key in its .ssh/known_hosts file to avoid this famous question:
 
-{% highlight bash %}
-The authenticity of host '[hostname] ([IP address])' can't be established.
-RSA key fingerprint is [key fingerprint].
-Are you sure you want to continue connecting (yes/no)?
-{% endhighlight %}
+    {% highlight bash %}
+    The authenticity of host '[hostname] ([IP address])' can't be established.
+    RSA key fingerprint is [key fingerprint].
+    Are you sure you want to continue connecting (yes/no)?
+    {% endhighlight %}
 
-2. **Each VM started through AWS provider by Jenkins must have:**
+* **Problem 2 -** Each VM started through AWS provider by Jenkins must have:
     * an SSH key usable with the private Gitlab repositories
     * a correct host key in its .ssh/known_hosts file
 
