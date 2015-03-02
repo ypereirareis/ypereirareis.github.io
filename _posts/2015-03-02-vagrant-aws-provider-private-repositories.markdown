@@ -17,7 +17,7 @@ But I recently faced a problem when trying to use the same vagrant provisioning 
 
 ## The facts
 
-Actually, when working with AWS provider, you use the possibilities offered by AWS to start virtual machines in the cloud, like every other VMs you could use with AWS.
+Actually, when working with AWS provider, you use the features offered by AWS to start virtual machines in the cloud, like every other VMs you could use with AWS.
 With a good Vagrantfile you can start a VM, run your provisioning, stop the VM,... **in the cloud**, just like you do on your local machine (but configurations are a little bit different).
 
 Plugin installation:
