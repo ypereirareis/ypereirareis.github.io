@@ -11,13 +11,13 @@ As you probably know, [Vagrant](http://docs.vagrantup.com/v2/getting-started/ind
 * Vmware
 * ...
 
-I often use Vagrant with [Virtualbox](https://www.virtualbox.org/) for my dev environements and it's very easy to deal with it thanks to the good documentation and community.
+I often use Vagrant with [Virtualbox](https://www.virtualbox.org/) for my dev environments and it's very easy to deal with it thanks to the good documentation and community.
 
 But I recently faced a problem when trying to use the same vagrant provisioning through [Jenkins](http://jenkins-ci.org/) and [AWS provider](https://github.com/mitchellh/vagrant-aws).
 
 ## The facts
 
-Actually, when working with AWS provider, you use the possibility offered by AWS to start virtual machines in the cloud, like every other VMs you could use with AWS.
+Actually, when working with AWS provider, you use the possibilities offered by AWS to start virtual machines in the cloud, like every other VMs you could use with AWS.
 With a good Vagrantfile you can start a VM, run your provisioning, stop the VM,... **in the cloud**, just like you do on your local machine (but configurations are a little bit different).
 
 Plugin installation:
