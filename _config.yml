@@ -30,13 +30,13 @@ share:
   twitter: true
   google_plus: true
   linkedin: true
-#  disqus: true
+  disqus: true
 
 
 # if share.disqus is true, provide your disqus shortname, the api key and the number of comments to display
-#disqus_username: ypereirareis
-#disqus_api_key: Npc8gX2BU4WBzLJI9Pyr8tyCcYLDeTL738NrzlWH9JkEMKkAu8oBhGG4W66NE7Pm
-#disqus_recent_comments_to_display: 5
+disqus_username: ypereirareis
+disqus_api_key: XSyglG1uPhzx9toLacpmIqEPcWY6XeZXohwsrLfmDqV8qdPr0EsFkq0prHY3n7Iq
+disqus_recent_comments_to_display: 10
 
 markdown: kramdown
 highlighter: pygments
