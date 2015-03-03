@@ -34,7 +34,7 @@ share:
 
 
 # if share.disqus is true, provide your disqus shortname, the api key and the number of comments to display
-disqus_username: ypereirareis
+disqus_username: ypereirareisgithubio
 disqus_api_key: XSyglG1uPhzx9toLacpmIqEPcWY6XeZXohwsrLfmDqV8qdPr0EsFkq0prHY3n7Iq
 disqus_recent_comments_to_display: 10
 
