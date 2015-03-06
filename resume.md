@@ -46,10 +46,12 @@ Pour me trouver ou me suivre sur le web :
 
 # **Expériences professionnelles**
 
-## [Kptive Studio](http://kptivestudio.com/fr/) *(Août 2014 / aujourd'hui)*
+## [Kptive Studio](http://kptivestudio.com/fr/) <small>*(Août 2014 / aujourd'hui)*</small>
 
+<small>
 **Ingénieur Développement Symfony2/AngularJS** |
 *Lyon*
+</small>
 
 Conception, architecture et développement logiciel en :
 
@@ -79,10 +81,12 @@ Langages / Outils / Frameworks :
 * [Docker](https://www.docker.com/)
 * AWS
 
-## [PMSIpilot](http://www.psih.fr/fr/) *(Juin 2013 / Août 2014)*
+## [PMSIpilot](http://www.psih.fr/fr/) <small>*(Juin 2013 / Août 2014)*</small>
 
+<small>
 **Ingénieur Développement Symfony2/AngularJS** |
 *Lyon*
+</small>
 
 Fonctionnement avec la méthode SCRUM :
 
@@ -112,20 +116,24 @@ Langages/Outils:
 * LAMP
 * Vagrant
 
-## [Sage](http://www.sage.fr/fr) *(Janvier 2013 / Juin 2013)*
+## [Sage](http://www.sage.fr/fr) <small>*(Janvier 2013 / Juin 2013)*</small>
 
+<small>
 **Ingénieur C# ASP/MVC et formateur** |
 *Lyon (Limonest)*
+</small>
 
 Passage éclair dans cette **trop grosse** société d'édition de logiciel de comptabilité, gestion, paie,...
 
 Formation des utilisateurs et des développeurs suite à l'acquisition par [Sage](http://www.sage.fr/fr) d'un produit développé chez [Brainsonic / Tangane](http://www.brainsonic.com/).
 
 
-## [Brainsonic / Tangane](http://www.brainsonic.com/) *(Juin 2010 / Décembre 2012)*
+## [Brainsonic / Tangane](http://www.brainsonic.com/) <small>*(Juin 2010 / Décembre 2012)*</small>
 
+<small>
 **Ingénieur Développement Symfony1.4+/C# ASP/MVC** |
 *Lyon*
+</small>
 
 Tangane est "devenue" Brainsonic fin 2012.
 
@@ -144,20 +152,26 @@ Administration de plateforme LAMP (installation, configuration vhosts, sécurisa
 
 # **Formation**
 
-## [INSA Lyon](http://www.insa-lyon.fr/) *(2007 / 2010)*
+## [INSA Lyon](http://www.insa-lyon.fr/) <small>*(2007 / 2010)*</small>
 
+<small>
 **Diplôme d'ingénieur en informatique.**
+</small>
 
 * 3 dernières années du cycle ingénieur INSA après avoir fait un DUT informatique.
 * J'ai réalisé mon stage de fin d'étude chez [Brainsonic / Tangane](http://www.brainsonic.com/), qui m'a ensuite embauché.
 
-## [IUT 2 Grenoble](http://www.iut2.upmf-grenoble.fr/) *(2005 / 2007)*
+## [IUT 2 Grenoble](http://www.iut2.upmf-grenoble.fr/) <small>*(2005 / 2007)*</small>
 
+<small>
 **DUT informatique**
+</small>
 
-## [BAC Scientifique GAP](http://www.lyc-briand-gap.ac-aix-marseille.fr/spip/) *(2005)*
+## [BAC Scientifique GAP](http://www.lyc-briand-gap.ac-aix-marseille.fr/spip/) <small>*(2005)*</small>
 
+<small>
 **Mention : bien**
+</small>
 
 <a id="passions"></a>
 

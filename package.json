@@ -1,18 +1,18 @@
 {
-  "name": "bernardopacheco",
-  "description": "Source code for Bernardo Pacheco website",
-  "author": "Bernardo Pacheco",
+  "name": "ypereirareis",
+  "description": "Source code for Yannick PEREIRA-REIS website",
+  "author": "Yannick PEREIRA-REIS",
   "version": "0.1.0",
-  "copyright": "2014",
-  "url": "http://bernardopacheco.net",
+  "copyright": "2015",
+  "url": "http://ypereirareis.github.io",
   "repository": {
     "type": "git",
-    "url": "https://github.com/bernardopacheco/bernardopacheco.github.io.git"
+    "url": "https://github.com/ypereirareis/ypereirareis.github.io.git"
   },
   "private": true,
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/bernardopacheco/bernardopacheco.github.io/issues"
+    "url": "https://github.com/ypereirareis/ypereirareis.github.io/issues"
   },
   "devDependencies": {
     "grunt": "^0.4.5",
