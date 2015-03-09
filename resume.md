@@ -24,7 +24,7 @@ Passionné depuis de nombreuses années (+10 ans) par le développement web, je 
 
 Au delà des technologies, j'accorde une immense importance à mon environnement et mon cadre de travail (valeurs, communication, partage, rigueur, ambiance,...).
 
-En veille technologique permanente, mes compétences évolues au rythme des évolutions technologiques et méthodologiques.
+En veille technologique permanente, mes compétences évoluent au rythme des évolutions technologiques et méthodologiques.
 
 En ce moment :
 
