@@ -119,14 +119,20 @@ Langages/Outils:
 ## [Sage](http://www.sage.fr/fr) <small>*(Janvier 2013 / Juin 2013)*</small>
 
 <small>
-**Ingénieur C# ASP/MVC et formateur** |
+**Ingénieur C# ASP/MVC et formation développeurs/utilisateurs/commerciaux** |
 *Lyon (Limonest)*
 </small>
 
-Passage éclair dans cette **trop grosse** société d'édition de logiciel de comptabilité, gestion, paie,...
+J'ai intégré la société suite à l'acquisition par [Sage](http://www.sage.fr/fr) d'un produit développé par [Brainsonic / Tangane](http://www.brainsonic.com/), et d'un salarié développeur du projet, **moi** !
 
-Formation des utilisateurs et des développeurs suite à l'acquisition par [Sage](http://www.sage.fr/fr) d'un produit développé chez [Brainsonic / Tangane](http://www.brainsonic.com/).
+Pendant mes 6 mois de présence très intéressants et instructifs, j'ai principalement fait de la formation aux développeurs, aux utilisateurs et aux commerciaux en me déplaçant dans différents villes de France : Paris, Brest, Nantes.
 
+Je ne suis resté chez Sage que très peu de temps car, au delà du projet lui-même, mes conditions de travail et mon environnement ne correspondaient pas du tout à mes attentes :
+
+* Seul développeur sur Lyon entourés de commerciaux et experts-comptables.
+* Plus du tout les mêmes responsabilités qu'auparavant sur le projet.
+* Des process et méthodes extrêmement lourds.
+* Un accès compliqué aux locaux Lyonnais de la société.
 
 ## [Brainsonic / Tangane](http://www.brainsonic.com/) <small>*(Juin 2010 / Décembre 2012)*</small>
 
