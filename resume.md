@@ -38,8 +38,9 @@ Pour me trouver ou me suivre sur le web :
 * [GitHub](https://github.com/ypereirareis)
 * [Twitter](https://twitter.com/yannickpr69)
 * [LinkedIn](https://fr.linkedin.com/in/yannickpereirareis)
-* [VagrantCloud/Atlas](https://atlas.hashicorp.com/ypereirareis/boxes/debian-elasticsearch-amd64)
-* [Docker](https://registry.hub.docker.com/u/ypereirareis/docker-elk-and-plugins/)
+* [Docker](https://hub.docker.com/u/ypereirareis/)
+* [VagrantCloud/Atlas](https://atlas.hashicorp.com/ypereirareis)
+
 
 
 <a id="xp"></a>
