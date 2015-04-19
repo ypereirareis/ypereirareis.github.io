@@ -5,12 +5,9 @@
 
 ## Docker
 
-`docker run -it --rm -v $(pwd):/app docker-ypereirareis npm install`
+`./do.sh build` to build the Docker Image
 
-`docker run -it --rm -v $(pwd):/app docker-ypereirareis bower install --allow-root install`
+`./do.sh all` to build the project and serve it on [http://127.0.0.1:4000](http://127.0.0.1:4000) 
 
-`docker run -it --rm -v $(pwd):/app docker-ypereirareis jekyll build`
+`./do.sh help` to list all available commands
 
-`docker run -it --rm -v $(pwd):/app docker-ypereirareis grunt`
-
-`docker run -it --rm -p 4000:4000 -v $(pwd):/app docker-ypereirareis jekyll serve -H 0.0.0.0`
