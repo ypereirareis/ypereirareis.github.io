@@ -47,7 +47,32 @@ Pour me trouver ou me suivre sur le web :
 
 # **Expériences professionnelles**
 
-## [Kptive Studio](http://kptivestudio.com/fr/) <small>*(Août 2014 / aujourd'hui)*</small>
+## [ZOL](http://www.zol.fr) <small>*(Mars 2015 / aujourd'hui)*</small>
+
+<small>
+**LeadDev Symfony2/AngularJS, Scrum Master** |
+*Lyon*
+</small>
+
+Langages / Outils / Frameworks / Méthodes :
+
+* [Symfony2](http://symfony.com/)
+* [AngularJS](https://angularjs.org/) / [ReactJS](http://facebook.github.io/react/) / jQuery
+* [Bower](http://bower.io/) / Gulp / [Grunt](http://gruntjs.com/)
+* [Docker](https://www.docker.com/)
+* Jenkins
+* Satis
+* Tests unitaires (atoum) et fonctionnels (behat)
+* Git / BitBucket
+
+Responsabilités :
+
+* Animation de conférences/formations en interne.
+* Création blog technique avec Jekyll.
+* Expert Symfony2, AngularJS et ElasticSearch.
+
+
+## [Kptive Studio](http://kptivestudio.com/fr/) <small>*(Août 2014 / Mars 2015)*</small>
 
 <small>
 **Ingénieur Développement Symfony2/AngularJS** |
