@@ -11,6 +11,10 @@ CYAN="\\033[1;36m"
 IMAGE_NAME='docker-ypereirareis'
 CONTAINER_NAME="jekyll-ypereirareis"
 
+USER="bob"
+HOME_DIR="/home/$USER"
+EXECUTE_AS="sudo -u bob HOME=$HOME_DIR"
+
 log() {
   echo -e "$BLEU > $1 $NORMAL"
 }
@@ -23,42 +27,58 @@ error() {
 
 build() {
   docker build -t $IMAGE_NAME .
+
   [ $? != 0 ] && error "Docker image build failed !" && exit 100
 }
 
 npm() {
   log "NPM install"
-  docker run -it --rm -v $(pwd):/app $IMAGE_NAME npm install
+  docker run -it --rm -v $(pwd):/app $IMAGE_NAME \
+    bash -ci "$EXECUTE_AS npm install"
+
   [ $? != 0 ] && error "Npm install failed !" && exit 101
 }
 
 bower() {
   log "Bower install"
-  docker run -it --rm -v $(pwd):/app $IMAGE_NAME /bin/bash -c "CI=false bower install --allow-root install"
+  docker run -it --rm -v $(pwd):/app -v /var/tmp/bower:$HOMEDIR/.bower $IMAGE_NAME \
+    /bin/bash -ci "$EXECUTE_AS bower install --allow-root install \
+      --config.interactive=false \
+      --config.storage.cache=$HOMEDIR/.bower/cache \
+      --config.storage.registry=$HOMEDIR/.bower/registry \
+      --config.storage.empty=$HOMEDIR/.bower/empty \
+      --config.storage.packages=$HOMEDIR/.bower/packages"
+
   [ $? != 0 ] && error "Bower install failed !" && exit 102
 }
 
 jkbuild() {
   log "Jekyll build"
-  docker run -it --rm -v $(pwd):/app $IMAGE_NAME jekyll build
+  docker run -it --rm -v $(pwd):/app $IMAGE_NAME \
+    /bin/bash -ci "$EXECUTE_AS jekyll build"
+
   [ $? != 0 ] && error "Jekyll build failed !" && exit 103
 }
 
 grunt() {
   log "Grunt build"
-  docker run -it --rm -v $(pwd):/app $IMAGE_NAME grunt
+  docker run -it --rm -v $(pwd):/app $IMAGE_NAME \
+    /bin/bash -ci "$EXECUTE_AS grunt"
+
   [ $? != 0 ] && error "Grunt build failed !" && exit 104
 }
 
 jkserve() {
   log "Jekyll serve"
-  docker run -it -d --name="$CONTAINER_NAME" -p 4000:4000 -v $(pwd):/app $IMAGE_NAME jekyll serve -H 0.0.0.0
+  docker run -it -d --name="$CONTAINER_NAME" -p 4000:4000 -v $(pwd):/app $IMAGE_NAME \
+    /bin/bash -ci "jekyll serve -H 0.0.0.0"
+
   [ $? != 0 ] && error "Jekyll serve failed !" && exit 105
 }
 
 install() {
   echo "Installing full application at once"
-  log "Removing previous container $CONTAINER_NAME" && docker rm -f $CONTAINER_NAME &> /dev/null || true
+  remove
   npm
   bower
   jkbuild
@@ -68,7 +88,7 @@ install() {
 
 bash() {
   log "BASH"
-  docker run -it --rm -v $(pwd):/app $IMAGE_NAME bash
+  docker run -it --rm -v $(pwd):/app $IMAGE_NAME /bin/bash
 }
 
 stop() {
@@ -79,6 +99,10 @@ start() {
   docker start $CONTAINER_NAME
 }
 
+remove() {
+  log "Removing previous container $CONTAINER_NAME" && \
+      docker rm -f $CONTAINER_NAME &> /dev/null || true
+}
 
 help() {
   echo "-----------------------------------------------------------------------"
@@ -95,6 +119,7 @@ help() {
   echo "   > stop - To stop main jekyll container"
   echo "   > start - To start main jekyll container"
   echo "   > bash - Log you into container"
+  echo "   > remove - Remove main jekyll container"
   echo "   > help - Display this help"
   echo -e -n "$NORMAL"
   echo "-----------------------------------------------------------------------"
