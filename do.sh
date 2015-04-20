@@ -1,13 +1,9 @@
+#!/usr/bin/env bash
+
 # Output colors
-VERT="\\033[1;32m"
 NORMAL="\\033[0;39m"
-ROUGE="\\033[1;31m"
-ROSE="\\033[1;35m"
-BLEU="\\033[1;34m"
-BLANC="\\033[0;02m"
-BLANCLAIR="\\033[1;08m"
-JAUNE="\\033[1;33m"
-CYAN="\\033[1;36m"
+RED="\\033[1;31m"
+BLUE="\\033[1;34m"
 
 # Names to identify images and containers of this app
 IMAGE_NAME='docker-ypereirareis'
@@ -19,12 +15,12 @@ HOMEDIR="/home/$USER"
 EXECUTE_AS="sudo -u bob HOME=$HOME_DIR"
 
 log() {
-  echo "$BLEU > $1 $NORMAL"
+  echo -e "$BLUE > $1 $NORMAL"
 }
 
 error() {
   echo ""
-  echo "$ROUGE >>> ERROR - $1$NORMAL"
+  echo -e "$RED >>> ERROR - $1$NORMAL"
 }
 
 build() {
