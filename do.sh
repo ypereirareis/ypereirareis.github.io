@@ -1,3 +1,4 @@
+# Output colors
 VERT="\\033[1;32m"
 NORMAL="\\033[0;39m"
 ROUGE="\\033[1;31m"
@@ -8,9 +9,11 @@ BLANCLAIR="\\033[1;08m"
 JAUNE="\\033[1;33m"
 CYAN="\\033[1;36m"
 
+# Names to identify images and containers of this app
 IMAGE_NAME='docker-ypereirareis'
 CONTAINER_NAME="jekyll-ypereirareis"
 
+# Usefull to run commands as non-root user inside containers
 USER="bob"
 HOMEDIR="/home/$USER"
 EXECUTE_AS="sudo -u bob HOME=$HOME_DIR"
