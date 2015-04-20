@@ -12,17 +12,16 @@ IMAGE_NAME='docker-ypereirareis'
 CONTAINER_NAME="jekyll-ypereirareis"
 
 USER="bob"
-HOME_DIR="/home/$USER"
+HOMEDIR="/home/$USER"
 EXECUTE_AS="sudo -u bob HOME=$HOME_DIR"
 
 log() {
-  echo -e "$BLEU > $1 $NORMAL"
+  echo "$BLEU > $1 $NORMAL"
 }
 
 error() {
-  echo -e -n "$ROUGE"
-  echo " >>> ERROR - $1"
-  echo -e -n "$NORMAL"
+  echo ""
+  echo "$ROUGE >>> ERROR - $1$NORMAL"
 }
 
 build() {
@@ -42,12 +41,9 @@ npm() {
 bower() {
   log "Bower install"
   docker run -it --rm -v $(pwd):/app -v /var/tmp/bower:$HOMEDIR/.bower $IMAGE_NAME \
-    /bin/bash -ci "$EXECUTE_AS bower install --allow-root install \
+    /bin/bash -ci "$EXECUTE_AS bower install \
       --config.interactive=false \
-      --config.storage.cache=$HOMEDIR/.bower/cache \
-      --config.storage.registry=$HOMEDIR/.bower/registry \
-      --config.storage.empty=$HOMEDIR/.bower/empty \
-      --config.storage.packages=$HOMEDIR/.bower/packages"
+      --config.storage.cache=$HOMEDIR/.bower/cache"
 
   [ $? != 0 ] && error "Bower install failed !" && exit 102
 }
