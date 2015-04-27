@@ -76,12 +76,12 @@ created in the image as you can see in my [Dockerfile](https://github.com/yperei
 
 {% highlight bash %}
 log() {
-  echo "$BLEU > $1 $NORMAL"
+  echo "$BLUE > $1 $NORMAL"
 }
 
 error() {
   echo ""
-  echo "$ROUGE >>> ERROR - $1$NORMAL"
+  echo "$RED >>> ERROR - $1$NORMAL"
 }
 {% endhighlight %}
 
@@ -246,8 +246,6 @@ The last line `$*` of the `do.sh` script is VERY important.
 It allows to call a function based on argument(s) passed to the script.
 `./do.sh install` for instance will execute the install function.
 
-**Conclusion**
-
 With a do-file you will work with docker writing simple shell commands like:
 
 * `./do.sh build`
@@ -259,4 +257,87 @@ What about an alias for `./do.sh` in your .bashrc/.zshrc ?
 
 ## Make / Makefile
 
+If you're not familiar with shell scripting you can choose another tool... a Makefile.
+
+`Makefiles` are files used to configure `make` that is a building project tool.
+The principle is simple: to build a target, we indicate the dependencies and the command to build it.
+`make` is in charge of traveling the tree to build targets in the correct order.
+
+{% highlight bash %}
+helloyou: hello you end
+    cat hello.txt you.txt end.txt > helloyou.txt
+    cat helloyou.txt
+hello:
+    echo "Hello" > hello.txt
+you:
+    echo "you" > you.txt
+end:
+    echo "!!!" > end.txt
+{% endhighlight %}
+
+**A big advantage of `make` and `Makefiles` is that it provides auto complete out of the box.**
+
+Many people like using `Makefile` in an uncommon way to run grouped commands like this for instance:
+
+{% highlight bash %}
+
+install: composer database cc
+
+database:
+    app/console doctrine:database:create
+    app/console doctrine:schema:create
+    app/console doctrine:schema:update
+
+composer:
+    composer install --prefer-source
+
+cc:
+    app/console cache:clear --env=prod
+
+{% endhighlight %}
+
+We could replace every symfony command with a `docker run` command just like in our **do-file**:
+
+{% highlight bash %}
+
+install: composer database cc
+
+database:
+    docker run --rm -it -v $(pwd):/app $IMAGE_NAME \
+        /bin/bash -ci "app/console doctrine:database:create"
+        
+    docker run --rm -it -v $(pwd):/app $IMAGE_NAME \
+        /bin/bash -ci "app/console doctrine:schema:create"
+            
+    docker run --rm -it -v $(pwd):/app $IMAGE_NAME \
+        /bin/bash -ci "app/console doctrine:schema:update"
+    
+composer:
+    docker run --rm -it -v $(pwd):/app $IMAGE_NAME \
+        /bin/bash -ci "composer install --prefer-dist"
+
+cc:
+    docker run --rm -it -v $(pwd):/app $IMAGE_NAME \
+        /bin/bash -ci "app/console cache:clear --env=prod"
+    
+{% endhighlight %}
+
+**Be careful...** When using `Makefile` you must use tab key/character in your commands.
+
 ## Docker Compose
+
+[Docker compose](https://docs.docker.com/compose/) is not a third way to work more easily with `docker` commands,
+it is a tool allowing simple containers orchestration.
+
+<blockquote>
+<p>Compose is a tool for defining and running complex applications with Docker.
+With Compose, you define a multi-container application in a single file,
+then spin your application up in a single command which does everything that needs to be done to get it running.
+</p>
+</blockquote>
+
+## Conclusion
+
+The best solution is the solution that best fits your (or team or project) needs.
+
+But, please, do not run `docker` commands directly from your shell without any complementary tool anymore.
