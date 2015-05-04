@@ -29,7 +29,7 @@ vagrant plugin install vagrant-aws
 
 The Vagrantfile will look like the following:
 
-{% highlight bash %}
+{% highlight ruby %}
 Vagrant.configure("2") do |config|
   config.vm.box = "dummy"
 
