@@ -7,6 +7,8 @@ description: Docker with shell script or Makefile to have a higher productivity
 Of course [Docker](https://docs.docker.com/) is a fantastic tool that allows us to work more efficiently
 and that offers new perspectives in terms of scalability, infrastructures, deployments,...
 
+![Docker](/assets/images/posts/docker.svg)
+
 But first of all, [Docker](https://docs.docker.com/) is used by a lot of people for development
 with many different languages on many different platforms.
 
