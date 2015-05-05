@@ -54,6 +54,7 @@ Comments are explicit enough I think...
 NORMAL="\\033[0;39m"
 RED="\\033[1;31m"
 BLUE="\\033[1;34m"
+GREEN="\\033[1;32m"
 
 # Names to identify images and containers of this app
 IMAGE_NAME='docker-ypereirareis'
@@ -67,7 +68,7 @@ EXECUTE_AS="sudo -u bob HOME=$HOME_DIR"
 
 
 The last line of this part, `EXECUTE_AS="sudo -u bob HOME=$HOME_DIR"`
-allows to execute commands into docker container as the non-root **bob** user
+allows to execute commands into docker containers as the non-root **bob** user
 created in the image as you can see in my [Dockerfile](https://github.com/ypereirareis/ypereirareis.github.io/blob/master/Dockerfile#L22-28).
 
 **Logging functions**
@@ -215,7 +216,7 @@ help() {
   echo "-----------------------------------------------------------------------"
   echo "                      Available commands                              -"
   echo "-----------------------------------------------------------------------"
-  echo -e -n "$VERT"
+  echo -e -n "$GREEN"
   echo "   > build - To build the Docker image"
   echo "   > npm - To install NPM modules/deps"
   echo "   > bower - To install Bower/Js deps"
@@ -260,7 +261,7 @@ What about an alias for `./do.sh` in your .bashrc/.zshrc ?
 
 If you're not familiar with shell scripting you can choose another tool... a `Makefile`.
 
-`Makefiles` are files used to configure `make` that is a building project tool.
+`Makefiles` are files used to configure `make`, which is a build tool.
 The principle is simple: to build a target, we indicate the dependencies and the command to build it.
 `make` is in charge of traveling the tree to build targets in the correct order.
 
@@ -276,7 +277,7 @@ end:
     echo "!!!" > end.txt
 {% endhighlight %}
 
-**A big advantage of `make` and `Makefiles` is that it provides auto complete out of the box.**
+**A big advantage of `make` and `Makefiles` is that it provides auto-complete out of the box.**
 
 Many people like using `Makefile` in an uncommon way to run grouped commands like this for instance:
 
@@ -306,13 +307,13 @@ install: composer database cc
 database:
     docker run --rm -it -v $(pwd):/app $IMAGE_NAME \
         /bin/bash -ci "app/console doctrine:database:create"
-        
+
     docker run --rm -it -v $(pwd):/app $IMAGE_NAME \
         /bin/bash -ci "app/console doctrine:schema:create"
-            
+
     docker run --rm -it -v $(pwd):/app $IMAGE_NAME \
         /bin/bash -ci "app/console doctrine:schema:update"
-    
+
 composer:
     docker run --rm -it -v $(pwd):/app $IMAGE_NAME \
         /bin/bash -ci "composer install --prefer-dist"
@@ -320,7 +321,7 @@ composer:
 cc:
     docker run --rm -it -v $(pwd):/app $IMAGE_NAME \
         /bin/bash -ci "app/console cache:clear --env=prod"
-    
+
 {% endhighlight %}
 
 **Be careful...** When using `Makefile` you must use tab key/character in your commands.
@@ -406,7 +407,7 @@ web:
         SYMFONY__DATABASE__NAME: database
         SYMFONY__DATABASE__USER: root
         SYMFONY__DATABASE__PASSWORD: database password
-        
+
 db:
     image: mysql:5.5
     environment:
@@ -451,7 +452,7 @@ composer:
 
 {% endhighlight %}
 
-You must extends every service/container used in your "environment specific" config.
+You must extend every service/container used in your "environment specific" config.
 
 **docker-prod.yml**
 
@@ -490,6 +491,6 @@ docker-compose -f docker-prod.yml up
 
 ## Conclusion
 
-Choose a solution and a set of tools that fits your needs.
+Choose a solution and a set of tools that fit your needs.
 
 But, please, do not run `docker` commands directly from your shell without any complementary tool anymore.

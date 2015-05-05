@@ -4,6 +4,7 @@
 NORMAL="\\033[0;39m"
 RED="\\033[1;31m"
 BLUE="\\033[1;34m"
+GREEN="\\033[1;32m"
 
 # Names to identify images and containers of this app
 IMAGE_NAME='docker-ypereirareis'
@@ -103,7 +104,7 @@ help() {
   echo "-----------------------------------------------------------------------"
   echo "                      Available commands                              -"
   echo "-----------------------------------------------------------------------"
-  echo -e -n "$VERT"
+  echo -e -n "$GREEN"
   echo "   > build - To build the Docker image"
   echo "   > npm - To install NPM modules/deps"
   echo "   > bower - To install Bower/Js deps"
