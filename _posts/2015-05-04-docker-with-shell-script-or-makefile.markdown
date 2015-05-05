@@ -215,7 +215,7 @@ help() {
   echo "-----------------------------------------------------------------------"
   echo "                      Available commands                              -"
   echo "-----------------------------------------------------------------------"
-  echo -e -n "$VERT"
+  echo -e -n "$BLUE"
   echo "   > build - To build the Docker image"
   echo "   > npm - To install NPM modules/deps"
   echo "   > bower - To install Bower/Js deps"
@@ -260,7 +260,7 @@ What about an alias for `./do.sh` in your .bashrc/.zshrc ?
 
 If you're not familiar with shell scripting you can choose another tool... a `Makefile`.
 
-`Makefiles` are files used to configure `make` that is a building project tool.
+`Makefiles` are files used to configure `make`, which is a build tool.
 The principle is simple: to build a target, we indicate the dependencies and the command to build it.
 `make` is in charge of traveling the tree to build targets in the correct order.
 
@@ -306,10 +306,8 @@ install: composer database cc
 database:
     docker run --rm -it -v $(pwd):/app $IMAGE_NAME \
         /bin/bash -ci "app/console doctrine:database:create"
-        
     docker run --rm -it -v $(pwd):/app $IMAGE_NAME \
         /bin/bash -ci "app/console doctrine:schema:create"
-            
     docker run --rm -it -v $(pwd):/app $IMAGE_NAME \
         /bin/bash -ci "app/console doctrine:schema:update"
     
@@ -451,7 +449,7 @@ composer:
 
 {% endhighlight %}
 
-You must extends every service/container used in your "environment specific" config.
+You must extend every service/container used in your "environment specific" config.
 
 **docker-prod.yml**
 
