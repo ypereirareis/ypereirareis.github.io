@@ -5,13 +5,13 @@ author:
   picture: /assets/images/avatar.png
 
 # site description
-description: Thoughts and writings about software engineering by Yannick Pereira-Reis.
+description: Thoughts and writings about software engineering by Yannick Pereira-Reis - PHP, Symfony2, AngularJs, ReactJs, Docker, Elasticsearch, freelance, Lyon
 
 # site url
 url: http://ypereirareis.github.io
 
 # site title
-title: Yannick Pereira-Reis
+title: Yannick Pereira-Reis - PHP, Symfony2, AngularJs, ReactJs, Docker, Elasticsearch, freelance, Lyon
 
 # site version
 version: 1.0.0
@@ -21,6 +21,9 @@ paginate: 5
 
 # your github username
 github_username: ypereirareis
+
+# Twitter
+twitter_username: "@yannickpr69"
 
 # linkedin url
 linkedin_url: fr.linkedin.com/in/yannickpereirareis
