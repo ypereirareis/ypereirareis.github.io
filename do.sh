@@ -103,7 +103,7 @@ help() {
   echo "-----------------------------------------------------------------------"
   echo "                      Available commands                              -"
   echo "-----------------------------------------------------------------------"
-  echo -e -n "$VERT"
+  echo -e -n "$BLUE"
   echo "   > build - To build the Docker image"
   echo "   > npm - To install NPM modules/deps"
   echo "   > bower - To install Bower/Js deps"
