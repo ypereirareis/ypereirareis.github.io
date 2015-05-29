@@ -18,7 +18,7 @@ Reindexing can be useful in many cases like :
 
 If you want more information, [the doc](https://www.elastic.co/blog/changing-mapping-with-zero-downtime) is very clear.
 
-But we are going to see how to have this zero downtime with [Symfony](https://symfony.com/) and [FOSElasticaBundle](https://github.com/FriendsOfSymfony/FOSElasticaBundle)
+But we are going to see how to have this zero downtime with [Symfony](https://symfony.com/) and [FOSElasticaBundle](https://github.com/FriendsOfSymfony/FOSElasticaBundle).
 
 ## Elasticsearch (elastic)
 
@@ -128,7 +128,7 @@ The alias is created at the end of the (first) indexing process.
 
 **Zero downtime indexing**
 
-The magic is in the fact that with FOSElasticaBundle when can start a reindexing process running the previous command again:
+The magic is in the fact that with FOSElasticaBundle we can start a reindexing process running the previous command again:
 
 {% highlight bash %}
 app/console fos:elastica:populate
@@ -158,6 +158,6 @@ This is really amazing :
 ## Conclusion
 
 Elasticsearch/elastic is a fantastic tool to make search easy and awesome.
-Coupled with other tools (marvel, kiban, logstash,...) of the elastic company,
+Coupled with other tools (marvel, kibana, logstash,...) of the elastic company,
 the possibilities are limitless.
 
