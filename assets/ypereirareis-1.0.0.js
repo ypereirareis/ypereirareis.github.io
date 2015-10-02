@@ -1,5 +1,5 @@
 /*!
- * ypereirareis - v0.1.0 - 2015-05-29
+ * ypereirareis - v0.1.0 - 2015-10-02
  * Yannick PEREIRA-REIS
  * Source code for Yannick PEREIRA-REIS website
  * http://ypereirareis.github.io
