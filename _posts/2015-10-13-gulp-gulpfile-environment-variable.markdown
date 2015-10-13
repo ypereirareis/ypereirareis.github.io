@@ -59,3 +59,26 @@ gulp --env=prod stylesheet
 gulp --env=dev stylesheet
 gulp --env=$(ENVIRONMENT_VAR) stylesheet
 {% endhighlight %}
+
+you could change the `--env` option with anything else:
+
+{% highlight bash %}
+gulp --type=prod stylesheet
+{% endhighlight %}
+
+and use this in your `Gulpfile.js`:
+
+{% highlight javascript %}
+gulp.task('stylesheet', function() {
+    return gulp.src([])
+    .pipe(sass())
+    .pipe(concat('styles.css'))
+    .pipe(gutil.env.type === 'prod' ? minifyCss() : gutil.noop())
+    .pipe(gulp.dest('web/css'));
+});
+{% endhighlight %}
+
+## More resources
+
+* [http://www.mikestreety.co.uk/blog/an-advanced-gulpjs-file](http://www.mikestreety.co.uk/blog/an-advanced-gulpjs-file)
+* [https://gist.github.com/youknowriad/f90b535d151b2794e42f](https://gist.github.com/youknowriad/f90b535d151b2794e42f)
