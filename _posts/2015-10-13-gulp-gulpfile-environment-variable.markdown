@@ -51,6 +51,28 @@ gulp.task('stylesheet', function() {
 });
 {% endhighlight %}
 
+* DRY
+
+It's possible that you have many gulp tasks that need this behavior:
+
+{% highlight javascript %}
+
+function minifyIfNeeded() {
+    return gutil.env.env === 'prod'
+        ? minify()
+        : gutil.noop();
+}
+
+gulp.task('stylesheet', function() {
+    return gulp.src([])
+    .pipe(sass())
+    .pipe(concat('styles.css'))
+    .pipe(minifyIfNeeded())
+    .pipe(gulp.dest('web/css'));
+});
+{% endhighlight %}
+
+
 ## Give gulp configuration through the command line
 
 {% highlight bash %}
