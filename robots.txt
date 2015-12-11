@@ -1,3 +1,2 @@
 User-agent: *
 Sitemap: http://ypereirareis.github.io/sitemap.xml
-Disallow:
