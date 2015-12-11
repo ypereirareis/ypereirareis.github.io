@@ -39,15 +39,6 @@ layout: default
         </section>
         <!-- content -->
 
-        {% if site.share.twitter or site.share.facebook or site.share.google_plus or site.share.linkedin %}
-          {% include share.html %}
-        {% endif %}
-        <!-- share -->
-
-        <div class="post-reading-link">
-          <a href="{{ post.url }}">Continue reading&nbsp;<i class="fa fa-angle-double-right"></i></a>
-        </div>
-        <!-- reading link -->
 
   </article>
   <!--post-->
@@ -57,13 +48,13 @@ layout: default
   {% if paginator.total_pages > 1 %}
   <div class="pagination">
     {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path }}" role="button" class="btn btn-primary">&nbsp;...Previous articles</a>
+    <a href="{{ paginator.previous_page_path }}" role="button" class="btn btn-primary">&nbsp;&lt;&nbsp;Newest&nbsp;</a>
     {% else %}
     <!--<button type="button" class="btn btn-primary" disabled="disabled"><i class="fa fa-angle-double-left"></i>&nbsp;PREVIOUS</button>-->
     {% endif %}
     <!-- <span class="page_number">{{ paginator.page }} of {{ paginator.total_pages }}</span> -->
     {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path }}" role="button" class="btn btn-primary">Next articles...&nbsp;</a>
+    <a href="{{ paginator.next_page_path }}" role="button" class="btn btn-primary">&nbsp;Oldest&nbsp;&gt;&nbsp;</a>
     {% else %}
     <!--<button type="button" class="btn btn-primary" disabled="disabled">NEXT&nbsp;<i class="fa fa-angle-double-right"></i></button>-->
     {% endif %}
