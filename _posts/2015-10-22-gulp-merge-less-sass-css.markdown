@@ -9,6 +9,8 @@ image: gulp.png
 Sometimes when working on "frontend tasks" with gulp,
 we need to merge different formats such as **less**, **scss**, **css** into a single minified css file.
 
+![Gulp](/assets/images/posts/gulp.png)
+
 ## Modules
 
 **Of course you have to install and require the good modules:**

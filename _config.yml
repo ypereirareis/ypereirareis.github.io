@@ -1,23 +1,23 @@
 # your informations
 author:
   name: Yannick Pereira-Reis
-  description: Frontend and Backend web developer
+  description: Full stack web developer <br />(Symfony, AngularJs, Docker, DevOps)
   picture: /assets/images/avatar.png
 
 # site description
-description: Thoughts and writings about software engineering by Yannick Pereira-Reis - PHP, Symfony2, AngularJs, ReactJs, Docker, Elasticsearch, freelance, Lyon
+description: Thoughts and writings about Symfony2, AngularJs, Docker, Elasticsearch, gulp, javascript, freelance, Lyon, Villeurbanne
 
 # site url
 url: http://ypereirareis.github.io
 
 # site title
-title: Yannick Pereira-Reis - PHP, Symfony2, AngularJs, ReactJs, Docker, Elasticsearch, freelance, Lyon
+title: Yannick Pereira-Reis - Full stask lead developer Symfony2, AngularJs and play with DevOps tools like vagrant, docker, supervisor, elasticsearch, elk, freelance, Lyon
 
 # site version
 version: 1.0.0
 
 # number of posts per page
-paginate: 5
+paginate: 10
 
 # your github username
 github_username: ypereirareis

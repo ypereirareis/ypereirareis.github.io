@@ -9,6 +9,8 @@ When using [elasticsearch](https://www.elastic.co/) or [elastic](https://www.ela
 the reindexing process must be an important task to deal with.
 Indeed, this process must be done with zero downtime, and nothing visible for users.
 
+![Elasticsearch](/assets/images/posts/elastic.png)
+
 Reindexing can be useful in many cases like :
 
 * Type/mapping updates.

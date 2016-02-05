@@ -10,6 +10,8 @@ As describe on the [Gulp website](http://gulpjs.com/), this tool allows you to *
 **Easy to Learn**, **Easy to use**, **Efficient** and **High Quality**... I totally agree with this.
 But I've been stuck by a small problem in the past few days : how to get an environment variable to build conditional tasks ?
 
+![Gulp](/assets/images/posts/gulp.png)
+
 ## Gulp util install
 
 First of all you need to add a new node dependency called [gulp-util](https://github.com/gulpjs/gulp-util) in your `packages.json` file:

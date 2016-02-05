@@ -2,6 +2,7 @@
 layout: post
 title:  "Vagrant AWS provider with private repositories"
 description: Vagrant AWS provider with private repositories
+keywords: "vagrant, AWS, provider, vm, virtual machine"
 permalink: /blog/2015/03/02/vagrant-aws-provider-private-repositories.html
 ---
 

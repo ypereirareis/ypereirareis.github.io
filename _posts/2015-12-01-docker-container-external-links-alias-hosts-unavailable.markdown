@@ -3,7 +3,7 @@ layout: post
 title: "Unreachable local hosts in a docker container with (external) links"
 description: "When working with docker, docker-compose and links or external link, it can lead to unreachable local hosts (ex: mailcatcher)"
 keywords: "docker, alias, external, links, local, hosts, container, compose, mailcatcher"
-image: docker.svg
+image: docker.png
 ---
 
 I recently added a new service stack in my dev process with docker.
@@ -13,7 +13,7 @@ One of those services is [mailcatcher](http://mailcatcher.me/)
 and is usable with docker thanks to [this image](https://hub.docker.com/r/zolweb/docker-mailcatcher/)...
 or many others.
 
-![Docker](/assets/images/posts/docker.svg)
+![Docker](/assets/images/posts/docker.png)
 
 ## Docker-compose service layer
 

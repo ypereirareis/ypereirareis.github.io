@@ -2,12 +2,15 @@
 layout: post
 title:  "Vagrant elasticsearch cluster"
 description: Vagrant elasticsearch cluster made easy.
+keywords: "vagrant, elasticsearch, cluster, vm, virtual machine"
 permalink: /blog/2015/02/26/vagrant-elasticsearch-cluster.html
 ---
 
 As a big fan of [elasticsearch](http://www.elasticsearch.org/), I very often use this extraordinary tool to make POCs, test applications like [logstash](http://logstash.net/) and [Kibana](http://www.elasticsearch.org/overview/kibana/), or more generally, to discover the lastest possibilities allowed by elasticsearch (percolator, aggregations, sharding, scalability,…).
 
 But, it's often very complicated to set up a full elasticsearch cluster for a POC, a simple test or a dev environment.
+
+![Elasticsearch](/assets/images/posts/elastic.png)
 
 On the other side, it's very easy to use the minimalist configuration set up by default when using elasticsearch, but it's quickly limited when we want to deal with problematics like:
 
