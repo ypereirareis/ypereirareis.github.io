@@ -4,6 +4,7 @@ title:  "Vagrant elasticsearch cluster"
 description: Vagrant elasticsearch cluster made easy.
 keywords: "vagrant, elasticsearch, cluster, vm, virtual machine"
 permalink: /blog/2015/02/26/vagrant-elasticsearch-cluster.html
+lastmod: "2016-02-05"
 ---
 
 As a big fan of [elasticsearch](http://www.elasticsearch.org/), I very often use this extraordinary tool to make POCs, test applications like [logstash](http://logstash.net/) and [Kibana](http://www.elasticsearch.org/overview/kibana/), or more generally, to discover the lastest possibilities allowed by elasticsearch (percolator, aggregations, sharding, scalability,…).

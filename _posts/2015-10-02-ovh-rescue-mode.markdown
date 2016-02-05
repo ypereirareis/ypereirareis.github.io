@@ -2,6 +2,7 @@
 layout: post
 title:  "Rescue Mode with OVH and Kimsufi"
 description: "Rescue Mode with OVH and Kimsufi"
+lastmod: "2016-02-05"
 ---
 
 I recently made a wrong manipulation on my server removing SSH access for everybody (root and users), then I lost my connection.

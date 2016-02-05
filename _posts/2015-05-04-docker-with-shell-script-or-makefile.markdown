@@ -3,6 +3,7 @@ layout: post
 title:  "Docker with shell script or Makefile"
 description: Docker with shell script or Makefile to have a higher productivity
 image: docker.png
+lastmod: "2016-02-05"
 ---
 
 Of course [Docker](https://docs.docker.com/) is a fantastic tool that allows us to work more efficiently
