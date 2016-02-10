@@ -18,6 +18,7 @@ version: 1.0.0
 
 # number of posts per page
 paginate: 10
+gems: [jekyll-paginate]
 
 # your github username
 github_username: ypereirareis
@@ -42,7 +43,7 @@ disqus_api_key: XSyglG1uPhzx9toLacpmIqEPcWY6XeZXohwsrLfmDqV8qdPr0EsFkq0prHY3n7Iq
 disqus_recent_comments_to_display: 10
 
 markdown: kramdown
-highlighter: pygments
+highlighter: rouge
 lsi:         false
 excerpt_separator: "\n\n"
 exclude: [ 'README.md', 'src/', 'node_modules', 'bower_components', 'package.json', 'bower.json', 'Gruntfile.js' ]
