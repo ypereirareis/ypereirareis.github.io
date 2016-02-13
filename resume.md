@@ -1,16 +1,14 @@
 ---
 layout: page
 title: Resume | Yannick Pereira-Reis
-description: Yannick PEREIRA-REIS, frontend, backend, PHP, Symfony2, AngularJS, ReactJS, CasperJS/PhantomJS, Elasticsearch, Vagrant, Ansible, Docker, AWS, Jenkins, Satis, Scrum, Git/Gitlab, Atoum, Jasmine, Behat, Protractor,...
+description: Yannick Pereira-Reis, full stack developpeur, lead dev Symfony2 et AngularJs j'explore des outils comme Elasticsearch, Vagrant, Ansible, Docker, AWS, Jenkins, Satis, Scrum, Git/Gitlab, Atoum, Jasmine, Behat, Protractor
 permalink: /website/resume/
 ---
 
 # **Yannick PEREIRA-REIS**
 * France > Rhône-Alpes > Lyon/Villeurbanne
-* Frontend and Backend developer
+* Full stack developer
 * Ingénieur informatique INSA Lyon
-
-PHP, **Symfony2**, **AngularJS**, ReactJS, CasperJS/PhantomJS, **Elasticsearch**, Vagrant, Ansible, Docker, AWS, Jenkins, Satis, Scrum, Git/Gitlab, **Atoum**, Jasmine, Behat, Protractor,...
 
 Pour plus de détails :
 
@@ -141,6 +139,15 @@ Langages/Outils:
 * Web Services / SOA
 * LAMP
 * Vagrant
+
+Projets :
+
+* [Outils/requèteur BI](http://bi-query.psih.fr/fr/) (type [qlikview](http://global.qlik.com/fr/explore/products/qlikview)) en AngularJS dans le domaine de la santé,
+construction de requêtes dynamiques (dimensions, mesures) et construction de tableaux de bord.
+
+* [Intranet/CMS/dashboard](http://bi-portal.psih.fr/fr/) en AngularJS pour établissements hospitaliés.
+
+Ces deux projets font parties d'un [projet global de BI pour les établissements hospitaliés](http://www.psih.fr/fr/solutions/).
 
 ## [Sage](http://www.sage.fr/fr) <small>*(Janvier 2013 / Juin 2013)*</small>
 
