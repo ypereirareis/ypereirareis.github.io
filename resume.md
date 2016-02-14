@@ -164,9 +164,9 @@ Juin 2013 / Août 2014 |
 * [Outils/requèteur BI](http://bi-query.psih.fr/fr/) (type [qlikview](http://global.qlik.com/fr/explore/products/qlikview)) en AngularJS dans le domaine de la santé,
 construction de requêtes dynamiques (dimensions, mesures) et construction de tableaux de bord.
 
-* [Intranet/CMS/dashboard](http://bi-portal.psih.fr/fr/) en AngularJS pour établissements hospitaliés.
+* [Intranet/CMS/dashboard](http://bi-portal.psih.fr/fr/) en AngularJS pour établissements hospitaliers.
 
-Ces deux projets font parties d'un [projet global de BI pour les établissements hospitaliés](http://www.psih.fr/fr/solutions/).
+Ces deux projets font parties d'un [projet global de BI pour les établissements hospitaliers](http://www.psih.fr/fr/solutions/).
 
 #### Langages / Outils / Frameworks / Méthodes :
 
