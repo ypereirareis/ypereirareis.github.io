@@ -3,7 +3,6 @@ layout: post
 title:  "Vagrant elasticsearch cluster"
 description: Vagrant elasticsearch cluster made easy.
 keywords: "vagrant, elasticsearch, cluster, vm, virtual machine"
-permalink: /blog/2015/02/26/vagrant-elasticsearch-cluster.html
 lastmod: "2016-02-14"
 ---
 
