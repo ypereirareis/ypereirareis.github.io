@@ -4,7 +4,7 @@ title: "Unreachable local hosts in a docker container with (external) links"
 description: "When working with docker, docker-compose and links or external link, it can lead to unreachable local hosts (ex: mailcatcher)"
 keywords: "docker, alias, external, links, local, hosts, container, compose, mailcatcher"
 image: docker.png
-lastmod: "2016-02-05"
+lastmod: "2016-02-14"
 ---
 
 I recently added a new service stack in my dev process with docker.

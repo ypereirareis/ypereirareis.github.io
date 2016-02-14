@@ -4,7 +4,7 @@ title:  "How to merge less, scss and css into a single css file"
 description: "How to merge less, sass and css into a single css file"
 keywords: "gulp, gulpfile, sass, scss, less, css, merge"
 image: gulp.png
-lastmod: "2016-02-05"
+lastmod: "2016-02-14"
 ---
 
 Sometimes when working on "frontend tasks" with gulp,

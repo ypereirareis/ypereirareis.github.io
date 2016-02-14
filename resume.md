@@ -1,14 +1,17 @@
 ---
 layout: page
-title: Resume | Yannick Pereira-Reis
-description: Yannick Pereira-Reis, full stack developpeur, lead dev Symfony2 et AngularJs j'explore des outils comme Elasticsearch, Vagrant, Ansible, Docker, AWS, Jenkins, Satis, Scrum, Git/Gitlab, Atoum, Jasmine, Behat, Protractor
+title: Yannick Pereira-Reis | Resume
+description: full stack developer, lead developer PHP, Symfony2 et AngularJs à Lyon, j'utilise des outils comme Elasticsearch, Vagrant, Ansible, Docker.
+keywords: lead dev, lead developer, lead dev lyon, lead developer lyon, lead dev angularjs, lead dev Symfony, lead dev angularjs lyon, lead dev Symfony lyon, php, mysql, elasticsearch, Symfony 2, Symfony 3, docker, vagrant, composer, AWS, Jenkins, Satis, Scrum, Git/Gitlab, Atoum, Jasmine, Behat, Protractor
 permalink: /website/resume/
+lastmod: "2016-02-14"
 ---
 
 # **Yannick PEREIRA-REIS**
+
 * France > Rhône-Alpes > Lyon/Villeurbanne
-* Full stack developer
-* Ingénieur informatique INSA Lyon
+* Full stack developer (AngularJs / Symfony)
+* Ingénieur INSA Lyon
 
 Pour plus de détails :
 
@@ -18,20 +21,22 @@ Pour plus de détails :
 
 ## Présentation
 
-Passionné depuis de nombreuses années (+10 ans) par le développement web, je suis en recherche permanente de nouveaux challenges.
+Passionné par mon métier, je suis en recherche permanente de challenges techniques ou autres.
+Symfony, AngularJs, docker, vagrant,... sont quelques unes de mes technologies de prédilection.
 
-Au delà des technologies, j'accorde une immense importance à mon environnement et mon cadre de travail (valeurs, communication, partage, rigueur, ambiance,...).
+Au delà de la technique, j'accorde une grande importance à mon environnement et mon cadre de travail
+(valeurs, communication, partage, rigueur, ambiance,...).
 
-En veille technologique permanente, mes compétences évoluent au rythme des évolutions technologiques et méthodologiques.
+En veille technologique constante, mes compétences évoluent avec les évolutions technologiques et méthodologiques du moment.
+Par exemple, j'explore en ce moment les profondeurs de technos comme :
 
-En ce moment :
+* [Angular2](https://angular.io/)
+* [CycleJS](http://cycle.js.org/)
+* [RxJS](https://github.com/Reactive-Extensions/RxJS)
+* [ES2015](https://babeljs.io/docs/learn-es2015/)
+* [ES2016](http://benmccormick.org/2015/09/14/es5-es6-es2016-es-next-whats-going-on-with-javascript-versioning/)
 
-* ReactJS
-* jspm.io
-* Docker
-* [RxJS](https://github.com/Reactive-Extensions/RxJS) et concepts de la programmation réactive
-
-Pour me trouver ou me suivre sur le web :
+Pour me suivre sur le web :
 
 * [GitHub](https://github.com/ypereirareis)
 * [Twitter](https://twitter.com/yannickpr69)
@@ -39,108 +44,122 @@ Pour me trouver ou me suivre sur le web :
 * [Docker](https://hub.docker.com/u/ypereirareis/)
 * [VagrantCloud/Atlas](https://atlas.hashicorp.com/ypereirareis)
 
+Mes articles en dehors de ce blog :
 
+* [symfony-catcher-toutes-les-requetes-proxy-applicatif](http://blog.zol.fr/2015/07/09/symfony-catcher-toutes-les-requetes-proxy-applicatif/)
+* [comment-bien-commencer-un-projet-symfony](http://blog.zol.fr/2015/07/16/comment-bien-commencer-un-projet-symfony/)
+* [travailler-avec-docker-sans-utilisateur-root](http://blog.zol.fr/2015/08/06/travailler-avec-docker-sans-utilisateur-root/)
+* [elasticsearch-the-split-brain-problem](http://blog.overnetcity.com/2014/04/24/elasticsearch-the-split-brain-problem/)
+* [elasticsearch-vagrant-cluster](http://blog.overnetcity.com/2014/04/03/elasticsearch-vagrant-cluster/)
+* [elasticsearch-reindexation-downtime-alias](http://blog.overnetcity.com/2014/05/07/elasticsearch-reindexation-downtime-alias/)
 
 <a id="xp"></a>
 
-# **Expériences professionnelles**
+## **Expériences professionnelles**
 
-## [ZOL](http://www.zol.fr) <small>*(Mars 2015 / aujourd'hui)*</small>
+### [ZOL](http://www.zol.fr)
 
 <small>
+Depuis mars 2015 |
 **LeadDev Symfony2/AngularJS, Scrum Master** |
 *Lyon*
 </small>
 
-Langages / Outils / Frameworks / Méthodes :
+<img class="img-center" src="../../assets/images/zol.png" alt="ZOL">
+
+
+> _Loin des SSII et des vendeurs de sites vitrine,
+> ZOL est né à Lyon il y a 10 ans et s’est fait une petite place dans le monde
+> du développement web à forte valeur ajoutée._
+
+#### Responsabilités :
+
+* Lead dev Symfony2, AngularJS et expert ElasticSearch.
+* Animation de conférences/formations en interne.
+* Création du blog technique avec Jekyll et rédaction de contenu.
+* Intégration et déploiement continu (docker, jenkins, gitlab).
+* Encadrement et formation des nouveaux arrivants.
+* Scrum Master.
+
+#### Projets :
+
+* Lead Dev Symfony 2 outils de recueil, analyse et statistiques de mains de poker (cartes, gains, mises, pots,...).
+* Lead Dev Symfony 2, outils de gestion d'un centre d'appel (clients, durées communications, coûts, historiques, facturations, ...)
+* Lead Dev Symfony 2, outils de recueil de CV, demandes de formation, devis,...
+
+#### Langages / Outils / Frameworks / Méthodes :
 
 * [Symfony2](http://symfony.com/)
 * [AngularJS](https://angularjs.org/) / [ReactJS](http://facebook.github.io/react/) / jQuery
-* [Bower](http://bower.io/) / Gulp / [Grunt](http://gruntjs.com/)
+* npm / [Bower](http://bower.io/) / Gulp / [Grunt](http://gruntjs.com/)
 * [Docker](https://www.docker.com/)
 * Jenkins
-* Satis
-* Tests unitaires (atoum) et fonctionnels (behat)
-* Git / BitBucket
+* Satis / composer / satisfy
+* Tests unitaires (atoum, jasmine) et fonctionnels (behat, protractor)
+* Git / BitBucket / gitlab
 
-Responsabilités :
-
-* Animation de conférences/formations en interne.
-* Création blog technique avec Jekyll.
-* Expert Symfony2, AngularJS et ElasticSearch.
-
-
-## [Kptive Studio](http://kptivestudio.com/fr/) <small>*(Août 2014 / Mars 2015)*</small>
+### [Kptive Studio](http://kptivestudio.com/fr/)
 
 <small>
-**Ingénieur Développement Symfony2/AngularJS** |
+Août 2014 / Mars 2015 |
+**LeadDev Symfony2/AngularJS** |
 *Lyon*
 </small>
 
-Conception, architecture et développement logiciel en :
+<img class="img-center" src="../../assets/images/kptive.png" alt="kptive">
 
-* PHP avec [Symfony2](http://symfony.com/) (Akeneo, Sylius,...)
-* JavaScript avec [AngularJS](https://angularjs.org/) / [ReactJS](http://facebook.github.io/react/)
+> _Nous créons des applications inspirées par vos besoins, vos enjeux, vos objectifs_
 
-Mise en place de process et d'outils.
-Méthodologie SCRUM.
+#### Responsabilités :
 
-Gestion de la qualité :
+* Conception, architecture et développement d'un back office de gestion
+d'un référentiel produit pour la vente multi canal (boutique, internet, place de marché)
+de vêtements en cuir pour [La Canadienne.](https://www.la-canadienne.com/)
+* Codage de règles métier complexes (prix par langue, par canal, par couleur et par taille, gestion de promotions, tailles et retouche)
+* Connecteur avec un logiciel de caisse.
 
+#### Projets :
+
+* API REST La Canadienne en Symfony 2.
+* Application d'administration des caractéristiques produits et magasins La Canadienne en AngularJS.
+
+#### Langages / Outils / Frameworks / Méthodes :
+
+* [Symfony2](http://symfony.com/)
+* Le PIM [Akeneo](http://www.akeneo.com/)
+* Des bundles [Sylius](http://sylius.org/)
+* AngularJS et ReactJS
+* Méthode SCRUM
+* Git / Gitlab / Gitflow
 * CI Jenkins
 * Tests unitaires (atoum, jasmine)
 * Tests fonctionnels (behat, protractor)
-* Gestion de configuration (git)
-* Revue de code (git + gitlab)
-
-Langages / Outils / Frameworks :
-
-* PHP
-* [Symfony2](http://symfony.com/)
-* [AngularJS](https://angularjs.org/) / [ReactJS](http://facebook.github.io/react/) / jQuery
-* [Bower](http://bower.io/) / Gulp / [Grunt](http://gruntjs.com/) / Browserify and JSPM ([http://jspm.io/](http://jspm.io/))
 * Vagrant / ansible
-* Jenkins
-* Satis
 * [Docker](https://www.docker.com/)
 * AWS
 
-## [PMSIpilot](http://www.psih.fr/fr/) <small>*(Juin 2013 / Août 2014)*</small>
+### [PMSIpilot](http://www.psih.fr/fr/)
 
 <small>
-**Ingénieur Développement Symfony2/AngularJS** |
+Juin 2013 / Août 2014 |
+**Développeur Symfony2/AngularJS** |
 *Lyon*
 </small>
 
-Fonctionnement avec la méthode SCRUM :
+<img class="img-center" src="../../assets/images/pmsipilot.jpg" alt="pmsipilot">
 
-- PO/SM
-- Planification/backlog/planning poker
-- Morning meeting
-- Rétrospective
+> _L'hôpital est ce lieu singulier qui nous accueille de la vie
+> à la mort en passant par les moments les plus éprouvants de la vie.
+> Il doit disposer des meilleurs outils afin de consacrer l'immense majorité
+> de ses resources au service du patient_
 
-Suivi de processus de gestion de la qualité :
+#### Responsabilités :
 
-- Intégration continue
-- Tests unitaires (atoum) et fonctionnels
-- Gestion de version/configuration (git)
-- Revue de code (git + gitlab)
-- Jenkins
+* Développeur Symfony2
+* Développeur AngularJS
+* Scrum Master (Stand up, planning poker, rétrospectives, ...)
 
-Langages/Outils:
-
-* PHP
-* PostgreSQL
-* [Symfony2](http://symfony.com/)
-* Composer
-* [AngularJS](https://angularjs.org/) / jQuery
-* [Bower](http://bower.io/) / [Grunt](http://gruntjs.com/)
-* SSO
-* Web Services / SOA
-* LAMP
-* Vagrant
-
-Projets :
+#### Projets :
 
 * [Outils/requèteur BI](http://bi-query.psih.fr/fr/) (type [qlikview](http://global.qlik.com/fr/explore/products/qlikview)) en AngularJS dans le domaine de la santé,
 construction de requêtes dynamiques (dimensions, mesures) et construction de tableaux de bord.
@@ -149,74 +168,118 @@ construction de requêtes dynamiques (dimensions, mesures) et construction de ta
 
 Ces deux projets font parties d'un [projet global de BI pour les établissements hospitaliés](http://www.psih.fr/fr/solutions/).
 
-## [Sage](http://www.sage.fr/fr) <small>*(Janvier 2013 / Juin 2013)*</small>
+#### Langages / Outils / Frameworks / Méthodes :
+
+* [Symfony2](http://symfony.com/)
+* [AngularJS](https://angularjs.org/) / [ReactJS](http://facebook.github.io/react/) / jQuery
+* npm / [Bower](http://bower.io/) / Gulp / [Grunt](http://gruntjs.com/)
+* [Docker](https://www.docker.com/)
+* Vagrant
+* Jenkins
+* Satis / composer / satisfy
+* Tests unitaires (atoum, jasmine) et fonctionnels (behat, protractor)
+* Git / BitBucket / gitlab
+
+
+### [Sage](http://www.sage.fr/fr)
 
 <small>
-**Ingénieur C# ASP/MVC et formation développeurs/utilisateurs/commerciaux** |
+Janvier 2013 / Juin 2013 |
+**Ingénieur R&D C# ASP/MVC** |
 *Lyon (Limonest)*
 </small>
 
-J'ai intégré la société suite à l'acquisition par [Sage](http://www.sage.fr/fr) d'un produit développé par [Brainsonic / Tangane](http://www.brainsonic.com/), et d'un salarié développeur du projet, **moi** !
+<img class="img-center" src="../../assets/images/sage.png" alt="sage">
 
-Pendant mes 6 mois de présence très intéressants et instructifs, j'ai principalement fait de la formation aux développeurs, aux utilisateurs et aux commerciaux en me déplaçant dans différents villes de France : Paris, Brest, Nantes.
+> _A l’écoute de vos besoins et de vos projets, nous vous proposons des solutions
+> et services personnalisés pour vous accompagner dans le développement de votre entreprise._
 
-Je ne suis resté chez Sage que très peu de temps car, au delà du projet lui-même, mes conditions de travail et mon environnement ne correspondaient pas du tout à mes attentes :
+J'ai intégré la société suite à l'acquisition par [Sage](http://www.sage.fr/fr)
+d'un produit développé par [Brainsonic / Tangane](http://www.brainsonic.com/),
+et d'un salarié développeur du projet, **moi** !
+
+Pendant mes 6 mois de présence très intéressants et instructifs,
+j'ai principalement fait de la formation aux développeurs,
+aux utilisateurs et aux commerciaux en me déplaçant dans différents villes de France :
+Paris, Brest, Nantes.
+
+Je ne suis resté chez Sage que très peu de temps car, au delà du projet lui-même,
+mes conditions de travail et mon environnement ne correspondaient pas du tout à mes attentes :
 
 * Seul développeur sur Lyon entourés de commerciaux et experts-comptables.
 * Plus du tout les mêmes responsabilités qu'auparavant sur le projet.
 * Des process et méthodes extrêmement lourds.
 * Un accès compliqué aux locaux Lyonnais de la société.
 
-## [Brainsonic / Tangane](http://www.brainsonic.com/) <small>*(Juin 2010 / Décembre 2012)*</small>
+### [Brainsonic / Tangane](http://www.brainsonic.com/)
 
 <small>
-**Ingénieur Développement Symfony1.4+/C# ASP/MVC** |
+Décembre 2009 / Décembre 2012 |
+**Ingénieur R&D Symfony / C#** |
 *Lyon*
 </small>
 
-Tangane est "devenue" Brainsonic fin 2012.
+<img class="img-center" src="../../assets/images/brainsonic.png" alt="brainsonic">
 
-Réalisation d'applications web diverses :
+> _Brainsonic, agence Content marketing et Social Media :
+> engagement via la puissance du contenu et le pouvoir de l'amplification._
 
-* **Applications en environnement Windows :** .NET, ASP/MVC, SqlServer, FullAjax, TU
-* **Applications en environnement LAMP :** PHP, Symfony 1.4 et Symfony 2, Magento, WordPress
+Tangane est "devenue" Brainsonic fin 2012, suite à une fusion.
 
-Utilisation de Frameworks et d'outils de type jQuery, Prototype, [AngularJS](https://angularjs.org/), SCSS, LESS,...
+#### Responsabilités :
 
-Administration de plateforme LAMP (installation, configuration vhosts, sécurisation, monitoring,...)
+* Développeur front jQuery et framework fullJS custom.
+* Développeur back PHP Symfony 1 et 2, et C# ASP MVC (SqlServer).
+* Encadrement de stagiaires et contrats pro.
+* Scrum Master
 
-**Méthode SCRUM et gestion de la qualité :** git, jenkins, Code Review, tests unitaires et fonctionnels.
+#### Projets :
+
+* [Outil d'échange entre PME/TPE et Experts-comptables](http://www.sage.fr/fr/experts-comptables/relation-client/sage-linkup-experts)
+* [La clinique des plantes](http://www.cliniquedesplantes.fr/)
+* Papermind (réseau social et recommandations culturelles)
+* [Parashop](http://www.parashop.com/)
+
+#### Langages / Outils / Frameworks / Méthodes :
+
+* [Symfony2](http://symfony.com/)
+* Jenkins
+* Satis / composer / satisfy
+* Tests unitaires (atoum) et fonctionnels (behat)
+* Git / BitBucket / gitlab
 
 <a id="formation"></a>
 
-# **Formation**
+## **Formation**
 
-## [INSA Lyon](http://www.insa-lyon.fr/) <small>*(2007 / 2010)*</small>
+### [INSA Lyon](http://www.insa-lyon.fr/)
 
 <small>
+2007 / 2010 |
 **Diplôme d'ingénieur en informatique.**
 </small>
 
 * 3 dernières années du cycle ingénieur INSA après avoir fait un DUT informatique.
 * J'ai réalisé mon stage de fin d'étude chez [Brainsonic / Tangane](http://www.brainsonic.com/), qui m'a ensuite embauché.
 
-## [IUT 2 Grenoble](http://www.iut2.upmf-grenoble.fr/) <small>*(2005 / 2007)*</small>
+### [IUT 2 Grenoble](http://www.iut2.upmf-grenoble.fr/)
 
 <small>
+2005 / 2007 |
 **DUT informatique**
 </small>
 
-## [BAC Scientifique GAP](http://www.lyc-briand-gap.ac-aix-marseille.fr/spip/) <small>*(2005)*</small>
+### [BAC Scientifique GAP](http://www.lyc-briand-gap.ac-aix-marseille.fr/spip/)
 
 <small>
+2005 |
 **Mention : bien**
 </small>
 
 <a id="passions"></a>
 
-# **Passions**
+## **Passions**
 
 * Informatique
-* Lecture (policiers, biographies)
 * VTT (randonnées)
-* Cuisine (bons petits plats mijotés)
+* Cuisine

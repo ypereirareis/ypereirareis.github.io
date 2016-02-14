@@ -4,7 +4,7 @@ title:  "Vagrant AWS provider with private repositories"
 description: Vagrant AWS provider with private repositories
 keywords: "vagrant, AWS, provider, vm, virtual machine"
 permalink: /blog/2015/03/02/vagrant-aws-provider-private-repositories.html
-lastmod: "2016-02-05"
+lastmod: "2016-02-14"
 ---
 
 As you probably know, [Vagrant](http://docs.vagrantup.com/v2/getting-started/index.html) is a very powerful tool powered by [Mitchell Hashimoto](https://github.com/mitchellh) and many [providers](http://docs.vagrantup.com/v2/getting-started/providers.html) are available with vagrant such as:

@@ -36,7 +36,6 @@ share:
   linkedin: true
   disqus: true
 
-
 # if share.disqus is true, provide your disqus shortname, the api key and the number of comments to display
 disqus_username: ypereirareisgithubio
 disqus_api_key: XSyglG1uPhzx9toLacpmIqEPcWY6XeZXohwsrLfmDqV8qdPr0EsFkq0prHY3n7Iq
@@ -48,5 +47,4 @@ lsi:         false
 excerpt_separator: "\n\n"
 exclude: [ 'README.md', 'src/', 'node_modules', 'bower_components', 'package.json', 'bower.json', 'Gruntfile.js' ]
 
-
-permalink: /blog/:year/:month/:day/:title
+permalink: /blog/:year/:month/:day/:title/

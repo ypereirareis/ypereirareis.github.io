@@ -3,7 +3,7 @@ layout: post
 title: "Composer, Satis and docker"
 description: "Thanks to Composer, Satis, satisfy and docker it's really easy to host and use private git repositories"
 keywords: "composer, satis, docker, satisfy, repository, repositories, git, packagist, github, gitlab, bitbucket"
-lastmod: "2016-02-05"
+lastmod: "2016-02-14"
 ---
 
 As a PHP and Symfony developer I use [Composer](https://getcomposer.org/)

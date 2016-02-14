@@ -4,7 +4,7 @@ title:  "How to get environment variables in a gulpfile"
 description: "Use an environment variable to build conditional functions in a gulpfile. Really useful for multi-environment configurations."
 keywords: "gulp, gulpfile, environment, variable, vars, variables, tasks, condition, conditions utils, noop"
 image: gulp.png
-lastmod: "2016-02-05"
+lastmod: "2016-02-14"
 ---
 
 As describe on the [Gulp website](http://gulpjs.com/), this tool allows you to **automate and enhance your workflow** and is
