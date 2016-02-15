@@ -4,7 +4,7 @@ title: "DoctrineMongoDBBundle composer install with Docker and HHVM"
 description: "DoctrineMongoDBBundle can be installed with a composer docker container and HHVM, but it can lead to problems or errors"
 keywords: "symfony, doctrine, mongo, mongodb, bundle, composer, hhvm"
 image: symfony.png
-lastmod: "2016-02-14"
+lastmod: "2016-02-15"
 ---
 
 When working with docker, a common thing is to use a specific docker image/container to run composer.

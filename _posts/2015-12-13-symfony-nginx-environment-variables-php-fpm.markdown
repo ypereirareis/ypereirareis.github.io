@@ -4,7 +4,7 @@ title: "Symfony environment variables with Nginx and PHP-FPM"
 description: "It's a common thing to use environment variables to configure Symfony for dev, staging, production..."
 keywords: "Symfony, nginx, php-fpm, php, fpm, environment, env, variables, variable, var, apache"
 image: symfony.png
-lastmod: "2016-02-14"
+lastmod: "2016-02-15"
 ---
 
 It's [a common thing](http://symfony.com/doc/current/cookbook/configuration/external_parameters.html) to use environment variables to configure Symfony for dev, staging, production...

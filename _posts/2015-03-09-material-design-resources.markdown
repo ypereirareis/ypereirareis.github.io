@@ -2,7 +2,7 @@
 layout: post
 title:  "Material Design Resources"
 description: Material Design Resources
-lastmod: "2016-02-14"
+lastmod: "2016-02-15"
 ---
 
 **Definition:**

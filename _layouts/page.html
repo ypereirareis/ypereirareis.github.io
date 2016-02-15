@@ -8,4 +8,9 @@ layout: default
     {{ content }}
   </article>
 
+  {% if site.share.twitter or site.share.facebook or site.share.google_plus or site.share.linkedin %}
+  {% assign isPage = true %}
+  {% include share.html %}
+  {% endif %}
+
 </section>
