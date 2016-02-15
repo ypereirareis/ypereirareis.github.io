@@ -41,6 +41,6 @@ Except for IT, I'm also interested in many others things such as:
 
 I like to learn from others, and I like to share my knowledge and experience, that's why I've created this website.
 
-I hope you'll enjoy reading [my articles](/). Don't hesitate to leave comments.
+I hope you'll enjoy reading ["my articles" "my articles"](/). Don't hesitate to leave comments.
 
 And have a look at [my french Résumé](/website/resume)

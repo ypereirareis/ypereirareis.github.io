@@ -4,6 +4,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+
+  <meta name="title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
   <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
 
   {% if page.keywords %}
@@ -16,23 +18,47 @@
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="{{ site.twitter_username}}">
   <meta name="twitter:creator" content="{{ site.twitter_username}}">
-  {% if page.title %}
-  <meta name="twitter:title" content="{{ page.title }}">
-  {% else %}
-   <meta name="twitter:title" content="{{ site.title }}">
-  {% endif %}
+
+  <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+
   {% if page.url %}
   <meta name="twitter:url" content="{{ site.url }}{{ page.url }}">
   {% endif %}
-  {% if page.description %}
-  <meta name="twitter:description" content="{{ page.description }}">
-  {% else %}
-  <meta name="twitter:description" content="{{ site.description }}">
-  {% endif %}
+
+  <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+
   {% if page.image %}
   <meta name="twitter:image:src" content="{{ site.url }}/assets/images/posts/{{ page.image }}">
   {% else %}
   <meta name="twitter:image:src" content="{{ site.url }}{{ site.author.picture }}">
+  {% endif %}
+
+
+  <!-- facebook Open Graph Metadatas -->
+  <meta content="462373940634960" property="fb:app_id">
+  <meta content="{{ site.title }}" property="og:site_name">
+  <meta content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" property="og:title">
+  {% if page.title %}
+  <meta content="article" property="og:type">
+  {% else %}
+  <meta content="website" property="og:type">
+  {% endif %}
+
+  <meta content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" property="og:description">
+
+  {% if page.url %}
+  <meta content="{{ site.url }}{{ page.url }}" property="og:url">
+  {% endif %}
+
+  {% if page.date %}
+  <meta content="{{ page.date | date_to_xmlschema }}" property="article:published_time">
+  <meta content="{{ site.url }}/about/" property="article:author">
+  {% endif %}
+
+  {% if page.image %}
+  <meta content="{{ site.url }}/assets/images/posts/{{ page.image }}" property="og:image">
+  {% else %}
+  <meta content="{{ site.url }}{{ site.author.picture }}" property="og:image">
   {% endif %}
 
   <link rel="stylesheet" href="/assets/{{ site.github_username }}-{{ site.version }}.css">

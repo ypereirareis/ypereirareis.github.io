@@ -35,6 +35,7 @@ share:
   google_plus: true
   linkedin: true
   disqus: true
+  facebook: true
 
 # if share.disqus is true, provide your disqus shortname, the api key and the number of comments to display
 disqus_username: ypereirareisgithubio
