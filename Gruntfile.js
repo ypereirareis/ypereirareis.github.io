@@ -92,7 +92,7 @@ module.exports = function( grunt ) {
           report: 'min'
         },
         files: {
-          '<%= project.assets.css %>': [ '_site/index.html', '_site/about/index.html' ]
+          '<%= project.assets.css %>': [ '_site/index.html', '_site/website/about/index.html', '_site/website/resume/index.html' ]
         }
       }
     },
