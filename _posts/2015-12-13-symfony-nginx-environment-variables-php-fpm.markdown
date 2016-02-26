@@ -1,17 +1,18 @@
 ---
 layout: post
 title: "Symfony environment variables with Nginx and PHP-FPM"
-description: "It's a common thing to use environment variables to configure Symfony for dev, staging, production..."
-keywords: "Symfony, nginx, php-fpm, php, fpm, environment, env, variables, variable, var, apache"
+excerpt: "It's a common thing to use environment variables to configure Symfony for dev, staging, production..."
+tags: [Symfony, nginx, php-fpm, php, fpm, environment, env, variables, variable, var, apache]
 image: symfony.png
-lastmod: "2016-02-15"
+modified: "2016-02-15"
+comments: true
 ---
 
 It's [a common thing](http://symfony.com/doc/current/cookbook/configuration/external_parameters.html) to use environment variables to configure Symfony for dev, staging, production...
 It allows to define specific configurations such as database host username and password, api entrypoint, ...
 without saving those information into files and commiting them,... it's a bad practice and could lead to security problems.
 
-![Symfony](/assets/images/posts/symfony.png)
+![Symfony](/images/posts/symfony.png)
 
 ## Apache
 

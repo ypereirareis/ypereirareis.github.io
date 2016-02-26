@@ -1,17 +1,18 @@
 ---
 layout: post
 title: "Docker image size optimization"
-description: "How to optimize docker image size with simple tricks. Caching layers, minimal base image like alpine or busybox, low number of layers, removing useless files and directories."
-keywords: "docker, image, size, optimization, layers, alpine, busybox, ubuntu, debian, cache, run, from, add"
+excerpt: "How to optimize docker image size with simple tricks. Caching layers, minimal base image like alpine or busybox, low number of layers, removing useless files and directories."
+tags: [docker, image, size, optimization, layers, alpine, busybox, ubuntu, debian, cache, run, from, add]
 image: docker.png
-lastmod: "2016-02-15"
+modified: "2016-02-15"
+comments: true
 ---
 
 Building docker images is pretty easy thanks to dockerfiles. But building **small docker images** is not always easy.
 The cache mechanism is really powerful, but it's also the main problem when dealing with image size optimization.
 Let's take an example and let's see how to improve the dockerfile to improve the image size.
 
-![Docker](/assets/images/posts/docker.png)
+![Docker](/images/posts/docker.png)
 
 # A Dockerfile as example
 
@@ -184,7 +185,7 @@ $ docker export 8ec324116755 | docker import - img_size_optim_flatten:latest
 16ac86fde38629776c0734cbceae22a9da97bd303739e58c5c5261b3376e79d3
 {% endhighlight %}
 
-{% highlight shell %}
+{% highlight bash %}
 $ docker images | grep img_size_optim_flatten 
 img_size_optim_flatten                latest              16ac86fde386        57 seconds ago      504.4 MB
 {% endhighlight %}

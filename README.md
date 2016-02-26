@@ -1,13 +1,14 @@
-# **Yannick PEREIRA-REIS**  
+# Yannick PEREIRA-REIS Blog
 
-[Résumé/CV](resume.md)
+[![Build Status](https://travis-ci.org/ypereirareis/minimal-mistakes.svg?branch=master)](https://travis-ci.org/ypereirareis/minimal-mistakes)
+
+[Résumé/CV](resume/index.md)
 
 
 ## Docker
 
-`./do.sh build` to build the Docker Image
+`make build` to build the Docker Image
 
-`./do.sh install` to build the project and serve it on [http://127.0.0.1:4000](http://127.0.0.1:4000) 
+`make install` to build the project and serve it on [http://127.0.0.1:4000](http://127.0.0.1:4000)
 
-`./do.sh help` to list all available commands
-
+`make jkbuild` to build jekyll

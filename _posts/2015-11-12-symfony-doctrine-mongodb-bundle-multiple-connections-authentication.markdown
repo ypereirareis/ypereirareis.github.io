@@ -1,17 +1,18 @@
 ---
 layout: post
 title: "DoctrineMongoDBBundle multiple connections and authentication"
-description: "DoctrineMongoDBBundle, docker, SASL Authentication failed on database, The service doctrine_mongodb.odm.conn1_connection has a dependency on a non-existent service doctrine_mongodb.odm.conn1_configuration. "
-keywords: "symfony, doctrine, mongo, mongodb, bundle, authentication, auth, authenticated, multuple, connection, connections, docker, error"
+excerpt: "DoctrineMongoDBBundle multiple connections and authentication, SASL Authentication failed on database, the service doctrine_mongodb.odm.conn1_connection has a dependency on a non-existent service doctrine_mongodb.odm.conn1_configuration. "
+tags: [symfony, doctrine, mongo, mongodb, bundle, authentication, auth, authenticated, multuple, connection, connections, docker, error]
 image: symfony.png
-lastmod: "2016-02-15"
+modified: "2016-02-15"
+comments: true
 ---
 
 The DoctrineMongoDbBundle documentation is not really clear. The default configuration with a single connection
 and no authentication works pretty well (as described in the doc), but if we want to work with many authenticated connections,
 it's not really easy to setup because the doc does not explain the configuration clearly.
 
-![Symfony](/assets/images/posts/symfony.png)
+![Symfony](/images/posts/symfony.png)
 
 ## Connection string / server
 

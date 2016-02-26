@@ -1,0 +1,8 @@
+---
+layout: post-index
+title: {{ title }}
+permalink:
+modified:
+excerpt:
+image:
+---

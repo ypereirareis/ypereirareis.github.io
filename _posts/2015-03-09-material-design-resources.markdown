@@ -1,8 +1,10 @@
 ---
 layout: post
 title:  "Material Design Resources"
-description: Material Design Resources
-lastmod: "2016-02-15"
+excerpt: Material Design Resources
+modified: "2016-02-15"
+tags: [material, design, resources, material design resources]
+comments: true
 ---
 
 **Definition:**

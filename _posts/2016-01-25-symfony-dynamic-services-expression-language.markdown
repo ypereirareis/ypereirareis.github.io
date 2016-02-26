@@ -1,16 +1,17 @@
 ---
 layout: post
 title: "Symfony dynamic services with environments or expression language"
-description: "How to create and inject services dynamically with Symfony and expression language based on environment or env variables"
-keywords: "Symfony, dynamic, services, service, expression, language, dependency, injection"
+excerpt: "How to create and inject services dynamically with Symfony and expression language based on environment or env variables"
+tags: [Symfony, dynamic, services, service, expression, language, dependency, injection]
 image: symfony.png
-lastmod: "2016-02-15"
+modified: "2016-02-15"
+comments: true
 ---
 
 There are many use cases where it's useful to inject different services based
 on the Symfony environment or on another param such as an env variable for instance.
 
-![Symfony](/assets/images/posts/symfony.png)
+![Symfony](/images/posts/symfony.png)
 
 **Example 1**
 

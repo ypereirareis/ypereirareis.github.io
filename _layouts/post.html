@@ -1,76 +1,60 @@
----
-layout: default
----
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+{% include _head.html %}
+</head>
 
-<section id="post">
+<body class="post">
 
+{% include _browser-upgrade.html %}
+
+{% include _navigation.html %}
+
+<div id="main" role="main">
+  <div class="article-author-side">
+    {% include _author-bio.html %}
+  </div>
   <article class="post">
-
-    <h1 class="post-title">
-      <a>{{ page.title }}</a>
-    </h1>
-    <!-- title -->
-
-    <div class="post-meta">
-      <ul class="list-inline">
-        <li>
-            {{ page.date | date: "%B" }}
-            {{ page.date | date: "%d" }},
-            {{ page.date | date: "%Y" }}
-        </li>
-        <li>
-          {% if site.share.disqus %}
-          <a href="{{ site.url }}{{ page.url }}#disqus_thread" data-disqus-identifier="{{ page.path }}"></a>
-          {% endif %}
-        </li>
-        <li>
-          <a href="//github.com/{{ site.github_username }}/{{ site.github_username }}.github.io/blob/master/{{ page.path }}" target="_blank"><i class="fa fa-github"></i>&nbsp;Edit this post on GitHub</a>
-        </li>
-      </ul>
-    </div>
-    <!-- meta -->
-
-    <section class="post-content">
-      {{ content }}
-    </section>
-    <!-- content -->
-
-    {% if site.share.twitter or site.share.facebook or site.share.google_plus or site.share.linkedin %}
-      {% assign isPage = true %}
-      {% include share.html %}
-    {% endif %}
-    <!-- share -->
-
-    <footer class="post-footer">
-      {% if site.share.disqus %}
-      <div id="disqus_thread"></div>
+    <div class="headline-wrap">
+      {% if page.link %}
+        <h1><a href="{{ page.link }}">{{ page.title }}</a></h1>
+      {% else %}
+        <h1><a href="{{ site.url }}{{ page.url }}" rel="bookmark" title="{{ page.title }}">{{ page.title }}</a></h1>
       {% endif %}
-    </footer>
-
+    </div><!--/ .headline-wrap -->
+    <div class="article-wrap">
+      {{ content }}
+      <hr />
+      <footer role="contentinfo">
+        {% if page.share != false %}{% include _social-share.html %}{% endif %}
+        <p class="byline"><strong>{{ page.title }}</strong> was published on <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>{% if page.modified %} and last modified on <time datetime="{{ page.modified | date: "%Y-%m-%d" }}">{{ page.modified | date: "%B %d, %Y" }}</time>{% endif %}.</p>
+      </footer>
+    </div><!-- /.article-wrap -->
+  {% if site.owner.disqus-shortname and page.comments == true %}
+    <section id="disqus_thread"></section><!-- /#disqus_thread -->
+  {% endif %}
   </article>
+</div><!-- /#main -->
 
-</section>
+<div class="footer-wrap">
+  <div class="related-articles">
+  <h4>You might also enjoy <small class="pull-right">(<a href="{{ site.url }}/posts/">View all posts</a>)</small></h4>
+    <ul>
+    {% for post in site.related_posts limit:3 %}
+      <li><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
+    {% endfor %}
+    </ul>
+    <hr />
+  </div><!-- /.related-articles -->
+  <footer>
+    {% include _footer.html %}
+  </footer>
+</div><!-- /.footer-wrap -->
 
-{% if site.share.disqus %}
-<script type="text/javascript">
+{% include _scripts.html %}	        
 
-  // Disqus widget
-
-  var disqus_identifier = '{{ page.path }}',
-    disqus_shortname = '{{ site.disqus_username }}',
-    disqus_title = '{{ page.title }}',
-    disqus_url = '{{ page.url | prepend: site.url }}';
-
-  (function() {
-
-    var dsq = document.createElement('script');
-
-    dsq.type = 'text/javascript';
-    dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-
-    ( document.getElementsByTagName('head')[ 0 ] || document.getElementsByTagName('body')[ 0 ] ).appendChild( dsq );
-  })();
-
-</script>
-{% endif %}
+</body>
+</html>

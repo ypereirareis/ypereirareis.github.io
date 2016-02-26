@@ -1,17 +1,18 @@
 ---
 layout: post
 title:  "How to get environment variables in a gulpfile"
-description: "Use an environment variable to build conditional functions in a gulpfile. Really useful for multi-environment configurations."
-keywords: "gulp, gulpfile, environment, variable, vars, variables, tasks, condition, conditions utils, noop"
+excerpt: "Use an environment variable to build conditional functions in a gulpfile. Really useful for multi-environment configurations."
+tags: [gulp, gulpfile, environment, variable, vars, variables, tasks, condition, conditions utils, noop]
 image: gulp.png
-lastmod: "2016-02-15"
+modified: "2016-02-15"
+comments: true
 ---
 
 As describe on the [Gulp website](http://gulpjs.com/), this tool allows you to **automate and enhance your workflow** and is
 **Easy to Learn**, **Easy to use**, **Efficient** and **High Quality**... I totally agree with this.
 But I've been stuck by a small problem in the past few days : how to get an environment variable to build conditional tasks ?
 
-![Gulp](/assets/images/posts/gulp.png)
+![Gulp](/images/posts/gulp.png)
 
 ## Gulp util install
 

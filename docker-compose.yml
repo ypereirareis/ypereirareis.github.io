@@ -1,0 +1,10 @@
+web:
+    image: ypereirareis/jekyll:3.1.2-minimal-mistakes
+    working_dir: /app
+    volumes:
+        - .:/app
+    environment:
+        VIRTUAL_HOST: ypereirareis.github.io.dev.zol.fr
+    ports:
+        - "4000:4000"
+
