@@ -1,4 +1,9 @@
-.idea/
 _site
+.sass-cache
+.DS_Store
+*.sublime-project
+*.sublime-workspace
+codekit-config.json
 node_modules
-bower_components
+_asset_bundler_cache
+.idea/
