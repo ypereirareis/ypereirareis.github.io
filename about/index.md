@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Yannick Pereira-Reis | About me
+title: About me
 excerpt: My name is Yannick Pereira-Reis, and I'm a full stack web developer in Lyon (France).
 tags: [Yannick Pereira-Reis, Yannick, Pereira-Reis, php, Symfony, Symfony2, AngularJs, Docker, Vagrant, Elasticsearch, Lyon]
 lastmod: "2016-02-15"
