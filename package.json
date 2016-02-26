@@ -1,28 +1,25 @@
 {
-  "name": "ypereirareis",
-  "description": "Source code for Yannick PEREIRA-REIS website",
-  "author": "Yannick PEREIRA-REIS",
-  "version": "0.1.0",
-  "copyright": "2015",
-  "url": "http://ypereirareis.github.io",
+  "name": "minimal-mistakes-theme",
+  "author": "Michael Rose <michael@mademistakes.com>",
+  "homepage": "http://mmistakes.github.io/minima-mistakes/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ypereirareis/ypereirareis.github.io.git"
+    "url": "git://github.com/mmistakes/minimal-mistakes.git"
   },
-  "private": true,
-  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ypereirareis/ypereirareis.github.io/issues"
+    "url": "https://github.com/mmistakes/minimal-mistakes/issues"
+  },
+  "engines": {
+    "node": ">= 0.10.0"
   },
   "devDependencies": {
-    "grunt": "^0.4.5",
-    "grunt-contrib-clean": "^0.6.0",
-    "grunt-contrib-concat": "^0.5.0",
-    "grunt-contrib-copy": "^0.7.0",
-    "grunt-contrib-jshint": "^0.10.0",
-    "grunt-contrib-less": "^0.11.4",
-    "grunt-contrib-uglify": "^0.6.0",
-    "grunt-contrib-watch": "^0.6.1",
-    "grunt-uncss": "^0.4.2"
+    "grunt": "~0.4.1",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-jshint": "~0.6.3",
+    "grunt-contrib-uglify": "~0.2.2",
+    "grunt-contrib-watch": "~0.5.2",
+    "grunt-recess": "~0.3.5",
+    "grunt-contrib-imagemin": "~0.2.0",
+    "grunt-svgmin": "~0.2.0"
   }
 }

@@ -1,8 +1,10 @@
 ---
 layout: post
 title:  "Rescue Mode with OVH and Kimsufi"
-description: "Rescue Mode with OVH and Kimsufi"
-lastmod: "2016-02-15"
+excerpt: "Rescue Mode with OVH and Kimsufi"
+tags: [ovh, rescue, mode]
+modified: "2016-02-15"
+comments: true
 ---
 
 I recently made a wrong manipulation on my server removing SSH access for everybody (root and users), then I lost my connection.
@@ -14,15 +16,15 @@ Log into your online OVH/kimsufi account then follow those instructions:
 
 * Click on the **NetBoot** button
 
-![Rescue](/assets/images/posts/rescue1.png)
+![Rescue](/images/posts/rescue1.png)
 
 * Choose the Rescue Mode clicking on the **Rescue** button
 
-![Rescue](/assets/images/posts/rescue2.png)
+![Rescue](/images/posts/rescue2.png)
 
 * On the home page click on the **Reboot** button.
 
-![Rescue](/assets/images/posts/rescue1.png)
+![Rescue](/images/posts/rescue1.png)
 
 Your server will be rebooted in the Rescue Mode and you will receive (by email) a temporary root access password to repare your server.
 
@@ -85,15 +87,15 @@ Log into your online OVH/kimsufi account then follow those instructions:
 
 * Click on the **NetBoot** button
 
-![Rescue](/assets/images/posts/rescue1.png)
+![Rescue](/images/posts/rescue1.png)
 
 * Choose the **Hard drive** mode clicking on the correct button.
 
-![Rescue](/assets/images/posts/rescue2.png)
+![Rescue](/images/posts/rescue2.png)
 
 * On the home page click on the **Reboot** button.
 
-![Rescue](/assets/images/posts/rescue1.png)
+![Rescue](/images/posts/rescue1.png)
 
 
 **Congratulations !**

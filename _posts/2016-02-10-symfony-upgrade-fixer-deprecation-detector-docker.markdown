@@ -1,16 +1,17 @@
 ---
 layout: post
 title: "Symfony 3 upgrade fixer and deprecation detector"
-description: "To upgrade a Symfony project to Symfony 3, some people built different tools to help us"
-keywords: "Symfony, upgrade, fixer, deprecation, deprecator, detector, Symfony3, Symfony 3, docker, tools, php"
+excerpt: "To upgrade a Symfony project to Symfony 3, some people built different tools to help us"
+tags: [Symfony, upgrade, fixer, deprecation, deprecator, detector, Symfony3, Symfony 3, docker, tools, php]
 image: symfony.png
+comments: true
 ---
 
 If you want to upgrade your Symfony project to Symfony 3, you must check many different points.
 There is a page in the Symfony documentation that explains how to
 [upgrade a major version](http://symfony.com/doc/current/cookbook/upgrade/major_version.html).
 
-![Symfony](/assets/images/posts/symfony.png)
+![Symfony](/images/posts/symfony.png)
 
 There are 3 steps to follow to succeed:
 

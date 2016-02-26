@@ -1,52 +1,46 @@
-# your informations
-author:
-  name: Yannick Pereira-Reis
-  description: Full stack web developer <br />(Symfony, AngularJs, Docker, DevOps)
-  picture: /assets/images/avatar.png
+# Site wide configuration
 
+title:            Yannick PEREIRA-REIS
+locale:           en_US
+url:              http://ypereirareis.github.io
 
-description: Full stack web developer in Lyon/France here are my thoughts and writings about Symfony2, AngularJs, Docker, Elasticsearch, gulp, javascript.
-keywords: Lead Dev, Lead Developer, Symfony, Symfony 2, Symfony 3, AngularJs, Angular, Elasticsearch, Docker, Vagrant, composer, php, satis, node, nodejs, npm, reactjs, react, freelance, Lyon, Villeurbanne
-
-# site url
-url: http://ypereirareis.github.io
-
-# site title
-title: Yannick Pereira-Reis - Full stack Lead developer Symfony2 and AngularJs and play with DevOps tools like docker, vagrant, elasticsearch.
-
-# site version
-version: 1.0.0
-
-# number of posts per page
-paginate: 10
-gems: [jekyll-paginate]
-
-# your github username
-github_username: ypereirareis
-
-# Twitter
-twitter_username: "@yannickpr69"
-
-# linkedin url
-linkedin_url: fr.linkedin.com/in/yannickpereirareis
-
-# set true to include or false to exclude share option
-share:
-  twitter: true
-  google_plus: true
-  linkedin: true
-  disqus: true
-  facebook: true
-
-# if share.disqus is true, provide your disqus shortname, the api key and the number of comments to display
-disqus_username: ypereirareisgithubio
-disqus_api_key: XSyglG1uPhzx9toLacpmIqEPcWY6XeZXohwsrLfmDqV8qdPr0EsFkq0prHY3n7Iq
-disqus_recent_comments_to_display: 10
-
-markdown: kramdown
-highlighter: rouge
-lsi:         false
-excerpt_separator: "\n\n"
-exclude: [ 'README.md', 'src/', 'node_modules', 'bower_components', 'package.json', 'bower.json', 'Gruntfile.js' ]
+# Jekyll configuration
 
 permalink: /blog/:year/:month/:day/:title/
+markdown:    kramdown
+highlighter: pygments
+sass:
+  sass_dir: _sass
+  style: compressed
+gems:
+  - jekyll-sitemap
+
+comments: true
+
+highlighter: rouge
+kramdown:
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  enable_coderay: false
+  syntax_highlighter: rouge
+
+# Site owner
+owner:
+  name: Yannick PEREIRA-REIS
+  avatar: author/avatar.png
+  bio: "Full stack developer Symfony2 and AngularJs in Lyon (France), I also play with DevOps tools like Docker, Vagrant, Elasticsearch, Logstash, Kibana, Supervisor, ..."
+  disqus-shortname: ypereirareisgithubio
+  google:
+    analytics: UA-60388348-1
+    verify: 
+    ad-client: 
+    ad-slot: 
+  bing-verify: 
+  twitter: yannickpr69
+  github: ypereirareis
+  linkedin: yannickpereirareis
+
+include: [".htaccess"]
+exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "Gemfile", "Gemfile.lock", "LICENSE", "README.md"]

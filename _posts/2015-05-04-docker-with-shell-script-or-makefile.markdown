@@ -1,15 +1,17 @@
 ---
 layout: post
 title:  "Docker with shell script or Makefile"
-description: Docker with shell script or Makefile to have a higher productivity
+excerpt: Docker with shell script or Makefile to have a higher productivity
+tags: [docker, shell, makefile, make, script]
 image: docker.png
-lastmod: "2016-02-15"
+modified: "2016-02-15"
+comments: true
 ---
 
 Of course [Docker](https://docs.docker.com/) is a fantastic tool that allows us to work more efficiently
 and that offers new perspectives in terms of scalability, infrastructures, deployments,...
 
-![Docker](/assets/images/posts/docker.png)
+![Docker](/images/posts/docker.png)
 
 But first of all, [Docker](https://docs.docker.com/) is used by a lot of people for development
 with many different languages on many different platforms.

@@ -1,16 +1,17 @@
 ---
 layout: post
-title:  "How to merge less, scss and css into a single css file"
-description: "How to merge less, sass and css into a single css file"
-keywords: "gulp, gulpfile, sass, scss, less, css, merge"
+title:  "How to merge less, scss and css into a single css file with gulp"
+excerpt: "It's not always easy to merge less, sass and css into a single css file with gulp"
+tags: [gulp, gulpfile, sass, scss, less, css, merge]
 image: gulp.png
-lastmod: "2016-02-15"
+modified: "2016-02-15"
+comments: true
 ---
 
 Sometimes when working on "frontend tasks" with gulp,
 we need to merge different formats such as **less**, **scss**, **css** into a single minified css file.
 
-![Gulp](/assets/images/posts/gulp.png)
+![Gulp](/images/posts/gulp.png)
 
 ## Modules
 

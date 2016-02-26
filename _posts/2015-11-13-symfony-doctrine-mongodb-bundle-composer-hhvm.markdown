@@ -1,16 +1,17 @@
 ---
 layout: post
 title: "DoctrineMongoDBBundle composer install with Docker and HHVM"
-description: "DoctrineMongoDBBundle can be installed with a composer docker container and HHVM, but it can lead to problems or errors"
-keywords: "symfony, doctrine, mongo, mongodb, bundle, composer, hhvm"
+excerpt: "DoctrineMongoDBBundle can be installed with a composer docker container and HHVM, but it can lead to problems or errors"
+tags: [symfony, doctrine, mongo, mongodb, bundle, composer, hhvm]
 image: symfony.png
-lastmod: "2016-02-15"
+modified: "2016-02-15"
+comments: true
 ---
 
 When working with docker, a common thing is to use a specific docker image/container to run composer.
 And it can be a good thing to run [composer through HHVM](https://github.com/marmelab/docker-composer-hhvm) to increase performance.
 
-![Symfony](/assets/images/posts/symfony.png)
+![Symfony](/images/posts/symfony.png)
 
 ## Composer and DoctrineMongoDBBundle
 
