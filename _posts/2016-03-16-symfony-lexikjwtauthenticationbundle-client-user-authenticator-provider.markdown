@@ -2,7 +2,7 @@
 layout: post
 title: "Symfony client for an API secured with LexikJWTAuthenticationBundle, user authenticator and user provider"
 excerpt: "A simple example of a Symfony client (firewall, user authenticator, user provider, user model) configured to consumed an API protected with JWT token and LexikJWTAuthenticationBundle."
-tags: [Symfony, jwt, token, LexikJWTAuthenticationBundle, client, api, authenticator, providern authentication, auth]
+tags: [Symfony, jwt, token, LexikJWTAuthenticationBundle, client, api, authenticator, provider, authentication, auth]
 image: symfony.png
 comments: true
 ---
@@ -21,15 +21,89 @@ just read and follow step by step [the documentation](https://github.com/lexik/L
 Everything should be fine as the doc is pretty good.
 
 As we use custom roles for our users we need to expose them in the JWT token.
-Indeed we need to add them in our users on the client side.
+Indeed, we need to add them in our users on the client side.
 
 ## User roles in the JWT token
 
-TODO
+Just create a JWT listener:
+
+{% highlight php startinline=true %}
+<?php
+
+namespace AdminBundle\Security;
+
+use Lexik\Bundle\JWTAuthenticationBundle\Event\JWTCreatedEvent;
+use JMS\DiExtraBundle\Annotation as DI;
+
+/**
+ * Class JWTCreatedListener
+ * @package AdminBundle\Security
+ *
+ * @DI\Service("project.listener.jwt_created")
+ * @DI\Tag("kernel.event_listener", attributes = {
+ *   "event" = "lexik_jwt_authentication.on_jwt_created", "method": "onJWTCreated"
+ * })
+ *
+ */
+class JWTCreatedListener
+{
+    /**
+     * @param JWTCreatedEvent $event
+     *
+     * @return void
+     */
+    public function onJWTCreated(JWTCreatedEvent $event)
+    {
+        if (!($request = $event->getRequest())) {
+            return;
+        }
+
+        $user = $event->getUser();
+        $payload       = $event->getData();
+        $payload['roles'] = $user->getRoles();
+
+        $event->setData($payload);
+    }
+}
+
+{% endhighlight %}
 
 ## Auth from query param
 
-Example : FORMS - TODO
+Sometimes you will need to generate forms on the server side, then serialize them into a json response, to be able to show them in the front.
+
+The form action on submission will point to the server side, and it could be difficult to add the JWT token in the headers.
+
+So I advise you to allow JWT authentication with query param.
+
+{% highlight bash %}
+security:
+    firewalls:
+        api:
+            pattern:   ^/api
+            provider: fos_userbundle # or something else
+            stateless: true
+            anonymous: true
+            lexik_jwt:
+                query_parameter:
+                    enabled: true
+                    name:    bearer # or something else
+{% endhighlight %}
+
+Of course when generating your forms views before exposing them to the API, do not forget to add the JWT token as a query string param.
+
+{% highlight html %}
+
+{% raw %}
+<form
+    method="POST"
+    action="{{ url('your_route', {bearer: jwt_token}) }}"
+    {{ form_enctype(form) }}
+>
+    ...
+</form>
+{% endraw %}
+{% endhighlight %}
 
 # Symfony JWT client (authenticator/provider)
 
