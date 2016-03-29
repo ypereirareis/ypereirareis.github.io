@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Doctrine performance tip with MySQL and indexes"
+title: "Doctrine performance tip with MySQL and indexes, parameters type hinting"
 excerpt: "If we do not write DQL queries correctly, we could have big performance problems"
 tags: [doctrine, DQL, inner join, join, index, indexes, mysql]
 image: doctrine.png
@@ -80,7 +80,7 @@ GROUP BY g0_.player_id, g0_.format, g0_.action;
 
 {% endhighlight %}
 
-# Good DQL example
+# Good DQL example (not really actually)
 
 ## DQL Query
 
@@ -165,7 +165,7 @@ mysql> EXPLAIN SELECT g0_.format AS format_0, g0_.action AS action_1, COUNT(g0_.
 * In the first case the created index **IS NOT** used.
 * The index **IS** used in the second case.
 
-# Explanation
+## Explanation
 
 * When an index is created, it takes into account the type of columns used in the index.
 * The player id field is an integer, so the index is created with an integer for the player_id field.
@@ -173,4 +173,37 @@ mysql> EXPLAIN SELECT g0_.format AS format_0, g0_.action AS action_1, COUNT(g0_.
 * In the good DQL example, Doctrine generates an SQL query with `WHERE g0_.player_id = '52'` **AND a join on player table**, the index is used for the inner join !
 
 
-TODO : Add doctrine parameter type
+# The solution, improve your DQL queries with type hinting.
+
+In these two examples, we can see that the generated SQL contains this part `WHERE g1_.id = '52'`.
+
+Actually, THIS IS the problem, not really the join between tables.
+In both DQL queries the `player_id` is used as a string but it should be as an integer.
+
+Always add type hinting to your DQL parameters:
+
+{% highlight php startinline=true %}
+<?php
+
+$qb = $this->doctrine->getRepository('AppBundle:ActionPlayer')
+    ->createQueryBuilder('ap')
+    ->select('ap.format, ap.action, COUNT(ap.player) AS value')
+    ->andWhere('ap.player = :player')->setParameter('player', (int) $player)
+    ->addGroupBy('ap.player')
+    ->addGroupBy('ap.format')
+    ->addGroupBy('ap.action')
+;
+
+{% endhighlight %}
+
+Or you could use the third parameter of the `setParameter()` method:
+
+{% highlight php startinline=true %}
+<?php
+
+->andWhere('ap.player = :player')->setParameter('player', $player, \Doctrine\DBAL\Types\Type::INTEGER)
+
+{% endhighlight %}
+
+**No more join needed to filter by player_id** and the index will be used as it should be.
+
