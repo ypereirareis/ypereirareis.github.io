@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "MySQL INSERT IGNORE alternatives"
-excerpt: "INSERT IGNORE INTO or REPLACE INTO MySQL operations are not really good practices. I advise you to replace with something else to INSERT if not exists"
+excerpt: "INSERT IGNORE INTO or REPLACE INTO MySQL operations are not really good practices. I advise you to replace with something else to INSERT if not exists."
 tags: [mysql, insert, ignore, insert ignore, into, insert into, replace into, replace, insert into select]
 image: mysql.jpg
 comments: true

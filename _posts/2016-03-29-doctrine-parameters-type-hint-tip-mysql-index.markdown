@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Doctrine performance tip with MySQL and indexes, parameters type hinting"
-excerpt: "If we do not write DQL queries correctly, we could have big performance problems"
+excerpt: "If we do not write DQL queries correctly, we could have big performance problems."
 tags: [doctrine, DQL, inner join, join, index, indexes, mysql]
 image: doctrine.png
 comments: true
