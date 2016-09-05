@@ -5,6 +5,7 @@ web:
         - .:/app
     environment:
         VIRTUAL_HOST: ypereirareis.github.io.dev.zol.fr
+        CERT_NAME: perso
     ports:
         - "4000:4000"
 
