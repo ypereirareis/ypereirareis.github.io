@@ -24,8 +24,8 @@ public function testAction()
     $conn->beginTransaction();
     
     try {
-        $everithingIsFine = $this->get('service')->do();
-        if ($everithingIsFine) {
+        $everythingIsFine = $this->get('service')->do();
+        if ($everythingIsFine) {
             $conn->commit();
             return new Response("OK");
         }
@@ -85,9 +85,9 @@ public function testAction()
     $transactionalSuccess = $this->transactionalExec(function()
         use (...)
     {
-        $everithingIsFine = $this->get('service')->do();
+        $everythingIsFine = $this->get('service')->do();
         
-        return $everithingIsFine;
+        return $everythingIsFine;
     });
 
 
