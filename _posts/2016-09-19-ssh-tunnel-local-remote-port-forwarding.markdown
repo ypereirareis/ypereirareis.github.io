@@ -7,7 +7,7 @@ image: openssh.gif
 comments: true
 ---
 
-![Docker](/images/posts/openssh.gif)
+![open ssh](/images/posts/openssh.gif)
 
 To use SSH tunnels, of course you need to have a few things:
 
