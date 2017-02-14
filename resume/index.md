@@ -2,13 +2,13 @@
 layout: page
 title: Yannick Pereira-Reis Resume
 excerpt: full stack developer, lead developer PHP, Symfony2 et AngularJs à Lyon, j'utilise des outils comme Elasticsearch, Vagrant, Ansible, Docker.
-tags: [lead dev, lead developer, lead dev lyon, lead developer lyon, lead dev angularjs, lead dev Symfony, lead dev angularjs lyon, lead dev Symfony lyon, php, mysql, elasticsearch, Symfony 2, Symfony 3, docker, vagrant, composer, AWS, Jenkins, Satis, Scrum, Git/Gitlab, Atoum, Jasmine, Behat, Protractor]
+tags: [lead, dev, developer, lyon, angularjs, angular, vuejs, symfony, php, mysql, elasticsearch, kibana, Symfony 2, Symfony 3, docker, vagrant, composer, AWS, Jenkins, Satis, Scrum, Git/Gitlab, Atoum, Jasmine, Behat, Protractor, sirene]
 permalink: /website/resume/
 modified: "2016-02-15"
 ---
 
 * France > Rhône-Alpes > Lyon/Villeurbanne
-* Full stack developer (AngularJs / Symfony)
+* Full stack developer (AngularJs / VueJs / Symfony)
 * Ingénieur INSA Lyon
 
 Pour plus de détails :
@@ -20,7 +20,7 @@ Pour plus de détails :
 ## Présentation
 
 Passionné par mon métier, je suis en recherche permanente de challenges techniques ou autres.
-Symfony, AngularJs, docker, vagrant,... sont quelques unes de mes technologies de prédilection.
+Symfony, AngularJs, VueJs, docker, vagrant,... sont quelques unes de mes technologies de prédilection.
 
 Au delà de la technique, j'accorde une grande importance à mon environnement et mon cadre de travail
 (valeurs, communication, partage, rigueur, ambiance,...).
@@ -72,7 +72,7 @@ Depuis mars 2015 |
 
 #### Responsabilités :
 
-* Lead dev Symfony2, AngularJS et expert ElasticSearch.
+* Lead dev Symfony2, AngularJS, VueJs et expert ElasticSearch.
 * Animation de conférences/formations en interne.
 * Création du blog technique avec Jekyll et rédaction de contenu.
 * Intégration et déploiement continu (docker, jenkins, gitlab).
@@ -81,14 +81,16 @@ Depuis mars 2015 |
 
 #### Projets :
 
-* Lead Dev Symfony 2 outils de recueil, analyse et statistiques de mains de poker (cartes, gains, mises, pots,...).
-* Lead Dev Symfony 2, outils de gestion d'un centre d'appel (clients, durées communications, coûts, historiques, facturations, ...)
-* Lead Dev Symfony 2, outils de recueil de CV, demandes de formation, devis,...
+* Lead Dev Symfony 2 outil de recueil, analyse et statistiques de mains de poker (cartes, gains, mises, pots,...).
+* Lead Dev Symfony 2, outil de gestion d'un centre d'appel (clients, durées communications, coûts, historiques, facturations, ...)
+* Lead Dev Symfony 2, outil de recueil de CV, demandes de formation, devis,...
+* Dev VueJs / Symfony 3, outil de conception d'arbre de décision (questions, réponses, résultats,... et parcours de l'arbre)
 
 #### Langages / Outils / Frameworks / Méthodes :
 
 * [Symfony2](http://symfony.com/)
 * [AngularJS](https://angularjs.org/) / [ReactJS](http://facebook.github.io/react/) / jQuery
+* [VueJs](https://vuejs.org/)
 * npm / [Bower](http://bower.io/) / Gulp / [Grunt](http://gruntjs.com/)
 * [Docker](https://www.docker.com/)
 * Jenkins

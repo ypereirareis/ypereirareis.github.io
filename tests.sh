@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
+docker network create nginx-proxy || true
 
 make install
 
 NON_BLOG_URLS=4
+
 
 cat _config.yml | grep -v .dev.zol.fr | grep -q https://ypereirareis.github.io
 
