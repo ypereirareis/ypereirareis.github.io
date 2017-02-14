@@ -1,11 +1,19 @@
-web:
+
+version: "2"
+services:
+  web:
     image: ypereirareis/jekyll:3.1.2-minimal-mistakes
     working_dir: /app
     volumes:
-        - .:/app
+      - .:/app
     environment:
-        VIRTUAL_HOST: ypereirareis.github.io.dev.zol.fr
-        CERT_NAME: perso
+      VIRTUAL_HOST: ypereirareis.github.io.dev.zol.fr
+      CERT_NAME: perso
     ports:
-        - "4000:4000"
+      - "127.0.0.1:4000:4000"
+
+networks:
+  default:
+    external:
+      name: nginx-proxy
 
