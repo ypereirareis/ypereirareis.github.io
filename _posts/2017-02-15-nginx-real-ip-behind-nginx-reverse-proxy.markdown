@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Get user real ip in nginx behing nginx reverse proxy"
+title: "Get user real ip in nginx behind nginx reverse proxy"
 excerpt: "Behind a reverse proxy, the user IP we get is often the reverse proxy IP itself. But for obvious reasons it's important to have access to the user real ip address."
 tags: [nginx, reverse, proxy, real, ip, address, user, headers, log, format, x-forwarded-for, x-forwarded-proto, x-real-ip]
 image: nginx.png
