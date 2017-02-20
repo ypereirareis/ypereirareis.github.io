@@ -97,6 +97,18 @@ You also could change log level:
 sed -i '/^;log_level/clog_level = error' "/usr/local/etc/php-fpm.d/www.conf"
 {% endhighlight %}
 
+## Important
+
+Log files must have correct access rights (owner) and must exist:
+
+{% highlight bash %}
+mkdir -p /var/log/php
+touch /var/log/php/fpm-access.log
+touch /var/log/php/fpm-error.log
+chown -R www-data:www-data /var/log/php
+{% endhighlight %}
+
+
 # PHP CLI
 
 To enable php CLI errors, we need to add these lines into the (cli) php.ini file.
