@@ -3,11 +3,11 @@ layout: post
 title: "RabbitMQ high available cluster with docker and HAProxy"
 excerpt: "A docker stack to simulate a RabbitMQ cluster with high availability. HAProxy for load balancing, multi nodes, nodes failure, network partition,..."
 tags: [rabbitmq, rabbit, ha, high, available, exchange, queues, mirroring, cluster, haproxy, swarrot, oldsound, symfony, node, nodes, persistancy, durable]
-image: rabbitmq.png
+image: rabbitmq.jpg
 comments: true
 ---
 
-![Docker](/images/posts/rabbitmq.png)
+![Docker](/images/posts/rabbitmq.jpg)
 
 # TL;DR
 
