@@ -2,7 +2,7 @@
 layout: page
 title: Yannick Pereira-Reis Resume
 excerpt: full stack developer, lead developer PHP, Symfony2 et AngularJs à Lyon, j'utilise des outils comme Elasticsearch, Vagrant, Ansible, Docker.
-tags: [lead, dev, developer, lyon, angularjs, angular, vuejs, symfony, php, mysql, elasticsearch, kibana, Symfony 2, Symfony 3, docker, vagrant, composer, AWS, Jenkins, Satis, Scrum, Git/Gitlab, Atoum, Jasmine, Behat, Protractor, sirene]
+tags: [lead, dev, developer, developpeur, lyon, angularjs, angular, vuejs, symfony, php, mysql, elasticsearch, kibana, Symfony 2, Symfony 3, docker, vagrant, composer, AWS, Jenkins, Satis, Scrum, Git/Gitlab, Atoum, Jasmine, Behat, Protractor, sirene]
 permalink: /website/resume/
 modified: "2016-02-15"
 ---
