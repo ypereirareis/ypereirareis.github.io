@@ -50,4 +50,4 @@ nginx-proxy:
 	@echo "Removing NGINX REVERSE PROXY"
 	@$(shell docker rm -f reverseproxy > /dev/null 2> /dev/null || true)
 	@echo "Starting NGINX REVERSE PROXY"
-	@$(shell docker run -d --name reverseproxy -p 80:80 -p 443:443 -v $(NGINX_CERT_DIR):/etc/nginx/certs -v /var/run/docker.sock:/tmp/docker.sock jwilder/nginx-proxy > /dev/null 2> /dev/null || true)
+	@$(shell docker run -d --name reverseproxy --net=nginx-proxy -p 80:80 -p 443:443 -v $(NGINX_CERT_DIR):/etc/nginx/certs -v /var/run/docker.sock:/tmp/docker.sock jwilder/nginx-proxy > /dev/null 2> /dev/null || true)
