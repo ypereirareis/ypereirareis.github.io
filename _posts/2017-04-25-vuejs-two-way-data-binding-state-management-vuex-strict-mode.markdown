@@ -13,7 +13,7 @@ comments: true
 
 # Two way data binding with VueJS and Vuex
 
-If you don't really know what is two way data binding, let's see a few definitions:
+If you don't really know what two way data binding is, let's see a few definitions:
 
 > Two way binding means that any data-related changes affecting the model are immediately propagated to the matching view(s),
 and that any changes made in the view(s) (say, by the user) are immediately reflected in the underlying model.
@@ -23,16 +23,16 @@ When app data changes, so does the UI, and conversely.
 when properties in the model get updated, so does the UI.
 When UI elements get updated, the changes get propagated back to the model.
 
-It's possible to use two way data binding with javascript frameworks like AngularJs, ReactJs, VueJs....
+It's possible to use two way binding with javascript frameworks like AngularJs, ReactJs, VueJs....
 
 ## Setup state/store with Vuex
 
 Of course, to setup Vuex with Vuejs you need two things:
 
-* A working VueJs project.
+* A fully working VueJs project.
 * Following [Vuex documentation](https://vuex.vuejs.org/en/), beginning with the [installation part](https://vuex.vuejs.org/en/installation.html).
 
-### Let's see here a very simple VueJS/Vuex configuration
+### Let's see a very simple VueJS/Vuex configuration
 
 Click on the *Result* tab to see "VueJs two way binding" in action.
 
@@ -44,7 +44,7 @@ Click on the *Result* tab to see "VueJs two way binding" in action.
 <script async src="//jsfiddle.net/ypereirareis/cpg40rh3/embed/js,html,result/dark/"></script>
 
 
-In this first example, if you open the debug tool of your browser(console), you should see this error message.
+In this first example, if you open the debug tool of your browser (console), you should see this error message.
 
 {% highlight javascript %}
 vue.min.js:6 Error: [vuex] Do not mutate vuex store state outside mutation handlers.
@@ -62,19 +62,19 @@ This error is throw by Vuex, because we have enabled the [Vuex strict mode](http
 
 > This ensures that all state mutations can be explicitly tracked by debugging tools.
 
-We'll talk to this later in the article...
+We'll talk about this later in the article...
 
 ## Is two way data binding a best practice or not ?
 
-### I see one big advantage to use two way data binding:
+### I see one big advantage to use two way binding:
 
-* Real time vue updates thanks to virtual DOM (very fast and not (re)rendering sub components if not needed).
+* Real time view updates thanks to Virtual DOM (very fast and not (re)rendering sub components if not needed).
 
-It suits perfectly for small applications with not too much real time state updates.
+It's perfectly suitable for small applications with not too much real time state updates.
 
 ### But I see many drawbacks too:
 
-* Watchers to update view when model is updated.
+* Watchers needed to update view when model is updated.
 * No way to track model updates in a centralized place.
 * Many places where state can be updated.
 * No way (not really true because we can rely on component watchers) to debounce or filter (or whatever) updates on state.
@@ -100,7 +100,7 @@ an option can be to deep clone the object before updating it with two way bindin
 ## Deep clone and watch
 
 The following few lines show how to deep clone the object and how to see updates on the object and on the deep copy.
-We are using [lodash](https://lodash.com/docs/4.17.4#cloneDeep) to deep clone the object.
+We are using [lodash](https://lodash.com/docs/4.17.4#cloneDeep) to clone the object.
 
 <script async src="//jsfiddle.net/ypereirareis/p1rwn9rb/embed/js,html,result/dark/"></script>
 
@@ -126,7 +126,7 @@ handler: _.debounce(function (user) {
 }, 500), deep: true
 {% endhighlight %}
 
-**Be careful !** You cannot put the debounced function in the mutation itself.
+**Be careful !** You cannot debounce the function in the mutation itself.
 Indeed, the code would be executed within the next event loop cycle, not really in the mutation function.
 The Vuex error will appear again.
 
@@ -150,7 +150,7 @@ What about removing it and relying on one way binding and explicit data updates 
 
 ### What are we doing here ?
 
-* We are not more cloning the object.
+* We are no more cloning the object.
 * We are using one way binding and explicitly updating object properties.
 
 {% highlight html %}
@@ -175,7 +175,7 @@ methods: {
 
 ### After a small refactoring
 
-It's possible to refactor the code to have only one method to update object properties.
+It's possible to refactor the code to have a single method to update object properties.
 
 <script async src="//jsfiddle.net/ypereirareis/cve0dtkb/embed/js,html,result/dark/"></script>
 
@@ -230,21 +230,6 @@ mutations: {
 
 # Conclusion
 
-Two way data binding is really easy to setup with all major javascript frameworks.
+Two way data binding is really easy to setup with all major javascript frameworks (it's often the default behavior).
 It's a very good option for small applications or POC.
 But for very complex UI you should consider using one way data binding and explicit state updates/mutations.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
