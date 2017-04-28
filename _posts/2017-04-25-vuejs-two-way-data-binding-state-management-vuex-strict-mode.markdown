@@ -228,6 +228,46 @@ mutations: {
 }
 {% endhighlight %}
 
+## [EDIT] Two-way Computed Property
+
+You could use a built-in VueJs functionality describred at the end of [this page](https://vuex.vuejs.org/en/forms.html).
+But once again **be careful** because it works only for simple computed properties, not for object (with many depth levels potentially).
+
+So if you have an object with 10 properties to update, you will need to set 10 two way computed properties (each with a get and a set method). It's gonna be a lot more verbose than the previous solution.
+
+**This kinda configuration**
+
+{% highlight javascript %}
+computed: {
+  prop1: {
+    get () {
+      return this.$store.state.obj.prop1
+    },
+    set (value) {
+      this.$store.commit('updateprop1', value)
+    }
+  },
+  prop2: {
+    get () {
+      return this.$store.state.obj.prop2
+    },
+    set (value) {
+      this.$store.commit('updateprop2', value)
+    }
+  },
+  ...
+  ,
+  prop10: {
+    get () {
+      return this.$store.state.obj.prop10
+    },
+    set (value) {
+      this.$store.commit('updateprop10', value)
+    }
+  }
+}
+{% endhighlight %}
+
 # Conclusion
 
 Two way data binding is really easy to setup with all major javascript frameworks (it's often the default behavior).
