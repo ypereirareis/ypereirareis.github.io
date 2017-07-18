@@ -3,7 +3,7 @@ docker network create nginx-proxy || true
 
 make install
 
-NON_BLOG_URLS=4
+NON_BLOG_URLS=5
 
 
 cat _config.yml | grep -v .dev.zol.fr | grep -q https://ypereirareis.github.io

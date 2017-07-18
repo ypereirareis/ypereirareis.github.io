@@ -1,14 +1,17 @@
 ---
 layout: page
-title: Yannick Pereira-Reis Resume
-excerpt: full stack developer, lead developer PHP, Symfony2 et AngularJs à Lyon, j'utilise des outils comme Elasticsearch, Vagrant, Ansible, Docker.
-tags: [lead, dev, developer, developpeur, lyon, angularjs, angular, vuejs, symfony, php, mysql, elasticsearch, kibana, Symfony 2, Symfony 3, docker, vagrant, composer, AWS, Jenkins, Satis, Scrum, Git/Gitlab, Atoum, Jasmine, Behat, Protractor, sirene]
+title: CV Yannick Pereira-Reis
+excerpt: développeur full stack, lead développeur PHP, Symfony2 et AngularJs à Lyon, j'utilise des outils comme Elasticsearch, Vagrant, Ansible, Docker.
+tags: [lead, dev, developer, développeur, lyon, angularjs, angular, vuejs, symfony, php, mysql, elasticsearch, kibana, Symfony 2, Symfony 3, docker, vagrant, composer, AWS, Jenkins, Satis, Scrum, Git/Gitlab, Atoum, Jasmine, Behat, Protractor, sirene]
 permalink: /website/resume/
 modified: "2016-02-15"
 ---
 
+<img class="no-border" src="../../images/resume/uk-flag.png" alt="english version">
+**[English Version](/website/resume/en)**
+
 * France > Rhône-Alpes > Lyon/Villeurbanne
-* Full stack developer (AngularJs / VueJs / Symfony)
+* Développeur full stack (AngularJs / VueJs / Symfony)
 * Ingénieur INSA Lyon
 
 Pour plus de détails :
@@ -17,7 +20,7 @@ Pour plus de détails :
 * [Ma formation](#formation)
 * [Mes passions](#passions)
 
-## Présentation
+## Présentation (développeur full stack)
 
 Passionné par mon métier, je suis en recherche permanente de challenges techniques ou autres.
 Symfony, AngularJs, VueJs, docker, vagrant,... sont quelques unes de mes technologies de prédilection.
@@ -59,7 +62,7 @@ Mes articles en dehors de ce blog :
 
 <small>
 Depuis mars 2015 |
-**LeadDev Symfony2/AngularJS, Scrum Master** |
+**Lead développeur Symfony2/AngularJS, Scrum Master** |
 *Lyon*
 </small>
 
@@ -72,7 +75,7 @@ Depuis mars 2015 |
 
 #### Responsabilités :
 
-* Lead dev Symfony2, AngularJS, VueJs et expert ElasticSearch.
+* Lead développeur Symfony2, AngularJS, VueJs et expert ElasticSearch.
 * Animation de conférences/formations en interne.
 * Création du blog technique avec Jekyll et rédaction de contenu.
 * Intégration et déploiement continu (docker, jenkins, gitlab).
@@ -81,9 +84,9 @@ Depuis mars 2015 |
 
 #### Projets :
 
-* Lead Dev Symfony 2 outil de recueil, analyse et statistiques de mains de poker (cartes, gains, mises, pots,...).
-* Lead Dev Symfony 2, outil de gestion d'un centre d'appel (clients, durées communications, coûts, historiques, facturations, ...)
-* Lead Dev Symfony 2, outil de recueil de CV, demandes de formation, devis,...
+* Lead développeur Symfony 2 outil de recueil, analyse et statistiques de mains de poker (cartes, gains, mises, pots,...).
+* Lead développeur Symfony 2, outil de gestion d'un centre d'appel (clients, durées communications, coûts, historiques, facturations, ...)
+* Lead développeur Symfony 2, outil de recueil de CV, demandes de formation, devis,...
 * Dev VueJs / Symfony 3, outil de conception d'arbre de décision (questions, réponses, résultats,... et parcours de l'arbre)
 
 #### Langages / Outils / Frameworks / Méthodes :

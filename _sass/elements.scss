@@ -28,6 +28,9 @@ article img {
     margin: 20px 5px;
     padding: 5px;
     border: 1px solid #ccc;
+    &.no-border {
+      border:none;
+    }
 }
 
 svg:not(:root) {
