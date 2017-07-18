@@ -39,7 +39,7 @@ bash:
 	@echo "$(step) Bash $(project) $(step)"
 	@$(compose) run --rm web bash
 
-NGINX_CERT_DIR=~/.zol/nginx/certs
+NGINX_CERT_DIR=~/.ariase/nginx/certs
 
 gen-ssl-certificate:
 	sudo openssl genrsa -out $(NGINX_CERT_DIR)/perso.key 2048
