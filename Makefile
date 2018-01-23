@@ -3,23 +3,23 @@ project=Blog YPEREIRAREIS
 projectCompose=blog-ypereirareis
 compose = docker-compose -p $(projectCompose)
 
-install: remove jkbuild jkserve
+install: remove bundle jkbuild jkserve
 
 bundle:
 	@echo "$(step) Bundler $(step)"
-	@$(compose) run --rm web bash -ci '\
+	@$(compose) run --rm web /bin/bash -l -c '\
                 bundle install --path vendor/bundle && \
                     bundle check && \
                     bundle update'
 
 jkbuild:
 	@echo "$(step) Jekyll build $(step)"
-	@$(compose) run --rm web bash -ci '\
+	@$(compose) run --rm web /bin/bash -l -c '\
 		bundle exec jekyll build'
 
 jkserve:
 	@echo "$(step) Jekyll Serve $(step)"
-	@$(compose) up -d web
+	@$(compose) run --service-ports web /bin/bash -c 'source /etc/profile.d/rvm.sh && bundle exec jekyll serve -H0.0.0.0'
 
 start: stop jkbuild jkserve
 
@@ -37,7 +37,7 @@ remove: stop
 
 bash:
 	@echo "$(step) Bash $(project) $(step)"
-	@$(compose) run --rm web bash
+	@$(compose) run --rm web /bin/bash -l
 
 NGINX_CERT_DIR=~/.ariase/nginx/certs
 
