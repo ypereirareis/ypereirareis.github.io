@@ -16,7 +16,7 @@ if [ $? != "0" ]; then
 fi
 
 
-SITEMAP_COUNT=`cat _site/sitemap.xml| grep -o "https:\/\/[^<]*" | grep -v www.w3.org | wc -l`
+SITEMAP_COUNT=`cat _site/sitemap.xml| grep -E "https?:\/\/[^<]*" | grep -v www.w3.org | wc -l`
 echo "---------------------------------------"
 echo "$SITEMAP_COUNT URLs in the site map"
 echo "---------------------------------------"

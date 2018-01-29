@@ -7,26 +7,24 @@ install: remove bundle jkbuild jkserve
 
 bundle:
 	@echo "$(step) Bundler $(step)"
-	@$(compose) run --rm web /bin/bash -l -c '\
-                bundle install --path vendor/bundle && \
+	@$(compose) run --rm web /bin/bash -ci '\
+                bundle install && \
                     bundle check && \
                     bundle update'
 
 jkbuild:
 	@echo "$(step) Jekyll build $(step)"
-	@$(compose) run --rm web /bin/bash -l -c '\
-		bundle exec jekyll build'
+	@$(compose) run --rm web jekyll build
 
 jkserve:
 	@echo "$(step) Jekyll Serve $(step)"
-	@$(compose) run --service-ports web /bin/bash -c 'source /etc/profile.d/rvm.sh && bundle exec jekyll serve -H0.0.0.0'
+	@$(compose) up -d web
 
 start: stop jkbuild jkserve
 
 stop:
 	@echo "$(step) Stopping $(project) $(step)"
 	@$(compose) stop
-
 state:
 	@echo "$(step) Etat $(project) $(step)"
 	@$(compose) ps

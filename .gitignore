@@ -9,3 +9,4 @@ _asset_bundler_cache
 .idea/
 .bundle/
 vendor/
+cache/
