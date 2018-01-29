@@ -35,7 +35,12 @@ remove: stop
 
 bash:
 	@echo "$(step) Bash $(project) $(step)"
-	@$(compose) run --rm web /bin/bash -l
+	@$(compose) run --rm web /bin/bash
+
+tests:
+	@echo "$(step) Bash $(project) $(step)"
+	@$(compose) run -u jekyll --rm web /bin/bash -c './tests.sh'
+
 
 NGINX_CERT_DIR=~/.ariase/nginx/certs
 

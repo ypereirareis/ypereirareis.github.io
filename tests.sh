@@ -20,7 +20,7 @@ SITEMAP_COUNT=`cat _site/sitemap.xml| grep -E "https?:\/\/[^<]*" | grep -v www.w
 echo "---------------------------------------"
 echo "$SITEMAP_COUNT URLs in the site map"
 echo "---------------------------------------"
-cat _site/sitemap.xml| grep -o "http:\/\/[^<]*" | grep -v www.w3.org
+cat _site/sitemap.xml| grep -E "https?:\/\/[^<]*" | grep -v www.w3.org
 echo "---------------------------------------"
 echo ""
 echo ""
