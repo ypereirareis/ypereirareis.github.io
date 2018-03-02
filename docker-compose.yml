@@ -2,18 +2,16 @@
 version: "2"
 services:
   web:
-    image: ypereirareis/jekyll:3.1.2-minimal-mistakes
-    working_dir: /app
+    image: jekyll/jekyll:3.6
+    working_dir: /srv/jekyll
+    command: jekyll serve -H0.0.0.0
     volumes:
-      - .:/app
+      - .:/srv/jekyll
+      - ./cache:/usr/local/bundle
     environment:
-      VIRTUAL_HOST: ypereirareis.github.io.dev.zol.fr
-      CERT_NAME: perso
+      - JEKYLL_UID=${JEKYLLUID}
+      - JEKYLL_GID=${JEKYLLGID}
     ports:
       - "127.0.0.1:4000:4000"
 
-networks:
-  default:
-    external:
-      name: nginx-proxy
 

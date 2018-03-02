@@ -6,7 +6,7 @@
 
 ## Docker
 
-Build with a [Jekyll 2.1.3 docker image](https://github.com/ypereirareis/docker-jekyll)
+Built with a [Jekyll 3.6.0 docker image](https://github.com/envygeeks/jekyll-docker)
 
 `make build` to build the Docker Image
 

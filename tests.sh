@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 docker network create nginx-proxy || true
 
+echo "========================================================================================================="
+id -u
+id -g
+
 make install
 
 NON_BLOG_URLS=5
@@ -16,11 +20,11 @@ if [ $? != "0" ]; then
 fi
 
 
-SITEMAP_COUNT=`cat _site/sitemap.xml| grep -o "https:\/\/[^<]*" | grep -v www.w3.org | wc -l`
+SITEMAP_COUNT=`cat _site/sitemap.xml| grep -E "https?:\/\/[^<]*" | grep -v www.w3.org | wc -l`
 echo "---------------------------------------"
 echo "$SITEMAP_COUNT URLs in the site map"
 echo "---------------------------------------"
-cat _site/sitemap.xml| grep -o "http:\/\/[^<]*" | grep -v www.w3.org
+cat _site/sitemap.xml| grep -E "https?:\/\/[^<]*" | grep -v www.w3.org
 echo "---------------------------------------"
 echo ""
 echo ""
