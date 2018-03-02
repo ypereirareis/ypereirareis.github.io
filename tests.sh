@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 docker network create nginx-proxy || true
 
+echo "========================================================================================================="
+id -u
+id -g
+
 make install
 
 NON_BLOG_URLS=5

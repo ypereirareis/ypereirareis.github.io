@@ -1,5 +1,10 @@
 sudo: required
 
+env:
+  global:
+    - JEKYLLUID=2000
+    - JEKYLLGID=2000
+
 language: bash
 
 services:
