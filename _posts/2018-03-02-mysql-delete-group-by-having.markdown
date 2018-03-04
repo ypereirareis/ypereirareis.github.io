@@ -44,6 +44,12 @@ ids_to_delete
 
 To do this we use the `FIND_IN_SET()` function.
 
+> **[EDIT 1] (David Gurba)**<br />
+> [group_concat_max_len](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_group_concat_max_len):
+> The maximum permitted result length in bytes for the GROUP_CONCAT() function. The default is 1024.<br />
+> SET SESSION group_concat_max_len=4294967295;<br />
+> SET GLOBAL group_concat_max_len=18446744073709551615;
+
 
 ```shell
 DELETE FROM table
