@@ -5,6 +5,8 @@ echo "==========================================================================
 id -u
 id -g
 
+docker network create webproxy || true
+
 make install
 
 NON_BLOG_URLS=5
