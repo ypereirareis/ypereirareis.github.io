@@ -4,6 +4,8 @@ services:
   web:
     image: jekyll/jekyll:3.6
     working_dir: /srv/jekyll
+    networks:
+      - webproxy
     command: jekyll serve -H0.0.0.0
     volumes:
       - .:/srv/jekyll
@@ -11,7 +13,12 @@ services:
     environment:
       - JEKYLL_UID=${JEKYLLUID}
       - JEKYLL_GID=${JEKYLLGID}
+      - VIRTUAL_HOST=${VHOST}
+      - VIRTUAL_PORT=4000
     ports:
       - "127.0.0.1:4000:4000"
 
-
+networks:
+  webproxy:
+    external:
+      name: ${PROXY_NETWORK}
