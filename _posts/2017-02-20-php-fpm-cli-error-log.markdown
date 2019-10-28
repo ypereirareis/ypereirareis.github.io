@@ -5,6 +5,7 @@ excerpt: "Logging errors is something essential. Let's see how to do it with php
 tags: [php, fpm, php-fpm, cli, php-cli, error, errors, log, logs]
 image: php-fpm.gif
 comments: true
+last_modified_at: "2020-04-09"
 ---
 
 ![Docker](/images/posts/php-fpm.gif)

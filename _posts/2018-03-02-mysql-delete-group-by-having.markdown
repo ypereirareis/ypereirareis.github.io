@@ -5,6 +5,7 @@ excerpt: "With MySQL, DELETE operations are not always easy (join, sub queries,.
 tags: [mysql, delete, group by, having, sub select]
 image: mysql.jpg
 comments: true
+last_modified_at: "2020-04-09"
 ---
 
 ![Docker](/images/posts/mysql.jpg)

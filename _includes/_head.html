@@ -6,6 +6,14 @@
   {% assign author = site.data.authors[page.author] %}{% else %}{% assign author = site.owner %}
 {% endif %}
 
+<link rel="preconnect" href="https://c.disquscdn.com" />
+<link rel="preconnect" href="//ypereirareisgithubio.disqus.com" />
+<link rel="preconnect" href="//fonts.googleapis.com" />
+<link rel="dns-prefetch" href="https://c.disquscdn.com" />
+<link rel="dns-prefetch" href="//ypereirareisgithubio.disqus.com" />
+<link rel="dns-prefetch" href="//fonts.googleapis.com" />
+
+
 {% include _open-graph.html %}
 
 {% if site.owner.google.verify %}<!-- Webmaster Tools verfication -->
@@ -22,7 +30,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!-- For all browsers -->
-<link rel="stylesheet" href="{{ site.url }}/assets/css/main.css">
+<link rel="preload" href="{{ site.url }}/assets/css/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="{{ site.url }}/assets/css/main.css"></noscript>
 
 <meta http-equiv="cleartype" content="on">
 
@@ -32,10 +41,15 @@
 	<script src="{{ site.url }}/assets/js/vendor/respond.min.js" defer></script>
 <![endif]-->
 
+
 <!-- Modernizr -->
 <script src="{{ site.url }}/assets/js/vendor/modernizr-2.7.1.custom.min.js" defer></script>
 
-<link href='//fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700%7CPT+Serif:400,700,400italic' rel='stylesheet' type='text/css'>
+
+
+<link rel="preload" href="//fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700%7CPT+Serif:400,700,400italic" as="style" onload="this.onload=null;this.rel='stylesheet';this.type='text/css'">
+<noscript><link type='text/css' rel="stylesheet" href="//fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700%7CPT+Serif:400,700,400italic"></noscript>
+
 
 <!-- Icons -->
 <link rel="apple-touch-icon" sizes="57x57" href="{{ site.url }}/images/apple-icon-57x57.png">

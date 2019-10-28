@@ -5,6 +5,7 @@ excerpt: Docker with shell script or Makefile to have a higher productivity
 tags: [docker, shell, makefile, make, script]
 image: docker.gif
 modified: "2020-04-09"
+last_modified_at: "2020-04-09"
 comments: true
 ---
 

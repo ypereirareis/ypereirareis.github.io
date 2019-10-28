@@ -5,6 +5,7 @@ excerpt: "It can be really useful to use ssh tunnels and local port forwarding t
 tags: [tunnel, tunnels, ssh, remote, local, port, forwarding, dynamic, databases, firewall, private]
 image: openssh.gif
 comments: true
+last_modified_at: "2020-04-09"
 ---
 
 ![open ssh](/images/posts/openssh.gif)

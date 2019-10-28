@@ -5,6 +5,7 @@ excerpt: "Two way data binding is really easy with VueJS and has very good perfo
 tags: [vuejs, vuex, strict, mode, binding, state, store, clone, mutation]
 image: vuejs.jpg
 comments: true
+last_modified_at: "2020-04-09"
 ---
 
 ![Docker](/images/posts/vuejs.jpg)

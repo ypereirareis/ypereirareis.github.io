@@ -5,6 +5,7 @@ excerpt: "This is a problem when you want to run PHP-FPM in a docker container w
 tags: [php, fpm, php-fpm, truncated, logs, warning, child, stderr, pool, 7.0, 7.1, 7.2, 7.3]
 image: php-fpm.gif
 comments: true
+last_modified_at: "2020-04-09"
 ---
 
 ![PHP-FPM](/images/posts/php-fpm.gif)

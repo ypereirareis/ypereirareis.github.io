@@ -5,6 +5,7 @@ excerpt: "It's often really useful to get and store real user ip address of user
 tags: [nginx, haproxy, client, ip, address, real, header, forwardfor ]
 image: haproxy.gif
 comments: true
+last_modified_at: "2020-04-09"
 ---
 
 ![Docker](/images/posts/haproxy.gif)

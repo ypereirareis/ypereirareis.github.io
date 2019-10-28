@@ -5,6 +5,7 @@ excerpt: "Always prefix your tables with a prefix to avoid naming conflicts. You
 tags: [doctrine, table, tables, prefix, prefixes, automatic, automatically, bundles, bundle, subscriber, service, symfony]
 image: symfony.gif
 modified: "2020-04-09"
+last_modified_at: "2020-04-09"
 comments: true
 ---
 

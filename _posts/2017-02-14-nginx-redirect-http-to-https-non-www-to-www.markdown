@@ -5,6 +5,7 @@ excerpt: "For SEO and security reasons it's important to set SSL/HTTPS on web se
 tags: [nginx, redirect, forward, ssl, https, http, www, non-www, encryption]
 image: nginx.gif
 comments: true
+last_modified_at: "2020-04-09"
 ---
 
 ![Docker](/images/posts/nginx.gif)

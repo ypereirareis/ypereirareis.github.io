@@ -5,6 +5,7 @@ excerpt: "A docker stack to simulate a RabbitMQ cluster with high availability. 
 tags: [rabbitmq, rabbit, ha, high, available, exchange, queues, mirroring, cluster, haproxy, swarrot, oldsound, symfony, node, nodes, persistancy, durable]
 image: rabbitmq.jpg
 comments: true
+last_modified_at: "2020-04-09"
 ---
 
 ![Docker](/images/posts/rabbitmq.jpg)

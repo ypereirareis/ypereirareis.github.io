@@ -5,6 +5,7 @@ excerpt: "You are on the good page if you want to know how to do a redirect with
 tags: [haproxy, redirect, permanent, cache, no-cache, no-store, cache-control, max-age, must-revalidate]
 image: haproxy.gif
 comments: true
+last_modified_at: "2020-04-09"
 ---
 
 ![Docker](/images/posts/haproxy.gif)

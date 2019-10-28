@@ -4,6 +4,7 @@ title: "Composer, Satis and docker"
 excerpt: "Thanks to Composer, Satis, satisfy and docker it's really easy to host and use private git repositories"
 tags: [composer, satis, docker, satisfy, repository, repositories, git, packagist, github, gitlab, bitbucket]
 modified: "2020-04-09"
+last_modified_at: "2020-04-09"
 comments: true
 ---
 

@@ -5,6 +5,7 @@ excerpt: "How to use docker environment variables from a crontab running inside 
 tags: [docker, crontab, cron, environment, variables, env, vars, var, source]
 image: docker.gif
 comments: true
+last_modified_at: "2020-04-09"
 ---
 
 Docker allows us to pass environment variables into running containers, and there are mainly two ways of doing this:

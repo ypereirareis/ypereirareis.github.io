@@ -5,6 +5,7 @@ excerpt: "When deploying a projet it's a very common case to have 502 Bad gatewa
 tags: [nginx, error, 502, bad gateway, php-fpm, php, fpm, dns, dynamic, domain name, resolution, connection refused, server failure, no route to host]
 image: nginx.gif
 comments: true
+last_modified_at: "2020-04-09"
 ---
 
 ![PHP-FPM](/images/posts/nginx.gif)

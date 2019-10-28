@@ -5,6 +5,7 @@ excerpt: "When aggregating metrics from many sources or exporters in a Prometheu
 tags: [prometheus, grafana, join, metric, metrics, label, labels, instance, promQL, database, exporter, node exporter]
 image: prometheus.jpg
 comments: true
+last_modified_at: "2020-04-09"
 ---
 
 ![Prometheus](/images/posts/prometheus.jpg)

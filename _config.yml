@@ -14,6 +14,7 @@ sass:
   style: compressed
 plugins:
   - jekyll-sitemap
+  - jekyll-gzip
 
 comments: true
 
@@ -30,7 +31,7 @@ kramdown:
 # Site owner
 owner:
   name: Yannick Pereira-Reis
-  avatar: author/avatar.png
+  avatar: author/avatar.jpg
   bio: "DevOps (docker swarm, haproxy, CI/CD, ELK, prometheus, grafana, ansible, automation, RabbitMQ, LVM, MySQL replication...) and fullstack web developer Symfony 2/3/4/5 + VueJs in Valence (France)."
   disqus-shortname: ypereirareisgithubio
   google:

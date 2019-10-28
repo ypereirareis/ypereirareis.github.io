@@ -5,6 +5,7 @@ excerpt: "Use an environment variable to build conditional functions in a gulpfi
 tags: [gulp, gulpfile, environment, variable, vars, variables, tasks, condition, conditions utils, noop]
 image: gulp.gif
 modified: "2020-04-09"
+last_modified_at: "2020-04-09"
 comments: true
 ---
 
