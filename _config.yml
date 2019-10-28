@@ -30,7 +30,7 @@ kramdown:
 owner:
   name: Yannick PEREIRA-REIS
   avatar: author/avatar.png
-  bio: "Full stack web developer Symfony2, VueJs and AngularJs in Lyon (France), I also play with DevOps tools like Docker, Vagrant, Elasticsearch, Logstash, Kibana, Supervisor, ..."
+  bio: "DevOps (docker swarm, haproxy, CI/CD, ELK, prometheus, grafana, ansible, automation, RabbitMQ, LVM, MySQL replication...) and fullstack web developer Symfony 2/3/4/5 + VueJs in Valence (France)."
   disqus-shortname: ypereirareisgithubio
   google:
     analytics: UA-60388348-1
