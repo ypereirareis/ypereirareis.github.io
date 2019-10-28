@@ -5,6 +5,7 @@ excerpt: "When working with docker, docker-compose and links or external link, i
 tags: [docker, alias, external, links, local, hosts, container, compose, mailcatcher]
 image: docker.gif
 modified: "2020-04-09"
+last_modified_at: "2020-04-09"
 comments: true
 ---
 

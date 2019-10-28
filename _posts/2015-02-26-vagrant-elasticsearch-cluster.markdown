@@ -4,6 +4,7 @@ title:  "Vagrant elasticsearch cluster"
 excerpt: Vagrant elasticsearch cluster made easy.
 tags: [vagrant, elasticsearch, cluster, vm, virtual machine]
 modified: "2020-04-09"
+last_modified_at: "2020-04-09"
 comments: true
 ---
 

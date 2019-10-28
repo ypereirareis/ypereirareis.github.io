@@ -5,6 +5,7 @@ excerpt: "A docker image entry point not following this simple rule will not be 
 tags: [docker, entrypoint, entry, point, cmd]
 image: docker.gif
 comments: true
+last_modified_at: "2020-04-09"
 ---
 
 ![Docker](/images/posts/docker.gif)

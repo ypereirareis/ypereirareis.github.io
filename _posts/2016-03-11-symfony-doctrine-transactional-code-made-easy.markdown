@@ -5,6 +5,7 @@ excerpt: "When doing multiple database operations in a single http request, comm
 tags: [Symfony, doctrine, transaction, transactional, easy, callable, anonymous, function]
 image: symfony.gif
 comments: true
+last_modified_at: "2020-04-09"
 ---
 
 When doing multiple database operations in a single http request, command line, method,...

@@ -5,6 +5,7 @@ excerpt: "INSERT IGNORE INTO or REPLACE INTO MySQL operations are not really goo
 tags: [mysql, insert, ignore, insert ignore, into, insert into, replace into, replace, insert into select]
 image: mysql.jpg
 comments: true
+last_modified_at: "2020-04-09"
 ---
 
 It's not always really easy to deal with "INSERT if not exists" operations.

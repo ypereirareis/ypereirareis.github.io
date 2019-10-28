@@ -5,6 +5,7 @@ excerpt: "If we do not write DQL queries correctly, we could have big performanc
 tags: [doctrine, DQL, inner join, join, index, indexes, mysql]
 image: doctrine.gif
 comments: true
+last_modified_at: "2020-04-09"
 ---
 
 As you may know, [Doctrine](http://www.doctrine-project.org/) can be a very good ally, but if we do not use it correctly

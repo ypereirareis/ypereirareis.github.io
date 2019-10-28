@@ -4,6 +4,8 @@ title: "Symfony 3 upgrade fixer and deprecation detector"
 excerpt: "To upgrade a Symfony project to Symfony 3, some people built different tools to help us"
 tags: [Symfony, upgrade, fixer, deprecation, deprecator, detector, Symfony3, Symfony 3, docker, tools, php]
 image: symfony.gif
+modified: "2020-04-09"
+last_modified_at: "2020-04-09"
 comments: true
 ---
 

@@ -5,6 +5,7 @@ excerpt: "A list of things to do or check to configure docker-machine (generic d
 tags: [docker, machine, docker-machine, daemon, driver, generic, devicemapper, container]
 image: docker.gif
 comments: true
+last_modified_at: "2020-04-09"
 ---
 
 [docker-machine](https://docs.docker.com/machine/) is a really powerful tool to control your remote docker daemons.

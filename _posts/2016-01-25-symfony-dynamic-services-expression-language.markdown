@@ -5,6 +5,7 @@ excerpt: "How to create and inject services dynamically with Symfony and express
 tags: [Symfony, dynamic, services, service, expression, language, dependency, injection]
 image: symfony.gif
 modified: "2020-04-09"
+last_modified_at: "2020-04-09"
 comments: true
 ---
 

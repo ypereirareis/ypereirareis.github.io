@@ -5,6 +5,7 @@ excerpt: "DoctrineMongoDBBundle can be installed with a composer docker containe
 tags: [symfony, doctrine, mongo, mongodb, bundle, composer, hhvm]
 image: symfony.gif
 modified: "2020-04-09"
+last_modified_at: "2020-04-09"
 comments: true
 ---
 

@@ -5,6 +5,7 @@ excerpt: "How to optimize docker image size with simple tricks. Caching layers, 
 tags: [docker, image, size, optimization, layers, alpine, busybox, ubuntu, debian, cache, run, from, add]
 image: docker.gif
 modified: "2020-04-09"
+last_modified_at: "2020-04-09"
 comments: true
 ---
 

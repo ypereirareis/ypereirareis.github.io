@@ -5,6 +5,7 @@ excerpt: "It's a common thing to use environment variables to configure Symfony 
 tags: [Symfony, nginx, php-fpm, php, fpm, environment, env, variables, variable, var, apache]
 image: symfony.gif
 modified: "2020-04-09"
+last_modified_at: "2020-04-09"
 comments: true
 ---
 

@@ -5,6 +5,7 @@ excerpt: "Factor number 3 of twelve-factor app methodology recommands to store c
 tags: [docker, compose, docker-compose, env, file, environment, swarm, stack, stacks, service, services, twelve-factor, twelve, factor]
 image: docker.gif
 comments: true
+last_modified_at: "2020-04-09"
 ---
 
 ![PHP-FPM](/images/posts/docker.svg)

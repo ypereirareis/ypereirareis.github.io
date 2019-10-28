@@ -5,6 +5,7 @@ excerpt: "Running cron jobs in docker containers will lead you to some very comm
 tags: [cron, crontab, job, jobs, docker, container, running, error, errors, logs, log, syslog, rsyslog, chown, extension, filename, variables, environment, syntax, mail, spool]
 image: crontab.png
 comments: true
+last_modified_at: "2020-04-09"
 ---
 
 ![Crontab](/images/posts/crontab.png)

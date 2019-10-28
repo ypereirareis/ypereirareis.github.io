@@ -5,6 +5,7 @@ excerpt: "A simple example of a Symfony client (firewall, user authenticator, us
 tags: [Symfony, jwt, token, LexikJWTAuthenticationBundle, client, api, authenticator, provider, authentication, auth]
 image: symfony.gif
 comments: true
+last_modified_at: "2020-04-09"
 ---
 
 We can find on the internet many examples on how to implements a client consuming API authenticated with JWT.
