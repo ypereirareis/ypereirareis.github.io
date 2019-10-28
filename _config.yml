@@ -1,7 +1,6 @@
 # Site wide configuration
 
 title:            Yannick Pereira-Reis
-description:      DevOps and fullstack developer (Docker, Symfony, VueJs, NodeJs,...) in Valence or in remote.
 locale:           en_US
 url:              https://ypereirareis.github.io
 
