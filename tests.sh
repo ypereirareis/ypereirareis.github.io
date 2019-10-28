@@ -9,7 +9,7 @@ docker network create webproxy || true
 
 make install
 
-NON_BLOG_URLS=5
+NON_BLOG_URLS=4
 
 
 cat _config.yml | grep -v .dev.zol.fr | grep -q https://ypereirareis.github.io
