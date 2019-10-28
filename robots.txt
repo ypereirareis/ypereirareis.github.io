@@ -1,2 +1,4 @@
 User-Agent: *
 Disallow:
+
+Sitemap: https://ypereirareis.github.io/sitemap.xml
