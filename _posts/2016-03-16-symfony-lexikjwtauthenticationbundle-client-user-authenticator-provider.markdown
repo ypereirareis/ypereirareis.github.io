@@ -3,7 +3,7 @@ layout: post
 title: "Symfony client for an API secured with LexikJWTAuthenticationBundle, user authenticator and user provider"
 excerpt: "A simple example of a Symfony client (firewall, user authenticator, user provider, user model) configured to consumed an API protected with JWT token and LexikJWTAuthenticationBundle."
 tags: [Symfony, jwt, token, LexikJWTAuthenticationBundle, client, api, authenticator, provider, authentication, auth]
-image: symfony.png
+image: symfony.gif
 comments: true
 ---
 
@@ -11,7 +11,7 @@ We can find on the internet many examples on how to implements a client consumin
 But impossible to find one based on Symfony and how to configure firewall, user provider, user authenticator and a user model.
 So let's see how to do it.
 
-![Symfony](/images/posts/symfony.png)
+![Symfony](/images/posts/symfony.gif)
 
 
 # LexikJWTAuthenticationBundle Server side

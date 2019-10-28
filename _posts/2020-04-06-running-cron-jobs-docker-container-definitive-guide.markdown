@@ -3,11 +3,11 @@ layout: post
 title: "Definitive guide on how to setup up and running cron jobs in docker containers"
 excerpt: "Running cron jobs in docker containers will lead you to some very common problems, and sometimes without any errors or logs. Let's see all the steps to properly configure and run cron jobs in a docker container."
 tags: [cron, crontab, job, jobs, docker, container, running, error, errors, logs, log, syslog, rsyslog, chown, extension, filename, variables, environment, syntax, mail, spool]
-image: crontab.png
+image: crontab.gif
 comments: true
 ---
 
-![Crontab](/images/posts/crontab.png)
+![Crontab](/images/posts/crontab.gif)
 
 # TLDR: My cron jobs are not running in my docker container. I don't know why and it's impossible to find any logs anywhere.
 

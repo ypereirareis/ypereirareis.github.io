@@ -3,11 +3,11 @@ layout: post
 title: "Nginx redirect http to https and non www to www"
 excerpt: "For SEO and security reasons it's important to set SSL/HTTPS on web servers and websites. It's important to avoid duplicate content for www and non www urls. Redirect http to https."
 tags: [nginx, redirect, forward, ssl, https, http, www, non-www, encryption]
-image: nginx.png
+image: nginx.gif
 comments: true
 ---
 
-![Docker](/images/posts/nginx.png)
+![Docker](/images/posts/nginx.gif)
 
 # Redirect HTTP to HTTPS (http://www.example.com to https://example.com)
 

@@ -3,11 +3,11 @@ layout: post
 title: "Docker and php-fpm truncated logs workaround and configuration for php 7.0, 7.1, 7.2 and 7.3"
 excerpt: "This is a problem when you want to run PHP-FPM in a docker container with php 7.0,7.1 and 7.2. It's common pratice for docker containers to write any log output to STDOUT/STDERR. Problem has been fixed for PHP 7.3"
 tags: [php, fpm, php-fpm, truncated, logs, warning, child, stderr, pool, 7.0, 7.1, 7.2, 7.3]
-image: php-fpm.png
+image: php-fpm.gif
 comments: true
 ---
 
-![PHP-FPM](/images/posts/php-fpm.png)
+![PHP-FPM](/images/posts/php-fpm.gif)
 
 # PHP-FPM truncated logs problem
 

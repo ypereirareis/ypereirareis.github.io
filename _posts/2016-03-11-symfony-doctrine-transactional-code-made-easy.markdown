@@ -3,14 +3,14 @@ layout: post
 title: "How to encapsulate your doctrine operations into transaction really easily"
 excerpt: "When doing multiple database operations in a single http request, command line, method,...we often need to use a database transaction to keep data safe."
 tags: [Symfony, doctrine, transaction, transactional, easy, callable, anonymous, function]
-image: symfony.png
+image: symfony.gif
 comments: true
 ---
 
 When doing multiple database operations in a single http request, command line, method,...
 we often need to use a database transaction to keep data safe.
 
-![Symfony](/images/posts/symfony.png)
+![Symfony](/images/posts/symfony.gif)
 
 
 # Example in an Action of a Controller

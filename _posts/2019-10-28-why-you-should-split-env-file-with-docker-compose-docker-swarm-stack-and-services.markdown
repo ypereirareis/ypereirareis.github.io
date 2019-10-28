@@ -3,7 +3,7 @@ layout: post
 title: "Why you should split your env file with docker-compose and docker swarm stack and services"
 excerpt: "Factor number 3 of twelve-factor app methodology recommands to store configuration that varies between deployments into environment. With some frameworks, docker-compose and docker swarm we can use .env files. Let's see why it's important to split them into many env files."
 tags: [docker, compose, docker-compose, env, file, environment, swarm, stack, stacks, service, services, twelve-factor, twelve, factor]
-image: docker.png
+image: docker.gif
 comments: true
 ---
 

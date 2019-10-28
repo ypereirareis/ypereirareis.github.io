@@ -21,7 +21,7 @@ A cluster is composed of at least two RabbitMQ nodes. These nodes need to be abl
 
 # Load Balancing with HAProxy
 
-![Docker](/images/posts/haproxy.png)
+![Docker](/images/posts/haproxy.gif)
 
 When working with a cluster the goal is to have a highly available service.
 So we need to dispatch requests on every running node of the cluster, and avoid sending request to failing nodes.

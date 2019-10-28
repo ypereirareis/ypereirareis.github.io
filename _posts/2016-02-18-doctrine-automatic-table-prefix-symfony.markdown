@@ -3,15 +3,15 @@ layout: post
 title: "Doctrine automatic table prefix"
 excerpt: "Always prefix your tables with a prefix to avoid naming conflicts. You can do this automatically with doctrine."
 tags: [doctrine, table, tables, prefix, prefixes, automatic, automatically, bundles, bundle, subscriber, service, symfony]
-image: symfony.png
-modified: "2016-02-18"
+image: symfony.gif
+modified: "2020-04-09"
 comments: true
 ---
 
 Prefixing table names automatically thanks to Doctrine can be very useful to avoid naming conflicts
 when using third party bundles or libraries. So I advise you to always prefix your tables by the name of your project for instance.
 
-![Symfony](/images/posts/symfony.png)
+![Symfony](/images/posts/symfony.gif)
 
 # Symfony/Doctrine subscriber
 

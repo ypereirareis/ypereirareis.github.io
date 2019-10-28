@@ -3,14 +3,14 @@ layout: post
 title: "Doctrine performance tip with MySQL and indexes, parameters type hinting"
 excerpt: "If we do not write DQL queries correctly, we could have big performance problems."
 tags: [doctrine, DQL, inner join, join, index, indexes, mysql]
-image: doctrine.png
+image: doctrine.gif
 comments: true
 ---
 
 As you may know, [Doctrine](http://www.doctrine-project.org/) can be a very good ally, but if we do not use it correctly
 we can have big performance problems really easily and quickly.
 
-![Symfony](/images/posts/doctrine.png)
+![Symfony](/images/posts/doctrine.gif)
 
 Let's take these two tables as an example:
 

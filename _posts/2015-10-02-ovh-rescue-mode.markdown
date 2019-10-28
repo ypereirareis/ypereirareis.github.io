@@ -3,7 +3,7 @@ layout: post
 title:  "Rescue Mode with OVH and Kimsufi"
 excerpt: "Rescue Mode with OVH and Kimsufi"
 tags: [ovh, rescue, mode]
-modified: "2016-02-15"
+modified: "2020-04-09"
 comments: true
 ---
 
@@ -16,15 +16,15 @@ Log into your online OVH/kimsufi account then follow those instructions:
 
 * Click on the **NetBoot** button
 
-![Rescue](/images/posts/rescue1.png)
+![Rescue](/images/posts/rescue1.gif)
 
 * Choose the Rescue Mode clicking on the **Rescue** button
 
-![Rescue](/images/posts/rescue2.png)
+![Rescue](/images/posts/rescue2.gif)
 
 * On the home page click on the **Reboot** button.
 
-![Rescue](/images/posts/rescue1.png)
+![Rescue](/images/posts/rescue1.gif)
 
 Your server will be rebooted in the Rescue Mode and you will receive (by email) a temporary root access password to repare your server.
 
@@ -87,15 +87,15 @@ Log into your online OVH/kimsufi account then follow those instructions:
 
 * Click on the **NetBoot** button
 
-![Rescue](/images/posts/rescue1.png)
+![Rescue](/images/posts/rescue1.gif)
 
 * Choose the **Hard drive** mode clicking on the correct button.
 
-![Rescue](/images/posts/rescue2.png)
+![Rescue](/images/posts/rescue2.gif)
 
 * On the home page click on the **Reboot** button.
 
-![Rescue](/images/posts/rescue1.png)
+![Rescue](/images/posts/rescue1.gif)
 
 
 **Congratulations !**

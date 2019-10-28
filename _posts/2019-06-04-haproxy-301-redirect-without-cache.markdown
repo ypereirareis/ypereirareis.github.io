@@ -3,11 +3,11 @@ layout: post
 title: "Doing a (301) redirect with HAPROXY without cache"
 excerpt: "You are on the good page if you want to know how to do a redirect without cache with haproxy"
 tags: [haproxy, redirect, permanent, cache, no-cache, no-store, cache-control, max-age, must-revalidate]
-image: haproxy.png
+image: haproxy.gif
 comments: true
 ---
 
-![Docker](/images/posts/haproxy.png)
+![Docker](/images/posts/haproxy.gif)
 
 # Example configuration for haproxy.cfg
 

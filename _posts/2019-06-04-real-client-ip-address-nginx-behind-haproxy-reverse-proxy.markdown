@@ -3,11 +3,11 @@ layout: post
 title: "Get real client IP address in NGINX behind HAPROXY reverse proxy"
 excerpt: "It's often really useful to get and store real user ip address of users browsing your website. Let's see how to do it with Nginx behind haproxy reverse proxy."
 tags: [nginx, haproxy, client, ip, address, real, header, forwardfor ]
-image: haproxy.png
+image: haproxy.gif
 comments: true
 ---
 
-![Docker](/images/posts/haproxy.png)
+![Docker](/images/posts/haproxy.gif)
 
 # Define a header in haproxy configuration to set real client IP address
 

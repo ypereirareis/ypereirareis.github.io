@@ -3,7 +3,7 @@ layout: post
 title: "Composer, Satis and docker"
 excerpt: "Thanks to Composer, Satis, satisfy and docker it's really easy to host and use private git repositories"
 tags: [composer, satis, docker, satisfy, repository, repositories, git, packagist, github, gitlab, bitbucket]
-modified: "2016-02-15"
+modified: "2020-04-09"
 comments: true
 ---
 
@@ -15,14 +15,14 @@ A few months ago, I created a [satis docker image](https://github.com/ypereirare
 
 * **[Composer](https://getcomposer.org/)**
 
-![Composer](/images/posts/composer.png)
+![Composer](/images/posts/composer.gif)
 
 _Composer is a tool for dependency management in PHP.
 It allows you to declare the libraries your project depends on and it will manage (install/update) them for you._
 
 * **[Satis](https://github.com/composer/satis)**
 
-![Satis](/images/posts/satis.png)
+![Satis](/images/posts/satis.gif)
 
 _Simple static Composer repository generator.
 It uses any composer.json file as input and dumps all the required
@@ -30,7 +30,7 @@ It uses any composer.json file as input and dumps all the required
 
 * **[Satisfy](https://github.com/ludofleury/satisfy)** (admin UI)
 
-![Satisfy](/images/posts/satisfy.png)
+![Satisfy](/images/posts/satisfy.gif)
 
 _Satisfy ease your satis configuration management.
 It provides simple web UI over Satis to avoid a hand-editing of the satis.json configuration file.
