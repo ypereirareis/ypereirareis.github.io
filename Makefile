@@ -9,8 +9,7 @@ bundle:
 	@echo "$(step) Bundler $(step)"
 	@$(compose) run --rm web /bin/bash -ci '\
                 bundle install && \
-                    bundle check && \
-                    bundle update'
+                    bundle check'
 
 jkbuild:
 	@echo "$(step) Jekyll build $(step)"
