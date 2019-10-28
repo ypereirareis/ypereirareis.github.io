@@ -9,7 +9,16 @@ comments: true
 
 ![PHP-FPM](/images/posts/docker.svg)
 
-# Using a `.env` file to store configuration with docker-compose swarm stacks and services
+# TLDR: questions answered in this article.
+
+* How to improve docker .env configuration for security ?
+* How to improve docker .env configuration for performance ?
+* How to improve docker .env configuration for better rolling update ?
+* How to improve docker swarm rolling update time ?
+* Why all my containers are restarting when updating environnement variables ?
+* How to properly split environnement files ?
+
+# Using a `.env` file to store configuration with docker-compose swarm stacks and services.
 
 Since a few years, a lot of projects based on docker, even in the open source community, comes with a `.env` file to store configuration.
 It allows to define specific configuration for deployments (development, staging and production for instance).
@@ -29,14 +38,14 @@ In that kind of configuration we will often work with a single `.env` file used 
 
 # What are the problems in the case of single `.env` file ?
 
-## Problem #1: Code organization and separation of concerns
+## Problem #1: Code organization and separation of concerns.
 
 * Very difficult to say which environment variables are used by each service.
 * Very difficult to say which environment variables are used by the PHP application itself.
 * Difficult to pick up a single service from that stack to add it to another stack.
 * Configurations can be mixed in this single file (unless you organize each part with comments).
 
-## Problem #2: Bugs
+## Problem #2: Bugs.
 
 Let's say you use a project like this perfect one: [jwilder/nginx-proxy](https://github.com/jwilder/nginx-proxy).
 
@@ -51,7 +60,7 @@ nginx.1    | 2019/10/07 07:32:39 [warn] 147#147: *105 upstream server temporaril
 This is because adding a variable to the `.env` file, will add it into **all containers** (configured with `env_file` directive).
 So with the **round robin** algorithm used by default within Nginx load balancing, the request will reach the PHP container one time out of two, instead of the Nginx container.
 
-## Problem #3: Security
+## Problem #3: Security.
 
 As we said in the previous part, "adding a variable to the `.env` file, will add it into **all containers** (configured with `env_file` directive)".
 So you will have access all environment variables in all running containers... In addition to the fact that it is unnecessary, it can introduce vulnerabilities.
@@ -70,7 +79,7 @@ They will also have access to other sensitive information:
 * you are using PHP for your application, probably version 7.2.
 * ...
 
-## Problem #4: Stack update, performance and resources consumption
+## Problem #4: Stack update, performance and resources consumption.
 
 Docker has a built-in mecanism allowing to restart containers when dependencies have changed: env variables, docker-compose directives, networks,...
 I'm sure you see where I'm going with this... Imagine you want to increase PHP memory limit, you will change the value of env variable `MEMORY_LIMIT`.
@@ -95,17 +104,17 @@ Our example is pretty simple but it's a common thing to have 5 or 6 services per
 
 We can't afford to restart everything when we simply want to update a single service.
 
-# Possibles solutions
+# Possibles solutions.
 
 Choose the one you prefer or the one that best fits your needs.
 
-## Solution #1: Never use the `env_file` (or `--env-file`) configuration
+## Solution #1: Never use the `env_file` (or `--env-file`) configuration.
 
 Docker-compose allows us to define environment variables to pass to running containers, with `environment` config, this way no other variable will be available in the container:
 
 <script src="https://gist.github.com/ypereirareis/362ddf09620769fb9625d2288249d6be.js"></script>
 
-## Solution #2: Split your env file into multiple env files
+## Solution #2: Split your env file into multiple env files.
 
 * .env (used by docker-compose)
 * .php.env (used by php service and application)
@@ -116,7 +125,7 @@ and the matching `docker-compose.yml`:
 
 <script src="https://gist.github.com/ypereirareis/4ae63ee240fd4aa65d8ef31b6191514f.js"></script>
 
-# Another thing to consider
+# Another thing to consider.
 
 When building your docker image you may add all your env files in the image if you are not careful.
 
