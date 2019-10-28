@@ -12,7 +12,7 @@ highlighter: pygments
 sass:
   sass_dir: _sass
   style: compressed
-gems:
+plugins:
   - jekyll-sitemap
 
 comments: true
@@ -25,6 +25,7 @@ kramdown:
   toc_levels: 1..6
   enable_coderay: false
   syntax_highlighter: rouge
+
 
 # Site owner
 owner:

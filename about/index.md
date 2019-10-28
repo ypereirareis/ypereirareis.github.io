@@ -1,13 +1,13 @@
 ---
 layout: page
 title: About me
-excerpt: My name is Yannick Pereira-Reis, and I'm a full stack web developer in Lyon (France).
-tags: [Yannick Pereira-Reis, Yannick, Pereira-Reis, php, Symfony, Symfony2, AngularJs, Docker, Vagrant, Elasticsearch, Lyon]
+excerpt: My name is Yannick Pereira-Reis, and I'm a DevOps and Fullstack web developer using Symfony and VueJs.
+tags: [Yannick Pereira-Reis, Yannick, Pereira-Reis, php, Symfony, docker, ansible, elk, grafana, prometheus, RabbitMQ, VueJs, Docker, Elasticsearch, Lyon, Valence]
 lastmod: "2016-02-15"
 permalink: /website/about/
 ---
 
-Hi! I am *Yannick Pereira-Reis*, and I'm a full stack web developer (Symfony2, AngularJs) in [Lyon (France)](http://www.lyon.fr/page/accueil.html).
+Hi! I am *Yannick Pereira-Reis*, and I'm a DevOps and fullstack web developer (Symfony, VueJs) in [Lyon (France)](http://www.lyon.fr/page/accueil.html).
 
 <img class="img-center" src="../../images/author/avatar.png" alt="Yannick Pereira-Reis">
 
@@ -42,4 +42,4 @@ I like to learn from others, and I like to share my knowledge and experience, th
 
 I hope you'll enjoy reading [my articles](/). Don't hesitate to leave comments.
 
-And have a look at [my french Résumé](/website/resume)
+And have a look at [my Résumé](/website/resume/)
