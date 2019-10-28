@@ -7,13 +7,16 @@
 {% if page.image %}
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="{{ site.url }}/images/posts/{{ page.image }}">
+<meta name="og:image" content="{{ site.url }}/images/posts/{{ page.image }}">
 {% else %}
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="{{ site.url }}/images/author/avatar.png">
+<meta name="og:image" content="{{{ site.url }}/images/author/avatar.png">
 {% endif %}
 
 <!-- Open Graph -->
 <meta property="og:locale" content="{{ site.locale }}">
+<meta property="og:type" content="article">
 <meta property="og:type" content="article">
 <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
 {% if page.excerpt %}<meta property="og:description" content="{{ page.excerpt | strip_html }}">{% endif %}
