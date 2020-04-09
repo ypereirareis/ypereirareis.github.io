@@ -3,14 +3,14 @@ layout: post
 title: "Use docker-machine with generic driver and devicemapper storage driver"
 excerpt: "A list of things to do or check to configure docker-machine (generic driver, devicemapper storage-driver) to control remote docker daemons."
 tags: [docker, machine, docker-machine, daemon, driver, generic, devicemapper, container]
-image: docker.png
+image: docker.gif
 comments: true
 ---
 
 [docker-machine](https://docs.docker.com/machine/) is a really powerful tool to control your remote docker daemons.
 Let's see how to configure everything to manage your remote containers easily from your local host.
 
-![Docker](/images/posts/docker.png)
+![Docker](/images/posts/docker.gif)
 
 # Remote server
 

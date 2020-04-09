@@ -3,7 +3,7 @@ layout: post
 title: "Access environment variables from crontab into a docker container"
 excerpt: "How to use docker environment variables from a crontab running inside a docker container."
 tags: [docker, crontab, cron, environment, variables, env, vars, var, source]
-image: docker.png
+image: docker.gif
 comments: true
 ---
 
@@ -12,7 +12,7 @@ Docker allows us to pass environment variables into running containers, and ther
 * Command options `-e` and `--env`
 * Variables files `--env-file`
 
-![Docker](/images/posts/docker.png)
+![Docker](/images/posts/docker.gif)
 
 # Access to docker container environment variables
 

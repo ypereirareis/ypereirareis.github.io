@@ -3,7 +3,7 @@ layout: post
 title:  "Vagrant AWS provider with private repositories"
 excerpt: Vagrant AWS provider with private repositories
 tags: [vagrant, AWS, provider, vm, virtual machine]
-modified: "2016-02-15"
+modified: "2020-04-09"
 comments: true
 ---
 

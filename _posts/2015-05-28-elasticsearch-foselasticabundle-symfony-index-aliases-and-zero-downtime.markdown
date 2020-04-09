@@ -2,8 +2,8 @@
 layout: post
 title:  "Elasticsearch zero downtime with FOSElasticaBundle for Symfony when reindexing"
 excerpt: "FOSElasticaBundle allows zero downtime reindexing process using elasticsearch aliases. You need to set the correct configuration for your index in the Symfony config.yml file"
-image: elastic_marvel_history.png
-modified: "2016-02-15"
+image: elastic_marvel_history.gif
+modified: "2020-04-09"
 comments: true
 ---
 
@@ -11,7 +11,7 @@ When using [elasticsearch](https://www.elastic.co/) or [elastic](https://www.ela
 the reindexing process must be an important task to deal with.
 Indeed, this process must be done with zero downtime, and nothing visible for users.
 
-![Elasticsearch](/images/posts/elastic.png)
+![Elasticsearch](/images/posts/elastic.gif)
 
 Reindexing can be useful in many cases like :
 
@@ -122,11 +122,11 @@ app/console fos:elastica:populate
 
 The real index name will have the following pattern: `app_prod_YYYY-MM-DD-HHMMSS`.
 
-![Elastic Head](/images/posts/elastic_head.png)
+![Elastic Head](/images/posts/elastic_head.gif)
 
 When the indexing process is finished we can see our `app_prod` alias on our `app_prod_2015-05-28-213059` index:
 
-![Elastic Head](/images/posts/elastic_head_alias.png)
+![Elastic Head](/images/posts/elastic_head_alias.gif)
 
 The alias is created at the end of the (first) indexing process.
 
@@ -141,23 +141,23 @@ app/console fos:elastica:populate
 The command will reindex data creating another index with another name.
 And more important, the previous index still exists with our alias:
 
-![Elastic Head](/images/posts/elastic_head_reindex.png)
+![Elastic Head](/images/posts/elastic_head_reindex.gif)
 
 At the end of the reindexing process, the command will change the target of the index,
 and will destroy the previous index:
 
-![Elastic Head](/images/posts/elastic_head_reindex_finished.png)
+![Elastic Head](/images/posts/elastic_head_reindex_finished.gif)
 
 This is how zero downtime reindexing process is achieved with Symfony and FOSElasticaBundle.
 
 With the [Marvel](https://www.elastic.co/products/marvel) product we can follow the process on graphs:
 
-![Elastic Marvel](/images/posts/elastic_marvel.png)
+![Elastic Marvel](/images/posts/elastic_marvel.gif)
 
 On Marvel **Shard allocation** dashboard you can see and (re)play history, automatically or step by step.
 This is really amazing :
 
-![Elastic Marvel](/images/posts/elastic_marvel_history.png)
+![Elastic Marvel](/images/posts/elastic_marvel_history.gif)
 
 ## Conclusion
 

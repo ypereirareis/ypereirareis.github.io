@@ -3,11 +3,11 @@ layout: post
 title: "How to write a good docker entry point for docker images and containers"
 excerpt: "A docker image entry point not following this simple rule will not be correct..."
 tags: [docker, entrypoint, entry, point, cmd]
-image: docker.png
+image: docker.gif
 comments: true
 ---
 
-![Docker](/images/posts/docker.png)
+![Docker](/images/posts/docker.gif)
 
 # A good Docker entry point
 

@@ -3,11 +3,11 @@ layout: post
 title: "PHP fpm and cli error log configuration"
 excerpt: "Logging errors is something essential. Let's see how to do it with php-fpm (and cli)"
 tags: [php, fpm, php-fpm, cli, php-cli, error, errors, log, logs]
-image: php-fpm.png
+image: php-fpm.gif
 comments: true
 ---
 
-![Docker](/images/posts/php-fpm.png)
+![Docker](/images/posts/php-fpm.gif)
 
 # PHP FPM
 

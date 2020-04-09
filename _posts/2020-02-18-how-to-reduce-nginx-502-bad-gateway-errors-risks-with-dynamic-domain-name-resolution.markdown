@@ -3,11 +3,11 @@ layout: post
 title: "How to reduce Nginx 502 bad gateway errors and risks with dynamic domain name resolution for proxy_pass and fastcgi_pass"
 excerpt: "When deploying a projet it's a very common case to have 502 Bad gateway error as PHP-FPM is restarting while Nginx is still up and running. But we can avoid Nginx reload or restart and reduce 502 Bad gateway errors"
 tags: [nginx, error, 502, bad gateway, php-fpm, php, fpm, dns, dynamic, domain name, resolution, connection refused, server failure, no route to host]
-image: nginx.png
+image: nginx.gif
 comments: true
 ---
 
-![PHP-FPM](/images/posts/nginx.png)
+![PHP-FPM](/images/posts/nginx.gif)
 
 # TLDR: questions answered in this article.
 

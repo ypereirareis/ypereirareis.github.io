@@ -2,7 +2,7 @@
 layout: post
 title:  "Material Design Resources"
 excerpt: Material Design Resources
-modified: "2016-02-15"
+modified: "2020-04-09"
 tags: [material, design, resources, material design resources]
 comments: true
 ---

@@ -1,6 +1,6 @@
 # Site wide configuration
 
-title:            Yannick PEREIRA-REIS
+title:            Yannick Pereira-Reis
 locale:           en_US
 url:              https://ypereirareis.github.io
 
@@ -29,7 +29,7 @@ kramdown:
 
 # Site owner
 owner:
-  name: Yannick PEREIRA-REIS
+  name: Yannick Pereira-Reis
   avatar: author/avatar.png
   bio: "DevOps (docker swarm, haproxy, CI/CD, ELK, prometheus, grafana, ansible, automation, RabbitMQ, LVM, MySQL replication...) and fullstack web developer Symfony 2/3/4/5 + VueJs in Valence (France)."
   disqus-shortname: ypereirareisgithubio
