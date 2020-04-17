@@ -1,19 +1,25 @@
 # Site navigation links
 
 - title: All posts
+  title_attr: All posts
   url: /posts/
 
 - title: CV
+  title_attr: CV / Résumé
   url: /website/resume
 
 - title: About
+  title_attr: About Yannick Pereira-Reis
   url: /website/about/
 
 - title: Github
+  title_attr: Yannick Pereira-Reis Github profile
   url: https://github.com/ypereirareis
 
 - title: LinkedIn
-  url: http://fr.linkedin.com/in/yannickpereirareis
+  title_attr: Yannick Pereira-Reis LinkedIn profile
+  url: https://linkedin.com/in/yannickpereirareis
 
 - title: Dockerhub
+  title_attr: Yannick Pereira-Reis Dockerhub profile
   url: https://hub.docker.com/r/ypereirareis/

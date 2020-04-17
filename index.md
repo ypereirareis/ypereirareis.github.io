@@ -1,5 +1,5 @@
 ---
 layout: home
-excerpt: "Yannick Pereira-Reis - DevOps (docker swarm, haproxy, CI/CD, ELK, prometheus, grafana, ansible, automation, RabbitMQ, LVM, MySQL replication...) and fullstack web developer Symfony 2/3/4/5 + VueJs in Valence (France)."
-tags: [Yannick, Pereira-reis, Lead Dev, Lead Developer, Symfony, Symfony, VueJs,  Elasticsearch, Docker, php, nodejs, reactjs, react, Lyon, Valence]
+excerpt: "DevOps and fullstack developer in Valence or in remote, using a long list of wonderful tools and libraries such as Docker, Swarm, Symfony, VueJs, webpack, Nexus, Prometheus, Grafana, Ansible,... and many others."
+tags: [Yannick, Pereira-reis, devops, developer, symfony, vueJs, elasticsearch, docker, php, nodejs, reactjs, react, Lyon, Valence]
 ---

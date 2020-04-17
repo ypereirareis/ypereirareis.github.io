@@ -1,10 +1,11 @@
 ---
 layout: page
-title: Yannick Pereira-Reis Resume
+title: Yannick Pereira-Reis - DevOps and fullstack developer in Valence or remote (Docker, Symfony, NodeJs, VueJs, ...)
 excerpt: DevOps (docker swarm, haproxy, CI/CD, ELK, prometheus, grafana, ansible, automation, RabbitMQ, LVM, MySQL replication...) and fullstack web developer Symfony 2/3/4/5 + VueJs in Valence (France)..
 tags: [devops, backend, fullstack, developer, docker, swarm, vuejs, symfony, ansible, prometheus, grafana, php, mysql, elasticsearch, elk, gitlab, lyon, valence, france]
 permalink: /website/resume/
 modified: "2020-02-21"
+last_modified_at: "2020-04-09"
 ---
 
 * France > Rhône-Alpes > Drôme > Valence

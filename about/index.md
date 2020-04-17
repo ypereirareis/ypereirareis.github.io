@@ -1,7 +1,7 @@
 ---
 layout: page
-title: About me
-excerpt: My name is Yannick Pereira-Reis, and I'm a DevOps and Fullstack web developer using Symfony and VueJs.
+title: About me... Yannick Pereira-Reis
+excerpt: My name is Yannick Pereira-Reis, and I'm a DevOps and Fullstack web developer using Docker, Symfony and VueJs.
 tags: [Yannick Pereira-Reis, Yannick, Pereira-Reis, php, Symfony, docker, ansible, elk, grafana, prometheus, RabbitMQ, VueJs, Docker, Elasticsearch, Lyon, Valence]
 lastmod: "2016-02-15"
 permalink: /website/about/
@@ -19,16 +19,15 @@ and [CSS](http://en.wikipedia.org/wiki/Cascading_Style_Sheets) when I was in hig
 
 Currently, I still work with PHP, Javascript or even CSS, but I also use more tools or frameworks helping me to do my daily work:
 
-* Symfony2
+* Symfony 4/5
 * AngularJs
 * ReactJs
-* Vagrant
+* VueJs
 * Jenkins
 * PhpStorm
 * Git/Gitlab
-* Less
-* Grunt
-* Gulp
+* Less / sass
+* Webpack
 * Docker
 
 Except for IT, I'm also interested in many others things such as:

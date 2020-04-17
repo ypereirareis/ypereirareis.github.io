@@ -1,6 +1,7 @@
 # Site wide configuration
 
 title:            Yannick Pereira-Reis
+description:      DevOps and fullstack developer (Docker, Symfony, VueJs, NodeJs,...) in Valence or in remote.
 locale:           en_US
 url:              https://ypereirareis.github.io
 
@@ -33,7 +34,7 @@ owner:
   name: Yannick Pereira-Reis
   avatar: author/avatar.jpg
   bio: "DevOps (docker swarm, haproxy, CI/CD, ELK, prometheus, grafana, ansible, automation, RabbitMQ, LVM, MySQL replication...) and fullstack web developer Symfony 2/3/4/5 + VueJs in Valence (France)."
-  disqus-shortname: ypereirareisgithubio
+  #disqus-shortname: ypereirareisgithubio
   google:
     analytics: UA-60388348-1
     verify: 
