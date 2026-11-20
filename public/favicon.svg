@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <style>
+    rect { fill: #1a1a1a; }
+    text { fill: #ffffff; }
+    @media (prefers-color-scheme: dark) {
+      rect { fill: #e8e8e8; }
+      text { fill: #111111; }
+    }
+  </style>
+  <rect width="64" height="64" rx="12" />
+  <text x="32" y="42" font-family="system-ui, sans-serif" font-size="28" font-weight="700" text-anchor="middle">YP</text>
+</svg>

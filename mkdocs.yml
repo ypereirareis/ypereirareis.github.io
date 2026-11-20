@@ -1,0 +1,11 @@
+site_name: ypereirareis.github.io
+site_description: Engineering documentation of the personal website.
+repo_url: https://github.com/ypereirareis/ypereirareis.github.io
+docs_dir: docs
+
+nav:
+  - Overview: index.md
+  - Quality gates: quality-gates.md
+  - Architecture decisions:
+      - adr/0001-static-site-with-astro.md
+      - adr/0002-single-ci-cd-pipeline.md

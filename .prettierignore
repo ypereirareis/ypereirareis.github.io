@@ -1,0 +1,5 @@
+dist/
+.astro/
+.lighthouseci/
+site/
+pnpm-lock.yaml

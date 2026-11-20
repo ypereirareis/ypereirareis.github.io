@@ -1,0 +1,106 @@
+---
+import type { GetStaticPaths } from "astro";
+import { render } from "astro:content";
+import FormattedDate from "../../components/FormattedDate.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { breadcrumbJsonLd } from "../../lib/jsonld";
+import { getPosts, postUrl, tagSlug, type Post } from "../../lib/posts";
+import { SITE } from "../../site.config";
+
+export const getStaticPaths = (async () => {
+  const posts = await getPosts();
+  return posts.map((post) => ({ params: { slug: post.id }, props: { post } }));
+}) satisfies GetStaticPaths;
+
+interface Props {
+  post: Post;
+}
+
+const { post } = Astro.props;
+const { title, description, pubDate, updatedDate, tags } = post.data;
+const { Content } = await render(post);
+
+const site = Astro.site ?? new URL(Astro.url.origin);
+const url = new URL(postUrl(post), site).href;
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  headline: title,
+  description,
+  datePublished: pubDate.toISOString(),
+  dateModified: (updatedDate ?? pubDate).toISOString(),
+  url,
+  mainEntityOfPage: url,
+  inLanguage: SITE.lang,
+  keywords: tags,
+  image: new URL("/og.png", site).href,
+  author: { "@id": new URL("/#person", site).href, "@type": "Person", name: SITE.author },
+};
+const breadcrumb = breadcrumbJsonLd(site, [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: title, path: postUrl(post) },
+]);
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  type="article"
+  publishedTime={pubDate}
+  modifiedTime={updatedDate}
+  jsonLd={[articleJsonLd, breadcrumb]}
+>
+  <article>
+    <header>
+      <h1>{title}</h1>
+      <p class="meta">
+        <FormattedDate date={pubDate} />
+        {updatedDate && (
+          <>
+            · Updated <FormattedDate date={updatedDate} />
+          </>
+        )}
+      </p>
+      {tags.length > 0 && (
+        <ul class="tags" aria-label="Tags">
+          {tags.map((tag) => (
+            <li>
+              <a href={`/blog/tags/${tagSlug(tag)}/`}>#{tag}</a>
+            </li>
+          ))}
+        </ul>
+      )}
+    </header>
+    <div class="prose">
+      <Content />
+    </div>
+  </article>
+  <p>
+    <a href="/blog/">← All posts</a>
+  </p>
+</BaseLayout>
+
+<style>
+  .meta {
+    margin-top: -0.5rem;
+    color: var(--text-muted);
+  }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .prose {
+    margin-top: 2rem;
+  }
+
+  .prose :global(h2) {
+    margin-top: 2.5rem;
+  }
+</style>

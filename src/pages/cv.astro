@@ -1,0 +1,140 @@
+---
+import { getEntry } from "astro:content";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { personJsonLd } from "../lib/jsonld";
+import { SITE } from "../site.config";
+
+const entry = await getEntry("cv", "cv");
+if (!entry) throw new Error("Missing src/content/cv/cv.yaml");
+const cv = entry.data;
+
+const site = Astro.site ?? new URL(Astro.url.origin);
+const formatPeriod = ({ start, end }: { start: string; end?: string | undefined }) =>
+  `${start.slice(0, 4)} – ${end ? end.slice(0, 4) : "present"}`;
+---
+
+<BaseLayout
+  title="CV"
+  description={`${SITE.author}, ${cv.headline}. ${cv.summary}`.slice(0, 160)}
+  jsonLd={[personJsonLd(site)]}
+>
+  <header class="cv-header">
+    <h1>{SITE.author}</h1>
+    <p class="headline">
+      {cv.headline} · {cv.location}
+    </p>
+    <p>{cv.summary}</p>
+    <p class="print-hint">Print this page to get a PDF version.</p>
+  </header>
+
+  <section aria-labelledby="skills">
+    <h2 id="skills">Skills</h2>
+    <dl class="skills">
+      {cv.skills.map(({ category, items }) => (
+        <div>
+          <dt>{category}</dt>
+          <dd>{items.join(", ")}</dd>
+        </div>
+      ))}
+    </dl>
+  </section>
+
+  <section aria-labelledby="experience">
+    <h2 id="experience">Experience</h2>
+    {cv.experience.map((job) => (
+      <article class="entry">
+        <h3>
+          {job.role} · {job.url ? <a href={job.url}>{job.company}</a> : job.company}
+        </h3>
+        <p class="meta">
+          {formatPeriod(job.period)} · {job.location}
+        </p>
+        <ul>
+          {job.highlights.map((highlight) => (
+            <li>{highlight}</li>
+          ))}
+        </ul>
+      </article>
+    ))}
+  </section>
+
+  <section aria-labelledby="education">
+    <h2 id="education">Education</h2>
+    {cv.education.map((school) => (
+      <article class="entry">
+        <h3>{school.degree}</h3>
+        <p class="meta">
+          {school.school} · {formatPeriod(school.period)}
+        </p>
+      </article>
+    ))}
+  </section>
+</BaseLayout>
+
+<style>
+  .headline,
+  .meta,
+  .print-hint {
+    color: var(--text-muted);
+  }
+
+  .headline {
+    margin-top: -0.75rem;
+    font-size: 1.15rem;
+  }
+
+  .print-hint {
+    font-size: 0.9rem;
+  }
+
+  .skills {
+    display: grid;
+    gap: 0.5rem;
+    margin: 0;
+  }
+
+  .skills div {
+    display: grid;
+    grid-template-columns: minmax(9rem, auto) 1fr;
+    gap: 1rem;
+  }
+
+  dt {
+    font-weight: 600;
+  }
+
+  dd {
+    margin: 0;
+  }
+
+  .entry h3 {
+    margin-bottom: 0;
+    font-size: 1.1rem;
+  }
+
+  .meta {
+    margin: 0.25rem 0 0.5rem;
+    font-size: 0.95rem;
+  }
+
+  @media (max-width: 30rem) {
+    .skills div {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+  }
+
+  @media print {
+    .print-hint {
+      display: none;
+    }
+
+    .entry {
+      break-inside: avoid;
+    }
+
+    h2 {
+      break-after: avoid;
+    }
+  }
+</style>

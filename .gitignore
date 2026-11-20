@@ -1,12 +1,26 @@
-_site
-.sass-cache
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+.astro/
+
+# Quality reports
+.lighthouseci/
+
+# MkDocs build output and local virtualenv
+site/
+.venv/
+
+# Logs
+*.log
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# OS / editors
 .DS_Store
-*.sublime-project
-*.sublime-workspace
-codekit-config.json
-node_modules
-_asset_bundler_cache
 .idea/
-.bundle/
-vendor/
-cache/
+.vscode/
