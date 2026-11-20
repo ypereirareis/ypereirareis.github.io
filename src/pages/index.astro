@@ -1,0 +1,75 @@
+---
+import { Image } from "astro:assets";
+import avatar from "../assets/avatar.jpg";
+import PostList from "../components/PostList.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { personJsonLd } from "../lib/jsonld";
+import { getPosts } from "../lib/posts";
+import { SITE } from "../site.config";
+
+const site = Astro.site ?? new URL(Astro.url.origin);
+const recentPosts = (await getPosts()).slice(0, 5);
+const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: SITE.title,
+  url: site.href,
+  inLanguage: SITE.lang,
+  author: { "@id": new URL("/#person", site).href },
+};
+---
+
+<BaseLayout jsonLd={[personJsonLd(site), websiteJsonLd]}>
+  <section class="intro" aria-labelledby="intro-title">
+    <Image
+      src={avatar}
+      alt=""
+      width={112}
+      height={112}
+      widths={[112, 224]}
+      sizes="112px"
+      loading="eager"
+      fetchpriority="high"
+      class="avatar"
+    />
+    <div>
+      <h1 id="intro-title">{SITE.author}</h1>
+      <p class="lead">{SITE.jobTitle}</p>
+    </div>
+  </section>
+
+  <p>
+    I build and run internal platforms: CI/CD, Kubernetes, observability and the tooling that lets
+    product teams ship safely and fast. This site hosts my <a href="/cv/">CV</a> and a technical
+    <a href="/blog/">blog</a>.
+  </p>
+
+  <section aria-labelledby="recent-posts">
+    <h2 id="recent-posts">Recent posts</h2>
+    <PostList posts={recentPosts} headingLevel={3} />
+  </section>
+</BaseLayout>
+
+<style>
+  .intro {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .avatar {
+    flex-shrink: 0;
+    border-radius: 50%;
+  }
+
+  h1 {
+    margin: 0;
+  }
+
+  .lead {
+    margin: 0.25rem 0 0;
+    color: var(--text-muted);
+    font-size: 1.2rem;
+  }
+</style>

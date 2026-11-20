@@ -1,0 +1,60 @@
+---
+import { SITE } from "../site.config";
+
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <ul>
+    <li>
+      <a href={SITE.links.github} rel="me">
+        GitHub
+      </a>
+    </li>
+    <li>
+      <a href={SITE.links.linkedin} rel="me">
+        LinkedIn
+      </a>
+    </li>
+    <li>
+      <a href="/rss.xml">RSS</a>
+    </li>
+    <li>
+      <a href="https://github.com/ypereirareis/ypereirareis.github.io">Source</a>
+    </li>
+  </ul>
+  <p>
+    © {year} {SITE.author}
+  </p>
+</footer>
+
+<style>
+  .site-footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 4rem;
+    padding-block: 1.5rem;
+    border-top: 1px solid var(--border);
+    color: var(--text-muted);
+    font-size: 0.9rem;
+  }
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  a {
+    color: var(--text-muted);
+  }
+
+  p {
+    margin: 0;
+  }
+</style>

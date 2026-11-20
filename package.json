@@ -1,25 +1,51 @@
 {
-  "name": "minimal-mistakes-theme",
-  "author": "Michael Rose <michael@mademistakes.com>",
-  "homepage": "http://mmistakes.github.io/minima-mistakes/",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/mmistakes/minimal-mistakes.git"
-  },
-  "bugs": {
-    "url": "https://github.com/mmistakes/minimal-mistakes/issues"
-  },
+  "name": "ypereirareis.github.io",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Personal website, resume and technical blog of Yannick Pereira-Reis.",
+  "license": "MIT",
+  "type": "module",
+  "packageManager": "pnpm@12.21.0",
   "engines": {
-    "node": ">= 0.10.0"
+    "node": ">=24"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check",
+    "lint": "pnpm run lint:code && pnpm run lint:format && pnpm run lint:md",
+    "lint:code": "eslint .",
+    "lint:format": "prettier --check .",
+    "lint:md": "markdownlint-cli2",
+    "format": "prettier --write .",
+    "test:a11y": "start-server-and-test 'sirv dist --port 4321 --quiet' http://localhost:4321 'pa11y-ci'",
+    "test:lighthouse": "lhci autorun"
+  },
+  "dependencies": {
+    "@astrojs/mdx": "^8.1.6",
+    "@astrojs/rss": "^4.0.19",
+    "@astrojs/sitemap": "^3.7.6",
+    "astro": "^7.4.13",
+    "sharp": "^0.35.5"
   },
   "devDependencies": {
-    "grunt": "~0.4.1",
-    "grunt-contrib-clean": "~0.5.0",
-    "grunt-contrib-jshint": "~0.6.3",
-    "grunt-contrib-uglify": "~0.2.2",
-    "grunt-contrib-watch": "~0.5.2",
-    "grunt-recess": "~0.3.5",
-    "grunt-contrib-imagemin": "~0.2.0",
-    "grunt-svgmin": "~0.2.0"
+    "@astrojs/check": "^0.9.12",
+    "@commitlint/cli": "^21.2.4",
+    "@commitlint/config-conventional": "^21.2.4",
+    "@eslint/js": "^10.0.1",
+    "@lhci/cli": "^0.16.1",
+    "eslint": "^10.15.0",
+    "eslint-plugin-astro": "^3.2.1",
+    "eslint-plugin-jsx-a11y-x": "^0.2.0",
+    "globals": "^17.14.0",
+    "markdownlint-cli2": "^0.24.1",
+    "pa11y-ci": "^5.0.0",
+    "prettier": "^3.10.1",
+    "prettier-plugin-astro": "^1.1.2",
+    "sirv-cli": "^3.0.1",
+    "start-server-and-test": "^3.0.13",
+    "typescript": "~6.0.3",
+    "typescript-eslint": "^8.73.0"
   }
 }

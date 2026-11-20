@@ -1,0 +1,11 @@
+{
+  "config": {
+    "default": true,
+    // Line length is not enforced: prose is soft-wrapped.
+    "MD013": false,
+    // Blog posts get their H1 from the frontmatter title.
+    "MD041": false,
+  },
+  "globs": ["**/*.{md,mdx}"],
+  "ignores": ["node_modules/**", "dist/**", ".astro/**", "site/**"],
+}

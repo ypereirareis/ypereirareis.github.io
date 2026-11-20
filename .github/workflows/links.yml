@@ -1,0 +1,35 @@
+name: External links
+
+on:
+  schedule:
+    - cron: "17 6 * * 1"
+  workflow_dispatch:
+
+permissions: {}
+
+env:
+  PUPPETEER_SKIP_DOWNLOAD: "true"
+
+jobs:
+  links:
+    name: External links
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: ./.github/actions/setup
+      - run: pnpm run build
+      - uses: lycheeverse/lychee-action@e7477775783ea5526144ba13e8db5eec57747ce8 # v2.9.0
+        with:
+          args: >-
+            --no-progress
+            --root-dir ${{ github.workspace }}/dist
+            --index-files index.html
+            --max-retries 3
+            'dist/**/*.html'
+          fail: true
+          jobSummary: true

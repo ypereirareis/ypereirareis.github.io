@@ -1,0 +1,84 @@
+# Resume data rendered on /cv/ (web and print).
+# TODO: add the 2020 → present experience, check the SFAM end date and
+# refresh the headline/summary.
+headline: Platform Engineer
+location: Valence, France (remote friendly)
+summary: >-
+  Platform engineer with a strong software engineering background.
+  I design and operate the platforms, CI/CD pipelines and tooling that let
+  product teams ship reliably and fast.
+
+skills:
+  - category: Platform
+    items: [Kubernetes, Docker, Docker Swarm, HAProxy, Ansible]
+  - category: CI/CD
+    items: [GitLab CI, GitHub Actions, Jenkins]
+  - category: Observability
+    items: [Prometheus, Grafana, Alertmanager, ELK]
+  - category: Data & messaging
+    items: [MySQL replication, RabbitMQ, Elasticsearch]
+  - category: Software
+    items: [TypeScript, Node.js, PHP, Symfony, Vue.js, GraphQL]
+
+experience:
+  - company: SFAM
+    role: DevOps & Fullstack Engineer
+    location: Valence, France
+    period: { start: "2018-04", end: "2020" }
+    highlights:
+      - Designed and operated Docker Swarm clusters running about 50 applications, 60 stacks and 200+ containers.
+      - Built IP failover and load balancing with HAProxy.
+      - Set up application and infrastructure monitoring with ELK, Prometheus, Grafana and Alertmanager.
+      - Operated MySQL in master/master and master/replica topologies, with backups.
+      - Built a database event stream with Maxwell and RabbitMQ clusters.
+      - Implemented CI/CD from dev to prod with GitLab CI, unit and end-to-end tests.
+      - Managed servers and deployments with Ansible (100+ roles).
+  - company: Swapcard
+    url: https://www.swapcard.com
+    role: Backend Engineer
+    location: Paris, France (remote)
+    period: { start: "2017-05", end: "2018-04" }
+    highlights:
+      - Backend development with Symfony and Node.js/TypeScript in a microservices architecture.
+      - Implemented GraphQL APIs for native mobile and web clients.
+      - Built Jenkins pipelines from dev to prod with parallelized test suites.
+  - company: ZOL
+    role: Lead Developer & Scrum Master
+    location: Lyon, France
+    period: { start: "2015-03", end: "2017-05" }
+    highlights:
+      - Lead developer on Symfony, AngularJS, Vue.js and Elasticsearch projects.
+      - Set up CI/CD pipelines with Docker, Jenkins and GitLab.
+      - Gave internal talks and ran the technical blog.
+  - company: Kptive Studio
+    role: Lead Developer
+    location: Lyon, France
+    period: { start: "2014-08", end: "2015-03" }
+    highlights:
+      - Built a custom multi-channel e-commerce platform (Symfony, Akeneo, AngularJS, RabbitMQ, CouchDB, ELK).
+  - company: PMSIpilot / Groupe PSIH
+    role: Web Developer
+    location: Lyon, France
+    period: { start: "2013-06", end: "2014-08" }
+    highlights:
+      - Fullstack development of BI applications for hospitals (Symfony, AngularJS).
+  - company: Sage
+    role: R&D Engineer
+    location: Lyon, France
+    period: { start: "2013-01", end: "2013-06" }
+    highlights:
+      - Trained developers, sales and accountants on an acquired product across France.
+  - company: Brainsonic / Tangane
+    role: Backend Engineer
+    location: Lyon, France
+    period: { start: "2009-12", end: "2012-12" }
+    highlights:
+      - Backend development with PHP/Symfony and C# ASP.NET MVC; Scrum Master.
+
+education:
+  - school: INSA Lyon
+    degree: Engineering degree, Computer Science
+    period: { start: "2007", end: "2010" }
+  - school: IUT 2 Grenoble
+    degree: DUT, Computer Science
+    period: { start: "2005", end: "2007" }
