@@ -5,8 +5,9 @@
       "url": [
         "http://localhost/",
         "http://localhost/cv/",
-        "http://localhost/blog/",
-        "http://localhost/404.html"
+        "http://localhost/posts/",
+        "http://localhost/404.html",
+        "http://localhost/posts/running-cron-jobs-docker-container-definitive-guide/"
       ],
       "numberOfRuns": 3,
       "settings": {

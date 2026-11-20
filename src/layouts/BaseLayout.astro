@@ -16,12 +16,10 @@ export type Props = HeadProps;
     <a class="skip-link" href="#main">
       Skip to content
     </a>
-    <div class="container">
-      <Header />
-      <main id="main" tabindex="-1">
-        <slot />
-      </main>
-      <Footer />
-    </div>
+    <Header />
+    <main id="main" class="container" tabindex="-1">
+      <slot />
+    </main>
+    <Footer />
   </body>
 </html>

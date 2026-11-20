@@ -6,7 +6,7 @@ import { SITE } from "../site.config";
 export const GET: APIRoute = async ({ site }) => {
   const posts = await getPosts();
   return rss({
-    title: `${SITE.title} · Blog`,
+    title: `${SITE.title} · Posts`,
     description: SITE.description,
     site: site ?? SITE.links.github,
     customData: `<language>${SITE.lang}</language>`,

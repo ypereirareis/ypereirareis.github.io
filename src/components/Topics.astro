@@ -1,0 +1,35 @@
+---
+import type { Post } from "../lib/posts";
+
+export interface Props {
+  topics: Post["data"]["tags"];
+}
+
+const { topics } = Astro.props;
+---
+
+<ul class="topics" aria-label="Topics">
+  {topics.map((topic) => (
+    <li>{topic}</li>
+  ))}
+</ul>
+
+<style>
+  .topics {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    padding: 0 0.4rem;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    line-height: 1.6;
+  }
+</style>

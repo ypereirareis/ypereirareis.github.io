@@ -2,7 +2,7 @@
 title: Building this site
 description: Why this site is a static Astro build with a CI pipeline that gates accessibility, performance and broken links before every deploy.
 pubDate: 2026-11-20
-tags: [astro, ci-cd, github-actions]
+tags: [platform]
 draft: true
 ---
 

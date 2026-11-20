@@ -1,0 +1,14 @@
+# Link checker configuration, picked up automatically by lychee (CI and local runs).
+
+# Example URLs in posts (localhost:9200, 10.0.0.x…) are not real links.
+exclude_loopback = true
+exclude_private = true
+
+# Pages of this site are checked offline against dist/ on every pull request.
+exclude = ['^https://ypereirareis\.github\.io/']
+
+# Stack Overflow, Server Fault and dev.mysql.com answer 403 to bots; 429 means rate limited.
+accept = ["200..=299", "403", "429"]
+
+max_retries = 3
+timeout = 20

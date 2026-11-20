@@ -2,7 +2,7 @@
   "name": "ypereirareis.github.io",
   "version": "2.0.0",
   "private": true,
-  "description": "Personal website, resume and technical blog of Yannick Pereira-Reis.",
+  "description": "Personal website, resume and technical writing of Yannick Pereira-Reis.",
   "license": "MIT",
   "type": "module",
   "packageManager": "pnpm@12.21.0",

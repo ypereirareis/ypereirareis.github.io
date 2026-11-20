@@ -9,6 +9,8 @@ export interface Props {
   publishedTime?: Date | undefined;
   modifiedTime?: Date | undefined;
   jsonLd?: Record<string, unknown>[];
+  /** Append the job title to the page title (SEO), e.g. on the CV. */
+  withJobTitle?: boolean;
 }
 
 const {
@@ -18,9 +20,17 @@ const {
   publishedTime,
   modifiedTime,
   jsonLd = [],
+  withJobTitle = false,
 } = Astro.props;
 
-const fullTitle = title ? `${title} · ${SITE.title}` : `${SITE.title} · ${SITE.jobTitle}`;
+// Home and CV carry the job title for SEO; posts use their own title only.
+const fullTitle = !title
+  ? `${SITE.jobTitle} · ${SITE.author}`
+  : type === "article"
+    ? title
+    : withJobTitle
+      ? `${title} · ${SITE.author}, ${SITE.jobTitle}`
+      : `${title} · ${SITE.author}`;
 const canonical = new URL(Astro.url.pathname, Astro.site);
 const ogImage = new URL("/og.png", Astro.site);
 ---
@@ -34,8 +44,8 @@ const ogImage = new URL("/og.png", Astro.site);
 <meta name="generator" content={Astro.generator} />
 
 <meta name="color-scheme" content="light dark" />
-<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
-<meta name="theme-color" content="#111111" media="(prefers-color-scheme: dark)" />
+<meta name="theme-color" content="#4338ca" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#312e81" media="(prefers-color-scheme: dark)" />
 
 <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
@@ -43,7 +53,7 @@ const ogImage = new URL("/og.png", Astro.site);
 <link
   rel="alternate"
   type="application/rss+xml"
-  title={`${SITE.title} · Blog`}
+  title={`${SITE.title} · Posts`}
   href={new URL("/rss.xml", Astro.site)}
 />
 
