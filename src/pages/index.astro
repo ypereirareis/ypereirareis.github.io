@@ -1,14 +1,14 @@
 ---
 import { Image } from "astro:assets";
 import avatar from "../assets/avatar.jpg";
-import PostList from "../components/PostList.astro";
+import PostIndex from "../components/PostIndex.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { personJsonLd } from "../lib/jsonld";
-import { getPosts } from "../lib/posts";
-import { SITE } from "../site.config";
+import { getPosts, HOME_POSTS } from "../lib/posts";
+import { FOCUS_AREAS, INTRO_POINTS, SITE } from "../site.config";
 
 const site = Astro.site ?? new URL(Astro.url.origin);
-const recentPosts = (await getPosts()).slice(0, 5);
+const recentPosts = (await getPosts()).slice(0, HOME_POSTS);
 const websiteJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebSite",
@@ -20,47 +20,109 @@ const websiteJsonLd = {
 ---
 
 <BaseLayout jsonLd={[personJsonLd(site), websiteJsonLd]}>
-  <section class="intro" aria-labelledby="intro-title">
+  <section class="hero" aria-labelledby="intro-title">
+    <div>
+      <h1 id="intro-title" class="page-title">
+        <span class="role">{SITE.jobTitle}</span>
+        <span class="name">{SITE.author}</span>
+      </h1>
+      <ul class="lead">
+        {INTRO_POINTS.map((point) => (
+          <li>
+            {point.split("**").map((part, index) => (index % 2 ? <strong>{part}</strong> : part))}
+          </li>
+        ))}
+      </ul>
+      <p class="actions">
+        <a class="button" href="/cv/">
+          View my CV
+        </a>
+        <a class="button secondary" href="/posts/">
+          Read my posts
+        </a>
+      </p>
+      <ul class="social">
+        <li>
+          <a href={SITE.links.github} rel="me">
+            <svg viewBox="0 0 16 16" width="18" height="18" aria-hidden="true">
+              <path
+                fill="currentColor"
+                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"
+              ></path>
+            </svg>
+            GitHub
+          </a>
+        </li>
+        <li>
+          <a href={SITE.links.linkedin} rel="me">
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+              <path
+                fill="currentColor"
+                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+              ></path>
+            </svg>
+            LinkedIn
+          </a>
+        </li>
+      </ul>
+    </div>
     <Image
       src={avatar}
       alt=""
-      width={112}
-      height={112}
-      widths={[112, 224]}
-      sizes="112px"
+      width={176}
+      height={176}
+      widths={[176, 352]}
+      sizes="176px"
       loading="eager"
       fetchpriority="high"
       class="avatar"
     />
-    <div>
-      <h1 id="intro-title">{SITE.author}</h1>
-      <p class="lead">{SITE.jobTitle}</p>
-    </div>
   </section>
 
-  <p>
-    I build and run internal platforms: CI/CD, Kubernetes, observability and the tooling that lets
-    product teams ship safely and fast. This site hosts my <a href="/cv/">CV</a> and a technical
-    <a href="/blog/">blog</a>.
-  </p>
+  <section aria-labelledby="focus">
+    <h2 id="focus" class="section-title">
+      What I do or did
+    </h2>
+    <ul class="grid focus-grid">
+      {FOCUS_AREAS.map(({ title, text, hue, items }) => (
+        <li class="card focus" data-hue={hue}>
+          <h3>
+            <span class="swatch" aria-hidden="true"></span>
+            {title}
+          </h3>
+          <p class="muted">{text}</p>
+          <ul class="points">
+            {items.map((item) => (
+              <li>{item}</li>
+            ))}
+          </ul>
+        </li>
+      ))}
+    </ul>
+  </section>
 
   <section aria-labelledby="recent-posts">
-    <h2 id="recent-posts">Recent posts</h2>
-    <PostList posts={recentPosts} headingLevel={3} />
+    <h2 id="recent-posts" class="section-title">
+      Recent posts
+    </h2>
+    {recentPosts.length === 0 ? (
+      <p class="muted">No posts yet.</p>
+    ) : (
+      <PostIndex posts={recentPosts} />
+    )}
+    <p class="all-posts">
+      <a href="/posts/">All posts →</a>
+    </p>
   </section>
 </BaseLayout>
 
 <style>
-  .intro {
-    display: flex;
+  .hero {
+    display: grid;
+    grid-template-columns: 1fr auto;
     align-items: center;
-    gap: 1.25rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .avatar {
-    flex-shrink: 0;
-    border-radius: 50%;
+    gap: 2rem 3rem;
+    padding-bottom: 1rem;
   }
 
   h1 {
@@ -68,8 +130,106 @@ const websiteJsonLd = {
   }
 
   .lead {
-    margin: 0.25rem 0 0;
+    max-width: 40rem;
+    margin: 1.25rem 0 1.5rem;
+    padding-left: 1.2rem;
     color: var(--text-muted);
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+    list-style: disc;
+  }
+
+  .lead li + li {
+    margin-top: 0.3rem;
+  }
+
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin: 0;
+  }
+
+  .social {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin: 1.25rem 0 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .social a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    color: var(--text-muted);
+    font-weight: 500;
+    text-decoration: none;
+  }
+
+  .social a:hover {
+    color: var(--primary);
+    text-decoration: underline;
+  }
+
+  .avatar {
+    border: 2px solid var(--accent);
+  }
+
+  .focus h3 {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin: 0 0 0.35rem;
+    font-size: 1.05rem;
+  }
+
+  .swatch {
+    flex-shrink: 0;
+    width: 0.6rem;
+    height: 0.6rem;
+    background: var(--hue-solid);
+  }
+
+  /* Two categories per row on wide screens, one on small screens. */
+  .focus-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @media (max-width: 48rem) {
+    .focus-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .focus .muted {
+    margin: 0 0 0.75rem;
+  }
+
+  .points {
+    margin: 0;
+    padding-left: 1.1rem;
+    list-style: disc;
+    font-size: 0.92rem;
+  }
+
+  .points li + li {
+    margin-top: 0.3rem;
+  }
+
+  .all-posts {
+    margin: 1rem 0 0;
+  }
+
+  @media (max-width: 40rem) {
+    .hero {
+      grid-template-columns: 1fr;
+    }
+
+    .avatar {
+      grid-row: 1;
+      width: 112px;
+      height: 112px;
+    }
   }
 </style>

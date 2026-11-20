@@ -1,0 +1,80 @@
+---
+import { postUrl, type Post } from "../lib/posts";
+import FormattedDate from "./FormattedDate.astro";
+import Topics from "./Topics.astro";
+
+export interface Props {
+  posts: Post[];
+}
+
+const { posts } = Astro.props;
+---
+
+<ul class="post-index">
+  {posts.map((post) => (
+    <li>
+      <div class="meta">
+        <FormattedDate date={post.data.pubDate} />
+        <Topics topics={post.data.tags} />
+      </div>
+      <a href={postUrl(post)}>{post.data.title}</a>
+    </li>
+  ))}
+</ul>
+
+<style>
+  .post-index {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    display: grid;
+    grid-template-columns: 12rem 1fr;
+    gap: 0.25rem 1.5rem;
+    padding-block: 0.75rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  li:first-child {
+    border-top: 1px solid var(--border);
+  }
+
+  .meta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.3rem;
+  }
+
+  li :global(time) {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    font-variant-numeric: tabular-nums;
+  }
+
+  a {
+    color: var(--text);
+    font-weight: 500;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: var(--primary);
+    text-decoration: underline;
+  }
+
+  @media (max-width: 40rem) {
+    li {
+      grid-template-columns: 1fr;
+    }
+
+    .meta {
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.5rem;
+    }
+  }
+</style>

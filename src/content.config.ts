@@ -1,15 +1,16 @@
 import { defineCollection } from "astro:content";
 import { glob } from "astro/loaders";
 import { z } from "astro/zod";
+import { TOPICS } from "./site.config";
 
 const blog = defineCollection({
   loader: glob({ base: "./src/content/blog", pattern: "**/*.{md,mdx}" }),
   schema: z.object({
-    title: z.string().max(70),
-    description: z.string().min(50).max(160),
+    title: z.string().max(130),
+    description: z.string().min(20).max(300),
     pubDate: z.coerce.date(),
     updatedDate: z.coerce.date().optional(),
-    tags: z.array(z.string()).default([]),
+    tags: z.array(z.enum(TOPICS)).min(1).max(2),
     draft: z.boolean().default(false),
   }),
 });

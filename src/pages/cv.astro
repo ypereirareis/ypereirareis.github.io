@@ -1,6 +1,8 @@
 ---
 import { getEntry } from "astro:content";
+import Chip from "../components/Chip.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import { hueAt } from "../lib/hues";
 import { personJsonLd } from "../lib/jsonld";
 import { SITE } from "../site.config";
 
@@ -9,122 +11,216 @@ if (!entry) throw new Error("Missing src/content/cv/cv.yaml");
 const cv = entry.data;
 
 const site = Astro.site ?? new URL(Astro.url.origin);
-const formatPeriod = ({ start, end }: { start: string; end?: string | undefined }) =>
-  `${start.slice(0, 4)} – ${end ? end.slice(0, 4) : "present"}`;
+const formatPeriod = ({ start, end }: { start: string; end?: string | undefined }) => {
+  const from = start.slice(0, 4);
+  const to = end ? end.slice(0, 4) : "present";
+  return from === to ? from : `${from} – ${to}`;
+};
 ---
 
 <BaseLayout
   title="CV"
+  withJobTitle
   description={`${SITE.author}, ${cv.headline}. ${cv.summary}`.slice(0, 160)}
   jsonLd={[personJsonLd(site)]}
 >
   <header class="cv-header">
-    <h1>{SITE.author}</h1>
-    <p class="headline">
-      {cv.headline} · {cv.location}
-    </p>
-    <p>{cv.summary}</p>
-    <p class="print-hint">Print this page to get a PDF version.</p>
+    <h1 class="page-title">
+      <span class="role">{cv.headline}</span>
+      <span class="name">{SITE.author}</span>
+    </h1>
+    <p class="lead">{cv.summary}</p>
   </header>
 
-  <section aria-labelledby="skills">
-    <h2 id="skills">Skills</h2>
-    <dl class="skills">
-      {cv.skills.map(({ category, items }) => (
-        <div>
-          <dt>{category}</dt>
-          <dd>{items.join(", ")}</dd>
-        </div>
-      ))}
-    </dl>
-  </section>
-
-  <section aria-labelledby="experience">
-    <h2 id="experience">Experience</h2>
-    {cv.experience.map((job) => (
-      <article class="entry">
-        <h3>
-          {job.role} · {job.url ? <a href={job.url}>{job.company}</a> : job.company}
-        </h3>
-        <p class="meta">
-          {formatPeriod(job.period)} · {job.location}
-        </p>
-        <ul>
-          {job.highlights.map((highlight) => (
-            <li>{highlight}</li>
-          ))}
+  <div class="layout">
+    <aside class="sidebar" aria-label="Profile">
+      <section class="card" aria-labelledby="contact">
+        <h2 id="contact">Contact</h2>
+        <ul class="plain">
+          <li>{cv.location}</li>
+          <li>
+            <a href={SITE.links.linkedin}>LinkedIn</a>
+          </li>
+          <li>
+            <a href={SITE.links.github}>GitHub</a>
+          </li>
         </ul>
-      </article>
-    ))}
-  </section>
+      </section>
 
-  <section aria-labelledby="education">
-    <h2 id="education">Education</h2>
-    {cv.education.map((school) => (
-      <article class="entry">
-        <h3>{school.degree}</h3>
-        <p class="meta">
-          {school.school} · {formatPeriod(school.period)}
-        </p>
-      </article>
-    ))}
-  </section>
+      <section class="card" aria-labelledby="skills">
+        <h2 id="skills">Skills</h2>
+        {cv.skills.map(({ category, items }, index) => (
+          <div class="skill-group">
+            <h3>{category}</h3>
+            <ul class="chips">
+              {items.map((item) => (
+                <li>
+                  <Chip label={item} hue={hueAt(index)} />
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </section>
+
+      <section class="card" aria-labelledby="education">
+        <h2 id="education">Education</h2>
+        {cv.education.map((school) => (
+          <div class="school">
+            <h3>{school.degree}</h3>
+            <p class="muted">
+              {school.school} · {formatPeriod(school.period)}
+            </p>
+          </div>
+        ))}
+      </section>
+
+      <p class="print-hint muted">Print this page to get a PDF version.</p>
+    </aside>
+
+    <section class="experience" aria-labelledby="experience">
+      <h2 id="experience" class="section-title">
+        Experience
+      </h2>
+      <ol class="timeline">
+        {cv.experience.map((job) => (
+          <li class="entry">
+            <article>
+              <p class="period">{formatPeriod(job.period)}</p>
+              <h3>
+                {job.role} · {job.url ? <a href={job.url}>{job.company}</a> : job.company}
+              </h3>
+              <p class="muted location">{job.location}</p>
+              <ul>
+                {job.highlights.map((highlight) => (
+                  <li>{highlight}</li>
+                ))}
+              </ul>
+            </article>
+          </li>
+        ))}
+      </ol>
+    </section>
+  </div>
 </BaseLayout>
 
 <style>
-  .headline,
-  .meta,
-  .print-hint {
+  .lead {
+    max-width: var(--measure);
     color: var(--text-muted);
-  }
-
-  .headline {
-    margin-top: -0.75rem;
     font-size: 1.15rem;
   }
 
-  .print-hint {
-    font-size: 0.9rem;
-  }
-
-  .skills {
+  .layout {
     display: grid;
-    gap: 0.5rem;
-    margin: 0;
+    grid-template-columns: minmax(16rem, 20rem) 1fr;
+    align-items: start;
+    gap: 2.5rem;
+    margin-top: 2rem;
   }
 
-  .skills div {
+  .sidebar {
     display: grid;
-    grid-template-columns: minmax(9rem, auto) 1fr;
-    gap: 1rem;
+    gap: 1.25rem;
   }
 
-  dt {
-    font-weight: 600;
-  }
-
-  dd {
-    margin: 0;
-  }
-
-  .entry h3 {
-    margin-bottom: 0;
+  .sidebar h2 {
+    margin: 0 0 0.75rem;
     font-size: 1.1rem;
   }
 
-  .meta {
-    margin: 0.25rem 0 0.5rem;
+  .sidebar h3 {
+    margin: 0 0 0.4rem;
     font-size: 0.95rem;
   }
 
-  @media (max-width: 30rem) {
-    .skills div {
+  .plain {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .skill-group + .skill-group,
+  .school + .school {
+    margin-top: 1rem;
+  }
+
+  .school p {
+    margin: 0;
+    font-size: 0.95rem;
+  }
+
+  .print-hint {
+    margin: 0;
+    font-size: 0.9rem;
+  }
+
+  .experience .section-title {
+    margin-top: 0;
+  }
+
+  .timeline {
+    margin: 0;
+    padding: 0 0 0 1.5rem;
+    border-left: 1px solid var(--border);
+    list-style: none;
+  }
+
+  .entry {
+    position: relative;
+  }
+
+  .entry + .entry {
+    margin-top: 2rem;
+  }
+
+  .entry::before {
+    content: "";
+    position: absolute;
+    top: 0.45rem;
+    left: calc(-1.5rem - 4px);
+    width: 7px;
+    height: 7px;
+    background: var(--primary);
+  }
+
+  .period {
+    margin: 0;
+    color: var(--primary);
+    font-size: 0.85rem;
+    font-weight: 600;
+  }
+
+  .entry h3 {
+    margin: 0.15rem 0 0;
+    font-size: 1.05rem;
+  }
+
+  .location {
+    margin: 0.15rem 0 0.5rem;
+    font-size: 0.95rem;
+  }
+
+  .entry ul {
+    padding-left: 1.25rem;
+    list-style: disc;
+  }
+
+  @media (max-width: 56rem) {
+    .layout {
       grid-template-columns: 1fr;
-      gap: 0;
+    }
+
+    .experience {
+      grid-row: 1;
     }
   }
 
   @media print {
+    .layout {
+      grid-template-columns: 1fr;
+    }
+
     .print-hint {
       display: none;
     }

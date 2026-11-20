@@ -1,11 +1,109 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+
+const stages = [
+  { name: "lint", passed: true, detail: "passed" },
+  { name: "build", passed: true, detail: "passed" },
+  { name: "test", passed: true, detail: "passed" },
+  { name: "route", passed: false, detail: "page not found" },
+];
 ---
 
 <BaseLayout title="Page not found" description="The page you are looking for does not exist.">
-  <h1>Page not found</h1>
-  <p>The page you are looking for does not exist or has moved.</p>
-  <p>
-    <a href="/">Back to the home page</a> or browse the <a href="/blog/">blog</a>.
+  <h1>
+    Pipeline #404 <span class="failed">failed</span>
+  </h1>
+  <p class="lead muted">The page you are looking for does not exist or has moved.</p>
+
+  <ol class="stages" aria-label="Pipeline stages">
+    {stages.map(({ name, passed, detail }) => (
+      <li class="stage" data-hue={passed ? "emerald" : "rose"} data-passed={passed}>
+        <span class="icon" aria-hidden="true"></span>
+        <span class="name">{name}</span>
+        <span class="detail">{detail}</span>
+      </li>
+    ))}
+  </ol>
+
+  <h2 class="section-title">Job log (route)</h2>
+  <pre><code>{`> resolving requested path…
+> no matching page in dist/
+> exit code 404`}</code></pre>
+
+  <p class="actions">
+    <a class="button" href="/">
+      Retry from home
+    </a>
+    <a class="button secondary" href="/posts/">
+      Browse my posts
+    </a>
   </p>
 </BaseLayout>
+
+<style>
+  .failed {
+    color: var(--hue-rose-fg);
+  }
+
+  .lead {
+    max-width: var(--measure);
+    font-size: 1.15rem;
+  }
+
+  .stages {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 12rem), 1fr));
+    gap: 0.75rem;
+    margin: 2rem 0 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .stage {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0 0.6rem;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--hue-solid);
+    background: var(--surface);
+  }
+
+  /* Decorative status glyph, drawn in CSS: the status is given by the text next to it. */
+  .icon::before {
+    content: "✗";
+  }
+
+  [data-passed="true"] .icon::before {
+    content: "✓";
+  }
+
+  .icon {
+    grid-row: span 2;
+    color: var(--hue-fg);
+    font-size: 1.25rem;
+    font-weight: 700;
+  }
+
+  .name {
+    font-family: var(--font-mono);
+    font-weight: 600;
+  }
+
+  .detail {
+    color: var(--hue-fg);
+    font-size: 0.9rem;
+  }
+
+  pre {
+    max-width: var(--measure);
+  }
+
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 2rem;
+  }
+</style>

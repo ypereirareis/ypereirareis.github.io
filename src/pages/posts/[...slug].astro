@@ -2,9 +2,10 @@
 import type { GetStaticPaths } from "astro";
 import { render } from "astro:content";
 import FormattedDate from "../../components/FormattedDate.astro";
+import Topics from "../../components/Topics.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { breadcrumbJsonLd } from "../../lib/jsonld";
-import { getPosts, postUrl, tagSlug, type Post } from "../../lib/posts";
+import { getPosts, postUrl, type Post } from "../../lib/posts";
 import { SITE } from "../../site.config";
 
 export const getStaticPaths = (async () => {
@@ -22,6 +23,9 @@ const { Content } = await render(post);
 
 const site = Astro.site ?? new URL(Astro.url.origin);
 const url = new URL(postUrl(post), site).href;
+const OUTDATED_AFTER_YEARS = 3;
+const lastUpdate = updatedDate ?? pubDate;
+const isOutdated = new Date().getFullYear() - lastUpdate.getFullYear() >= OUTDATED_AFTER_YEARS;
 const articleJsonLd = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
@@ -38,7 +42,7 @@ const articleJsonLd = {
 };
 const breadcrumb = breadcrumbJsonLd(site, [
   { name: "Home", path: "/" },
-  { name: "Blog", path: "/blog/" },
+  { name: "Posts", path: "/posts/" },
   { name: title, path: postUrl(post) },
 ]);
 ---
@@ -51,56 +55,66 @@ const breadcrumb = breadcrumbJsonLd(site, [
   modifiedTime={updatedDate}
   jsonLd={[articleJsonLd, breadcrumb]}
 >
-  <article>
-    <header>
-      <h1>{title}</h1>
+  <article class="post">
+    <header class="post-header">
       <p class="meta">
         <FormattedDate date={pubDate} />
         {updatedDate && (
           <>
-            · Updated <FormattedDate date={updatedDate} />
+            {" · Updated "}
+            <FormattedDate date={updatedDate} />
           </>
         )}
       </p>
-      {tags.length > 0 && (
-        <ul class="tags" aria-label="Tags">
-          {tags.map((tag) => (
-            <li>
-              <a href={`/blog/tags/${tagSlug(tag)}/`}>#{tag}</a>
-            </li>
-          ))}
-        </ul>
-      )}
+      <h1>{title}</h1>
+      <Topics topics={tags} />
     </header>
+    {isOutdated && (
+      <p class="outdated" role="note">
+        This article was written in {pubDate.getFullYear()}. Tools and versions have moved on since
+        then, so some content may be outdated.
+      </p>
+    )}
     <div class="prose">
       <Content />
     </div>
+    <p class="back">
+      <a href="/posts/">← All posts</a>
+    </p>
   </article>
-  <p>
-    <a href="/blog/">← All posts</a>
-  </p>
 </BaseLayout>
 
 <style>
-  .meta {
-    margin-top: -0.5rem;
-    color: var(--text-muted);
+  .post {
+    max-width: var(--measure);
+    margin-inline: auto;
   }
 
-  .tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.75rem;
-    margin: 0;
-    padding: 0;
-    list-style: none;
+  .post-header {
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .meta {
+    margin: 0 0 0.5rem;
+    color: var(--primary);
+    font-weight: 600;
   }
 
   .prose {
     margin-top: 2rem;
   }
 
-  .prose :global(h2) {
-    margin-top: 2.5rem;
+  .outdated {
+    margin: 1.5rem 0 0;
+    padding: 0.75rem 1rem;
+    border-left: 2px solid var(--accent);
+    background: var(--hue-amber-bg);
+    color: var(--hue-amber-fg);
+    font-size: 0.95rem;
+  }
+
+  .back {
+    margin-top: 3rem;
   }
 </style>

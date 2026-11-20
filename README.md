@@ -3,7 +3,7 @@
 [![CI](https://github.com/ypereirareis/ypereirareis.github.io/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/ypereirareis/ypereirareis.github.io/actions/workflows/ci.yml)
 [![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/ypereirareis/ypereirareis.github.io/badge)](https://scorecard.dev/viewer/?uri=github.com/ypereirareis/ypereirareis.github.io)
 
-Source of [ypereirareis.github.io](https://ypereirareis.github.io): resume and technical blog.
+Source of [ypereirareis.github.io](https://ypereirareis.github.io): resume and technical writing.
 
 - Static site built with [Astro](https://astro.build), no client-side JavaScript.
 - Content in Markdown/MDX and YAML, validated by typed schemas at build time.
@@ -29,7 +29,7 @@ pnpm dev          # http://localhost:4321
 
 ## Content
 
-- Blog posts: `src/content/blog/*.md(x)`. Set `draft: true` to keep a post out of production builds.
+- Posts (published under `/posts/`): `src/content/blog/*.md(x)`. Set `draft: true` to keep a post out of production builds.
 - Resume: `src/content/cv/cv.yaml`, rendered on `/cv/` and print-ready (print to PDF).
 
 ## CI/CD

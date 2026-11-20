@@ -6,56 +6,83 @@ const isActive = (href: string) => (href === "/" ? current === "/" : current.sta
 ---
 
 <header class="site-header">
-  <a class="site-title" href="/">
-    {SITE.title}
-  </a>
-  <nav aria-label="Main">
-    <ul>
-      {NAV.map(({ href, label }) => (
-        <li>
-          <a href={href} aria-current={isActive(href) ? "page" : undefined}>
-            {label}
-          </a>
-        </li>
-      ))}
-    </ul>
-  </nav>
+  <div class="container inner">
+    <a class="site-title" href="/">
+      <span class="mark" aria-hidden="true"></span>
+      {SITE.title}
+    </a>
+    <nav aria-label="Main">
+      <ul>
+        {NAV.map(({ href, label }) => (
+          <li>
+            <a href={href} aria-current={isActive(href) ? "page" : undefined}>
+              {label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  </div>
 </header>
 
 <style>
   .site-header {
+    background: var(--header-bg);
+    color: var(--header-text);
+  }
+
+  .inner {
     display: flex;
     flex-wrap: wrap;
-    align-items: baseline;
+    align-items: center;
     justify-content: space-between;
     gap: 0.5rem 1.5rem;
-    padding-block: 1.5rem;
-    border-bottom: 1px solid var(--border);
+    padding-block: 1rem;
   }
 
   .site-title {
-    font-weight: 700;
-    color: var(--text);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    color: var(--header-text);
+    font-weight: 600;
     text-decoration: none;
+  }
+
+  .mark {
+    width: 0.6rem;
+    height: 0.6rem;
+    background: var(--accent);
   }
 
   ul {
     display: flex;
-    gap: 1.25rem;
+    gap: 0.25rem;
     margin: 0;
     padding: 0;
     list-style: none;
   }
 
   nav a {
-    color: var(--text-muted);
+    display: block;
+    padding: 0.35rem 0.75rem;
+    border-bottom: 2px solid transparent;
+    color: var(--header-muted);
     text-decoration: none;
   }
 
-  nav a:hover,
-  nav a[aria-current="page"] {
-    color: var(--text);
+  nav a:hover {
+    color: var(--header-text);
     text-decoration: underline;
     text-underline-offset: 0.3em;
+  }
+
+  nav a[aria-current="page"] {
+    border-bottom-color: var(--accent);
+    color: var(--header-text);
+  }
+
+  .site-header :focus-visible {
+    outline-color: var(--header-text);
   }
 </style>

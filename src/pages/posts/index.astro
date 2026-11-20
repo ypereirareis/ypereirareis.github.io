@@ -1,0 +1,77 @@
+---
+import PostIndex from "../../components/PostIndex.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { BLOG_LATEST_POSTS, getPosts } from "../../lib/posts";
+
+const posts = await getPosts();
+// Recomputed on every build from publication dates: no manual archiving.
+const latest = posts.slice(0, BLOG_LATEST_POSTS);
+const archived = posts.slice(BLOG_LATEST_POSTS);
+---
+
+<BaseLayout
+  title="Posts"
+  description="Technical articles about platform engineering, CI/CD, Kubernetes, observability and developer experience."
+>
+  <h1>Posts</h1>
+  <p class="lead muted">
+    Notes from the field on platform engineering, CI/CD, Kubernetes, observability and developer
+    experience.
+  </p>
+  <section aria-labelledby="latest">
+    <h2 id="latest" class="section-title">
+      Latest posts
+    </h2>
+    {latest.length === 0 ? <p class="muted">No posts yet.</p> : <PostIndex posts={latest} />}
+  </section>
+  {archived.length > 0 && (
+    <section aria-labelledby="archived">
+      <h2 id="archived" class="section-title">
+        Archived
+      </h2>
+      <details>
+        <summary>Show the {archived.length} older posts</summary>
+        <PostIndex posts={archived} />
+      </details>
+    </section>
+  )}
+</BaseLayout>
+
+<style>
+  .lead {
+    max-width: var(--measure);
+    font-size: 1.15rem;
+  }
+
+  summary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    color: var(--primary);
+    font-weight: 500;
+    cursor: pointer;
+    list-style: none;
+  }
+
+  summary::-webkit-details-marker {
+    display: none;
+  }
+
+  /* Disclosure indicator: points right when closed, down when open. */
+  summary::before {
+    content: "";
+    width: 0.45rem;
+    height: 0.45rem;
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    transform: rotate(-45deg);
+  }
+
+  details[open] > summary::before {
+    transform: rotate(45deg);
+  }
+
+  details[open] > summary {
+    margin-bottom: 1.25rem;
+  }
+</style>

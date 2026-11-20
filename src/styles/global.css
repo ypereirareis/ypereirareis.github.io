@@ -1,18 +1,85 @@
-/* Sober, system-font based theme. Colors meet WCAG AAA for body text. */
+/*
+ * Flat theme: solid fills, thin borders, no shadows or gradients.
+ * Every text/background pair meets WCAG AA; body text meets AAA.
+ * Amber (--accent) is decorative only and never used for text.
+ */
 :root {
   color-scheme: light dark;
 
-  --bg: light-dark(#ffffff, #111111);
-  --text: light-dark(#1a1a1a, #e8e8e8);
-  --text-muted: light-dark(#4d4d4d, #b0b0b0);
-  --link: light-dark(#0645ad, #8ab4f8);
-  --border: light-dark(#e0e0e0, #2e2e2e);
-  --code-bg: light-dark(#f5f5f5, #1c1c1c);
-  --focus: light-dark(#0645ad, #8ab4f8);
+  --bg: light-dark(#ffffff, #0f1020);
+  --surface: light-dark(#f4f4fb, #1a1b2e);
+  --text: light-dark(#1a1b2e, #e8e8f0);
+  --text-muted: light-dark(#4b4d63, #a9abc3);
+  --border: light-dark(#e2e2ee, #2c2d45);
+  --primary: light-dark(#4338ca, #a5b4fc);
+  --on-primary: light-dark(#ffffff, #0f1020);
+  --header-bg: light-dark(#4338ca, #312e81);
+  --header-text: #ffffff;
+  --header-muted: #e0e7ff;
+  --accent: #f59e0b;
+  --code-bg: light-dark(#f4f4fb, #1a1b2e);
+
+  --hue-indigo-fg: light-dark(#3730a3, #c7d2fe);
+  --hue-indigo-bg: light-dark(#e0e7ff, #26265a);
+  --hue-indigo-solid: light-dark(#4338ca, #818cf8);
+  --hue-cyan-fg: light-dark(#155e75, #a5f3fc);
+  --hue-cyan-bg: light-dark(#cffafe, #123a44);
+  --hue-cyan-solid: light-dark(#0e7490, #22d3ee);
+  --hue-emerald-fg: light-dark(#065f46, #a7f3d0);
+  --hue-emerald-bg: light-dark(#d1fae5, #0b3b2c);
+  --hue-emerald-solid: light-dark(#059669, #34d399);
+  --hue-amber-fg: light-dark(#92400e, #fcd34d);
+  --hue-amber-bg: light-dark(#fef3c7, #3d2a0a);
+  --hue-amber-solid: #f59e0b;
+  --hue-rose-fg: light-dark(#9d174d, #fbcfe8);
+  --hue-rose-bg: light-dark(#fce7f3, #43122c);
+  --hue-rose-solid: light-dark(#be185d, #f472b6);
+  --hue-violet-fg: light-dark(#5b21b6, #ddd6fe);
+  --hue-violet-bg: light-dark(#ede9fe, #2e1a5c);
+  --hue-violet-solid: light-dark(#7c3aed, #a78bfa);
 
   --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --font-mono: ui-monospace, "SF Mono", "Cascadia Code", "Roboto Mono", Menlo, Consolas, monospace;
+  --container: 72rem;
   --measure: 44rem;
+  --radius: 0;
+  --gutter: clamp(1rem, 4vw, 2rem);
+}
+
+[data-hue="indigo"] {
+  --hue-fg: var(--hue-indigo-fg);
+  --hue-bg: var(--hue-indigo-bg);
+  --hue-solid: var(--hue-indigo-solid);
+}
+
+[data-hue="cyan"] {
+  --hue-fg: var(--hue-cyan-fg);
+  --hue-bg: var(--hue-cyan-bg);
+  --hue-solid: var(--hue-cyan-solid);
+}
+
+[data-hue="emerald"] {
+  --hue-fg: var(--hue-emerald-fg);
+  --hue-bg: var(--hue-emerald-bg);
+  --hue-solid: var(--hue-emerald-solid);
+}
+
+[data-hue="amber"] {
+  --hue-fg: var(--hue-amber-fg);
+  --hue-bg: var(--hue-amber-bg);
+  --hue-solid: var(--hue-amber-solid);
+}
+
+[data-hue="rose"] {
+  --hue-fg: var(--hue-rose-fg);
+  --hue-bg: var(--hue-rose-bg);
+  --hue-solid: var(--hue-rose-solid);
+}
+
+[data-hue="violet"] {
+  --hue-fg: var(--hue-violet-fg);
+  --hue-bg: var(--hue-violet-bg);
+  --hue-solid: var(--hue-violet-solid);
 }
 
 *,
@@ -27,22 +94,28 @@ html {
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   margin: 0;
   background: var(--bg);
   color: var(--text);
   font-family: var(--font-sans);
   font-size: 1.0625rem;
   line-height: 1.65;
+  overflow-wrap: break-word;
 }
 
 .container {
-  max-width: var(--measure);
+  width: 100%;
+  max-width: var(--container);
   margin-inline: auto;
-  padding-inline: 1.25rem;
+  padding-inline: var(--gutter);
 }
 
 main {
-  padding-top: 2.5rem;
+  flex: 1;
+  padding-block: clamp(2rem, 5vw, 3.5rem);
 }
 
 main:focus {
@@ -53,13 +126,39 @@ h1,
 h2,
 h3,
 h4 {
-  line-height: 1.25;
+  line-height: 1.2;
   text-wrap: balance;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 600;
 }
 
 h1 {
   margin-top: 0;
-  font-size: 2rem;
+  font-size: clamp(1.9rem, 1.4rem + 2vw, 2.6rem);
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: 1.35rem;
+  letter-spacing: -0.01em;
+}
+
+/* Page title: job title first, name as a secondary line (both in the h1). */
+.page-title .role {
+  display: block;
+}
+
+.page-title .name {
+  display: block;
+  margin-top: 0.4rem;
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 0;
 }
 
 p,
@@ -68,14 +167,13 @@ li {
 }
 
 a {
-  color: var(--link);
+  color: var(--primary);
   text-underline-offset: 0.2em;
 }
 
 :focus-visible {
-  outline: 3px solid var(--focus);
+  outline: 2px solid var(--primary);
   outline-offset: 2px;
-  border-radius: 2px;
 }
 
 img {
@@ -91,15 +189,13 @@ pre {
 
 :not(pre) > code {
   padding: 0.1em 0.35em;
-  border-radius: 4px;
   background: var(--code-bg);
 }
 
 pre {
   overflow-x: auto;
-  padding: 1rem;
+  padding: 1rem 1.25rem;
   border: 1px solid var(--border);
-  border-radius: 6px;
   line-height: 1.5;
 }
 
@@ -108,6 +204,141 @@ pre {
 .astro-code span {
   color: light-dark(var(--shiki-light), var(--shiki-dark));
   background-color: light-dark(var(--shiki-light-bg), var(--shiki-dark-bg));
+}
+
+/* Section heading with a short amber bar. */
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 3rem 0 1.25rem;
+}
+
+.section-title::before {
+  content: "";
+  width: 1.25rem;
+  height: 2px;
+  background: var(--accent);
+}
+
+/* Responsive card grid: one column on small screens, as many as fit above. */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, var(--min, 16rem)), 1fr));
+  gap: 1.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Let grid items shrink below their longest word (long titles wrap instead of overflowing). */
+.grid > * {
+  min-width: 0;
+}
+
+.card {
+  height: 100%;
+  padding: 1.25rem 1.5rem;
+  border: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.card > :first-child {
+  margin-top: 0;
+}
+
+.card > :last-child {
+  margin-bottom: 0;
+}
+
+.chip {
+  display: inline-block;
+  padding: 0.05rem 0.5rem;
+  background: var(--hue-bg, var(--surface));
+  color: var(--hue-fg, var(--text));
+  font-size: 0.8rem;
+  font-weight: 500;
+  line-height: 1.6;
+  text-decoration: none;
+}
+
+a.chip:hover {
+  text-decoration: underline;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.55rem 1.1rem;
+  border: 1px solid var(--primary);
+  background: var(--primary);
+  color: var(--on-primary);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.button:hover {
+  text-decoration: underline;
+}
+
+.button.secondary {
+  background: transparent;
+  color: var(--primary);
+}
+
+.prose {
+  max-width: var(--measure);
+  /* Long URLs and inline code must not overflow on small screens. */
+  overflow-wrap: anywhere;
+}
+
+.prose :where(pre) {
+  overflow-wrap: normal;
+}
+
+.prose :where(h2) {
+  margin-top: 2.5rem;
+}
+
+.prose :where(img) {
+  display: block;
+  margin: 1.5rem auto;
+}
+
+.prose :where(blockquote) {
+  margin: 1.5rem 0;
+  padding: 0.25rem 1rem;
+  border-left: 2px solid var(--primary);
+  background: var(--surface);
+  color: var(--text-muted);
+}
+
+.prose :where(table) {
+  display: block;
+  overflow-x: auto;
+  border-collapse: collapse;
+}
+
+.prose :where(th, td) {
+  padding: 0.4rem 0.75rem;
+  border: 1px solid var(--border);
+  text-align: left;
+}
+
+.prose :where(li > pre) {
+  margin-block: 0.75rem;
+}
+
+.muted {
+  color: var(--text-muted);
 }
 
 .skip-link {
@@ -153,6 +384,18 @@ pre {
   .site-header nav,
   .site-footer {
     display: none;
+  }
+
+  .site-header {
+    background: none;
+    color: inherit;
+  }
+
+  .chip,
+  .card {
+    border: 1px solid #999;
+    background: none;
+    color: inherit;
   }
 
   a {

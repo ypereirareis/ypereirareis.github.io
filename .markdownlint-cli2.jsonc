@@ -5,6 +5,15 @@
     "MD013": false,
     // Blog posts get their H1 from the frontmatter title.
     "MD041": false,
+    // Writing-style rules: bold lead-ins, "$ command" prompts and punctuated headings are accepted.
+    "MD014": false,
+    "MD026": false,
+    "MD036": false,
+    // Repeated headings are fine in different sections (e.g. "Example" under several steps).
+    "MD024": { "siblings_only": true },
+    // Tabs are legitimate inside code (Makefiles, Go…).
+    "MD010": { "code_blocks": false },
+    "MD033": { "allowed_elements": ["br"] },
   },
   "globs": ["**/*.{md,mdx}"],
   "ignores": ["node_modules/**", "dist/**", ".astro/**", "site/**"],

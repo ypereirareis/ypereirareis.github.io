@@ -5,46 +5,51 @@ const year = new Date().getFullYear();
 ---
 
 <footer class="site-footer">
-  <ul>
-    <li>
-      <a href={SITE.links.github} rel="me">
-        GitHub
-      </a>
-    </li>
-    <li>
-      <a href={SITE.links.linkedin} rel="me">
-        LinkedIn
-      </a>
-    </li>
-    <li>
-      <a href="/rss.xml">RSS</a>
-    </li>
-    <li>
-      <a href="https://github.com/ypereirareis/ypereirareis.github.io">Source</a>
-    </li>
-  </ul>
-  <p>
-    © {year} {SITE.author}
-  </p>
+  <div class="container inner">
+    <ul>
+      <li>
+        <a href={SITE.links.github} rel="me">
+          GitHub
+        </a>
+      </li>
+      <li>
+        <a href={SITE.links.linkedin} rel="me">
+          LinkedIn
+        </a>
+      </li>
+      <li>
+        <a href="/rss.xml">RSS</a>
+      </li>
+      <li>
+        <a href="https://github.com/ypereirareis/ypereirareis.github.io">Source</a>
+      </li>
+    </ul>
+    <p>
+      © {year} {SITE.author}
+    </p>
+  </div>
 </footer>
 
 <style>
   .site-footer {
+    border-top: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--text-muted);
+    font-size: 0.9rem;
+  }
+
+  .inner {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 1rem;
-    margin-top: 4rem;
     padding-block: 1.5rem;
-    border-top: 1px solid var(--border);
-    color: var(--text-muted);
-    font-size: 0.9rem;
   }
 
   ul {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 1.25rem;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -52,6 +57,10 @@ const year = new Date().getFullYear();
 
   a {
     color: var(--text-muted);
+  }
+
+  a:hover {
+    color: var(--primary);
   }
 
   p {
