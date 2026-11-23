@@ -1,38 +1,64 @@
 # Resume data rendered on /cv/ (web and print).
-# TODO: add the 2020 → present experience, check the SFAM end date and
-# refresh the headline/summary.
-headline: Platform Engineer
+headline: Cloud Platform Engineer
 location: Valence, France (remote-friendly)
 summary: >-
-  Platform engineer with a strong software engineering background.
-  I design and operate the platforms, CI/CD pipelines and tooling that let
-  product teams ship reliably and fast.
-
-skills:
-  - category: Platform
-    items: [Kubernetes, Docker, Docker Swarm, HAProxy, Ansible]
-  - category: CI/CD
-    items: [GitLab CI, GitHub Actions, Jenkins]
-  - category: Observability
-    items: [Prometheus, Grafana, Alertmanager, ELK]
-  - category: Data & messaging
-    items: [MySQL replication, RabbitMQ, Elasticsearch]
-  - category: Software
-    items: [TypeScript, Node.js, PHP, Symfony, Vue.js, GraphQL]
+  I turn infrastructure into a product: a software engineer turned DevOps, then
+  Cloud Platform Engineer, I build GitOps platforms, CI/CD pipelines and
+  automation on AWS and Kubernetes that let product teams ship safely without
+  thinking about infrastructure.
 
 experience:
-  - company: SFAM
+  - company: Ingenico
+    url: https://www.ingenico.com/
+    role: Cloud Platform Engineer
+    location: Valence, France (hybrid)
+    period: { start: "2023-09" }
+    sections:
+      - title: Platform and CI/CD
+        highlights:
+          - "Maintained a unified CI written in Python for all repositories: Kaniko builds in OCI format, tests with Karate, Helm unit tests, Terratest and Python, merge request checks with Danger, release and artifact publishing."
+          - Code quality and release automation with pre-commit, Conventional Commits, semantic-release and Renovate, which also drives environment promotions.
+          - "GitLab managed as code with Terraform: projects, groups, variables and scheduled pipelines."
+          - Maintained a Helm library chart standardizing the deployment of hundreds of Kubernetes microservices.
+      - title: GitOps and infrastructure as code
+        highlights:
+          - Built and maintained the central live repository orchestrating deployments to every environment.
+          - GitOps with Argo CD (sync waves) and Crossplane; Terraform and Terragrunt modules with drift detection.
+          - "Platform components delivered with Helm, Terraform or Crossplane: HashiCorp Vault and External Secrets, K8up backups, Argo CD, MinIO, and single sign-on across applications with SAML and OIDC."
+      - title: Development
+        highlights:
+          - Custom Argo CD plugin in Node.js to extend GitOps workflows.
+          - Camunda proof of concept in Node.js to measure workflow performance and size the Zeebe and Elasticsearch nodes.
+      - title: Reliability and collaboration
+        highlights:
+          - "Took part in the design and implementation of a multi-region, active-passive disaster recovery plan on AWS: RDS, MSK, OpenSearch, S3, CloudFront, IoT Core and Argo CD."
+          - Datadog dashboards and monitors (logs, APM, metrics, alerting) and synthetic tests.
+          - On-call rotation and blameless post-mortems.
+          - Code reviews, test coverage, documentation and pair programming.
+  - company: Hubside
     role: DevOps & Fullstack Engineer
     location: Valence, France
-    period: { start: "2018-04", end: "2020" }
-    highlights:
-      - Designed and operated Docker Swarm clusters running about 50 applications, 60 stacks and 200+ containers.
-      - Built IP failover and load balancing with HAProxy.
-      - Set up application and infrastructure monitoring with ELK, Prometheus, Grafana and Alertmanager.
-      - Operated MySQL in master/master and master/replica topologies, with backups.
-      - Built a database event stream with Maxwell and RabbitMQ clusters.
-      - Implemented CI/CD from dev to prod with GitLab CI, unit and end-to-end tests.
-      - Managed servers and deployments with Ansible (100+ roles).
+    period: { start: "2018-04", end: "2023-08" }
+    sections:
+      - title: Kubernetes and Google Cloud
+        highlights:
+          - Led the migration from self-managed Docker Swarm clusters to Kubernetes (GKE) and Terraform on Google Cloud.
+          - "Google Cloud foundations as code with Terraform modules: VPC and VPC peering, Cloud NAT, Cloud VPN, Cloud SQL, VM instance groups, Secret Manager, Artifact Registry (Docker images and Helm charts), and backup policies for databases and VMs."
+          - "Kubernetes platform: official NGINX Ingress Controller, cert-manager, Reloader, Helm, Kustomize and kbld (Carvel), with logs in Elastic Cloud."
+          - Explored Kubernetes first on a sandbox environment (OVH Cloud).
+      - title: Docker Swarm and operations
+        highlights:
+          - "Designed and operated several Docker Swarm clusters: about 50 applications, 60+ stacks, 150 services and 300+ containers, with dozens of Docker images in a private Nexus registry (users, roles, read/write rights)."
+          - IP failover and load balancing with HAProxy.
+          - "Monitoring: ELK and Filebeat for applications; Prometheus, Grafana, node-exporter, cAdvisor, Alertmanager and SNMP for infrastructure."
+          - Operated and backed up MySQL in master/master and primary/replica replication.
+          - Database event stream with Maxwell and RabbitMQ clusters.
+          - CI/CD from dev to prod with GitLab CI, unit and functional tests (PHPUnit, Cypress).
+          - Server management and deployments with Ansible (100+ roles), and automated Debian workstation setup (installation, LVM partitioning).
+      - title: Development
+        highlights:
+          - REST APIs and client libraries on top of complex databases with API Platform and OpenAPI.
+          - Microservices architectures with Symfony, Vue.js, GraphQL, JWT, RabbitMQ and Docker.
   - company: Swapcard
     url: https://www.swapcard.com
     role: Backend Engineer
@@ -85,3 +111,13 @@ education:
   - school: IUT 2 Grenoble
     degree: DUT, Computer Science
     period: { start: "2005", end: "2007" }
+
+passions:
+  - { icon: "💻", label: My job }
+  - { icon: "🌍", label: Meeting new people and discovering new places }
+  - { icon: "😄", label: "Laughing, especially at dad jokes" }
+  - { icon: "🍪", label: "Cooking, and even more eating :)" }
+  - { icon: "🚲", label: Mountain biking }
+  - { icon: "🏃", label: Running }
+  - { icon: "🎲", label: Board games }
+  - { icon: "🎮", label: "Video games, now and then" }

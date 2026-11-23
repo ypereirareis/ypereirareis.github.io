@@ -1,9 +1,9 @@
 export const SITE = {
   title: "Yannick Pereira-Reis",
   description:
-    "Platform engineer. Resume and technical writing about platform engineering, CI/CD, Kubernetes, observability and developer experience.",
+    "Cloud Platform Engineer. Resume and technical writing about platform engineering, CI/CD, Kubernetes, observability and developer experience.",
   author: "Yannick Pereira-Reis",
-  jobTitle: "Platform Engineer",
+  jobTitle: "Cloud Platform Engineer",
   locale: "en_US",
   lang: "en",
   /** Source code of this site (not a profile: kept out of `links`, used for JSON-LD sameAs). */
@@ -25,7 +25,7 @@ export const INTRO_POINTS = [
   "I build and run **internal platforms** that let product teams ship safely and fast.",
   "Automation is a way of life: if I do it twice, I script it.",
   "**Software engineer first**, with years of **backend and full-stack development**.",
-  "Then **DevOps** and now **Platform Engineer**.",
+  "Then **DevOps** and now **Cloud Platform Engineer**.",
   "**Remote work** is my natural habitat, but I still migrate to the office now and then to see my colleagues (and the coffee machine).",
   "Special thanks to **Claude**, my pair-programming partner.",
 ];
@@ -52,7 +52,7 @@ export const FOCUS_AREAS: { title: string; text: string; hue: Hue; items: string
     items: [
       "Owner of the software factory, CI/CD and GitOps system components of the platform.",
       "Working with the owners of the other components (gateway, data, workload, network…) on cross-cutting platform topics.",
-      "Contributed to the design of a multi-region, active-passive disaster recovery plan on AWS.",
+      "Took part in the design and implementation of a multi-region, active-passive disaster recovery plan on AWS: RDS, MSK, OpenSearch, S3, CloudFront, IoT Core and Argo CD.",
       "Led platform-wide changes, such as moving every Argo CD application to a multi-region layout across all environments.",
       "Proofs of concept to evaluate new tools before adoption.",
       "Documentation: design docs, technical and functional documentation, contributing guides, published with MkDocs.",

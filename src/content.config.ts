@@ -26,12 +26,6 @@ const cv = defineCollection({
     headline: z.string(),
     location: z.string(),
     summary: z.string(),
-    skills: z.array(
-      z.object({
-        category: z.string(),
-        items: z.array(z.string()),
-      }),
-    ),
     experience: z.array(
       z.object({
         company: z.string(),
@@ -39,7 +33,11 @@ const cv = defineCollection({
         role: z.string(),
         location: z.string(),
         period,
-        highlights: z.array(z.string()),
+        highlights: z.array(z.string()).default([]),
+        /** Optional groups of highlights, each with a subtitle. */
+        sections: z
+          .array(z.object({ title: z.string(), highlights: z.array(z.string()) }))
+          .default([]),
       }),
     ),
     education: z.array(
@@ -49,6 +47,7 @@ const cv = defineCollection({
         period,
       }),
     ),
+    passions: z.array(z.object({ icon: z.string(), label: z.string() })).default([]),
   }),
 });
 

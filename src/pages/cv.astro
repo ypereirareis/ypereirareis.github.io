@@ -1,8 +1,7 @@
 ---
 import { getEntry } from "astro:content";
-import Chip from "../components/Chip.astro";
+import Icon from "../components/Icon.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import { hueAt } from "../lib/hues";
 import { personJsonLd } from "../lib/jsonld";
 import { SITE } from "../site.config";
 
@@ -11,6 +10,12 @@ if (!entry) throw new Error("Missing src/content/cv/cv.yaml");
 const cv = entry.data;
 
 const site = Astro.site ?? new URL(Astro.url.origin);
+// Meta description: about 160 characters, cut on a word boundary.
+const fullDescription = `${SITE.author}, ${cv.headline}. ${cv.summary}`;
+const description =
+  fullDescription.length <= 160
+    ? fullDescription
+    : `${fullDescription.slice(0, 157).replace(/\s+\S*$/, "")}…`;
 const formatPeriod = ({ start, end }: { start: string; end?: string | undefined }) => {
   const from = start.slice(0, 4);
   const to = end ? end.slice(0, 4) : "present";
@@ -18,12 +23,7 @@ const formatPeriod = ({ start, end }: { start: string; end?: string | undefined 
 };
 ---
 
-<BaseLayout
-  title="CV"
-  withJobTitle
-  description={`${SITE.author}, ${cv.headline}. ${cv.summary}`.slice(0, 160)}
-  jsonLd={[personJsonLd(site)]}
->
+<BaseLayout title="CV" withJobTitle description={description} jsonLd={[personJsonLd(site)]}>
   <header class="cv-header">
     <h1 class="page-title">
       <span class="role">{cv.headline}</span>
@@ -33,50 +33,27 @@ const formatPeriod = ({ start, end }: { start: string; end?: string | undefined 
   </header>
 
   <div class="layout">
-    <aside class="sidebar" aria-label="Profile">
-      <section class="card" aria-labelledby="contact">
-        <h2 id="contact">Contact</h2>
-        <ul class="plain">
-          <li>{cv.location}</li>
-          <li>
-            <a href={SITE.links.linkedin}>LinkedIn</a>
-          </li>
-          <li>
-            <a href={SITE.links.github}>GitHub</a>
-          </li>
-        </ul>
-      </section>
-
-      <section class="card" aria-labelledby="skills">
-        <h2 id="skills">Skills</h2>
-        {cv.skills.map(({ category, items }, index) => (
-          <div class="skill-group">
-            <h3>{category}</h3>
-            <ul class="chips">
-              {items.map((item) => (
-                <li>
-                  <Chip label={item} hue={hueAt(index)} />
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
-      </section>
-
-      <section class="card" aria-labelledby="education">
-        <h2 id="education">Education</h2>
-        {cv.education.map((school) => (
-          <div class="school">
-            <h3>{school.degree}</h3>
-            <p class="muted">
-              {school.school} · {formatPeriod(school.period)}
-            </p>
-          </div>
-        ))}
-      </section>
-
-      <p class="print-hint muted">Print this page to get a PDF version.</p>
-    </aside>
+    <section class="card side contact" aria-labelledby="contact">
+      <h2 id="contact">Contact</h2>
+      <ul class="plain">
+        <li class="contact-link">
+          <Icon name="location" />
+          {cv.location}
+        </li>
+        <li>
+          <a class="contact-link" href={SITE.links.linkedin} rel="me">
+            <Icon name="linkedin" />
+            LinkedIn
+          </a>
+        </li>
+        <li>
+          <a class="contact-link" href={SITE.links.github} rel="me">
+            <Icon name="github" />
+            GitHub
+          </a>
+        </li>
+      </ul>
+    </section>
 
     <section class="experience" aria-labelledby="experience">
       <h2 id="experience" class="section-title">
@@ -91,16 +68,58 @@ const formatPeriod = ({ start, end }: { start: string; end?: string | undefined 
                 {job.role} · {job.url ? <a href={job.url}>{job.company}</a> : job.company}
               </h3>
               <p class="muted location">{job.location}</p>
-              <ul>
-                {job.highlights.map((highlight) => (
-                  <li>{highlight}</li>
-                ))}
-              </ul>
+              {job.highlights.length > 0 && (
+                <ul>
+                  {job.highlights.map((highlight) => (
+                    <li>{highlight}</li>
+                  ))}
+                </ul>
+              )}
+              {job.sections.map((section) => (
+                <>
+                  <h4 class="subsection">{section.title}</h4>
+                  <ul>
+                    {section.highlights.map((highlight) => (
+                      <li>{highlight}</li>
+                    ))}
+                  </ul>
+                </>
+              ))}
             </article>
           </li>
         ))}
       </ol>
     </section>
+
+    <section class="card side education" aria-labelledby="education">
+      <h2 id="education">Education</h2>
+      {cv.education.map((school) => (
+        <div class="school">
+          <h3>{school.degree}</h3>
+          <p class="muted">
+            {school.school} · {formatPeriod(school.period)}
+          </p>
+        </div>
+      ))}
+    </section>
+
+    {cv.passions.length > 0 && (
+      <section class="card side passions" aria-labelledby="passions">
+        <h2 id="passions">Passions</h2>
+        <ul class="plain passion-list">
+          {cv.passions.map(({ icon, label }) => (
+            <li>
+              <span class="passion-icon" aria-hidden="true">
+                {icon}
+              </span>
+              {label}
+            </li>
+          ))}
+        </ul>
+      </section>
+    )}
+
+    <p class="side print-hint muted">Print this page to get a PDF version.</p>
   </div>
 </BaseLayout>
 
@@ -111,27 +130,62 @@ const formatPeriod = ({ start, end }: { start: string; end?: string | undefined 
     font-size: 1.15rem;
   }
 
+  /* DOM order (contact, experience, education) is the mobile and print order;
+     on wide screens the grid puts contact and education on the left. */
   .layout {
     display: grid;
     grid-template-columns: minmax(16rem, 20rem) 1fr;
+    grid-template-rows: auto auto auto auto 1fr;
     align-items: start;
-    gap: 2.5rem;
+    gap: 1.25rem 2.5rem;
     margin-top: 2rem;
   }
 
-  .sidebar {
-    display: grid;
-    gap: 1.25rem;
+  .contact {
+    grid-area: 1 / 1;
   }
 
-  .sidebar h2 {
+  .education {
+    grid-area: 2 / 1;
+  }
+
+  .passions {
+    grid-area: 3 / 1;
+  }
+
+  .print-hint {
+    grid-area: 4 / 1;
+  }
+
+  .experience {
+    grid-column: 2;
+    grid-row: 1 / span 5;
+  }
+
+  .side h2 {
     margin: 0 0 0.75rem;
     font-size: 1.1rem;
   }
 
-  .sidebar h3 {
+  .side h3 {
     margin: 0 0 0.4rem;
     font-size: 0.95rem;
+  }
+
+  .contact-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+  }
+
+  .passion-list li {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .passion-icon {
+    flex-shrink: 0;
+    width: 1.4rem;
   }
 
   .plain {
@@ -140,7 +194,6 @@ const formatPeriod = ({ start, end }: { start: string; end?: string | undefined 
     list-style: none;
   }
 
-  .skill-group + .skill-group,
   .school + .school {
     margin-top: 1rem;
   }
@@ -201,6 +254,14 @@ const formatPeriod = ({ start, end }: { start: string; end?: string | undefined 
     font-size: 0.95rem;
   }
 
+  .subsection {
+    margin: 0.9rem 0 0.25rem;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    font-style: italic;
+    font-weight: 600;
+  }
+
   .entry ul {
     padding-left: 1.25rem;
     list-style: disc;
@@ -209,16 +270,31 @@ const formatPeriod = ({ start, end }: { start: string; end?: string | undefined 
   @media (max-width: 56rem) {
     .layout {
       grid-template-columns: 1fr;
+      grid-template-rows: none;
+      row-gap: 2rem;
     }
 
+    .contact,
+    .education,
+    .passions,
+    .print-hint,
     .experience {
-      grid-row: 1;
+      grid-area: auto;
     }
   }
 
   @media print {
     .layout {
       grid-template-columns: 1fr;
+      grid-template-rows: none;
+    }
+
+    .contact,
+    .education,
+    .passions,
+    .print-hint,
+    .experience {
+      grid-area: auto;
     }
 
     .print-hint {

@@ -276,30 +276,6 @@ pre {
   margin-bottom: 0;
 }
 
-.chip {
-  display: inline-block;
-  padding: 0.05rem 0.5rem;
-  background: var(--hue-bg, var(--surface));
-  color: var(--hue-fg, var(--text));
-  font-size: 0.8rem;
-  font-weight: 500;
-  line-height: 1.6;
-  text-decoration: none;
-}
-
-a.chip:hover {
-  text-decoration: underline;
-}
-
-.chips {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
 .button {
   display: inline-block;
   padding: 0.55rem 1.1rem;
@@ -419,7 +395,6 @@ a.chip:hover {
     color: inherit;
   }
 
-  .chip,
   .card {
     border: 1px solid #999;
     background: none;
