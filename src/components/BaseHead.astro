@@ -11,6 +11,11 @@ export interface Props {
   jsonLd?: Record<string, unknown>[];
   /** Append the job title to the page title (SEO), e.g. on the CV. */
   withJobTitle?: boolean;
+  /** Open Graph / Twitter image path (default: the site-wide /og.png) and its alt text. */
+  image?: string | undefined;
+  imageAlt?: string | undefined;
+  /** Post topics, exposed as article:tag. */
+  tags?: readonly string[] | undefined;
 }
 
 const {
@@ -21,6 +26,9 @@ const {
   modifiedTime,
   jsonLd = [],
   withJobTitle = false,
+  image = "/og.png",
+  imageAlt = `${SITE.title} · ${SITE.jobTitle}`,
+  tags = [],
 } = Astro.props;
 
 // Home and CV carry the job title for SEO; posts use their own title only.
@@ -32,7 +40,7 @@ const fullTitle = !title
       ? `${title} · ${SITE.author}, ${SITE.jobTitle}`
       : `${title} · ${SITE.author}`;
 const canonical = new URL(Astro.url.pathname, Astro.site);
-const ogImage = new URL("/og.png", Astro.site);
+const ogImage = new URL(image, Astro.site);
 ---
 
 <meta charset="utf-8" />
@@ -75,10 +83,16 @@ const ogImage = new URL("/og.png", Astro.site);
 <meta property="og:image" content={ogImage} />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
-<meta property="og:image:alt" content={`${SITE.title} · ${SITE.jobTitle}`} />
+<meta property="og:image:alt" content={imageAlt} />
 {publishedTime && <meta property="article:published_time" content={publishedTime.toISOString()} />}
 {modifiedTime && <meta property="article:modified_time" content={modifiedTime.toISOString()} />}
+{tags.map((tag) => (
+  <meta property="article:tag" content={tag} />
+))}
 <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content={ogImage} />
+<meta name="twitter:image:alt" content={imageAlt} />
+<meta name="robots" content="max-image-preview:large" />
 
 {jsonLd.map((data) => (
   <script is:inline type="application/ld+json" set:html={JSON.stringify(data)} />

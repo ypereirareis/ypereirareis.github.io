@@ -13,8 +13,6 @@ One of those services is [mailcatcher](http://mailcatcher.me/)
 and is usable with docker thanks to [this image](https://hub.docker.com/r/zolweb/docker-mailcatcher/)...
 or many others.
 
-![Docker](../../assets/posts/docker.gif)
-
 ## Docker-compose service layer
 
 There are two ways I know to use this **mailcatcher** service inside many projects:

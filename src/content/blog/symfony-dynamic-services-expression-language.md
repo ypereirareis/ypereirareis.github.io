@@ -9,8 +9,6 @@ tags: [development]
 There are many use cases where it's useful to inject different services based
 on the Symfony environment or on another param such as an env variable for instance.
 
-![Symfony](../../assets/posts/symfony.gif)
-
 **Example 1**
 
 - In Symfony **dev** env we want to use mailcatcher to send/receive emails.

@@ -9,8 +9,6 @@ tags: [development]
 Prefixing table names automatically thanks to Doctrine can be very useful to avoid naming conflicts
 when using third party bundles or libraries. So I advise you to always prefix your tables by the name of your project for instance.
 
-![Symfony](../../assets/posts/symfony.gif)
-
 ## Symfony/Doctrine subscriber
 
 It's **important** to note that I use [JMSDiExtraBundle](https://github.com/schmittjoh/JMSDiExtraBundle) here

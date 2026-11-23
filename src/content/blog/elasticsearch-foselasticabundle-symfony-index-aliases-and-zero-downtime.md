@@ -10,8 +10,6 @@ When using [elasticsearch](https://www.elastic.co/) or [elastic](https://www.ela
 the reindexing process must be an important task to deal with.
 Indeed, this process must be done with zero downtime, and nothing visible for users.
 
-![Elasticsearch](../../assets/posts/elastic.gif)
-
 Reindexing can be useful in many cases like:
 
 - Type/mapping updates.
@@ -120,11 +118,11 @@ app/console fos:elastica:populate
 
 The real index name will have the following pattern: `app_prod_YYYY-MM-DD-HHMMSS`.
 
-![Elastic Head](../../assets/posts/elastic_head.gif)
+![Elasticsearch Head during the first indexing: the new app_prod index and its five shards on two nodes](../../assets/posts/elastic_head.gif)
 
 When the indexing process is finished we can see our `app_prod` alias on our `app_prod_2015-05-28-213059` index:
 
-![Elastic Head](../../assets/posts/elastic_head_alias.gif)
+![Elasticsearch Head after indexing: the app_prod alias on the app_prod_2015-05-28-213059 index](../../assets/posts/elastic_head_alias.gif)
 
 The alias is created at the end of the (first) indexing process.
 
@@ -139,23 +137,23 @@ app/console fos:elastica:populate
 The command will reindex data creating another index with another name.
 And more important, the previous index still exists with our alias:
 
-![Elastic Head](../../assets/posts/elastic_head_reindex.gif)
+![Elasticsearch Head during reindexing: the new index is built while the previous one still holds the alias](../../assets/posts/elastic_head_reindex.gif)
 
 At the end of the reindexing process, the command will change the target of the index,
 and will destroy the previous index:
 
-![Elastic Head](../../assets/posts/elastic_head_reindex_finished.gif)
+![Elasticsearch Head after reindexing: the alias points to the new index and the previous one is deleted](../../assets/posts/elastic_head_reindex_finished.gif)
 
 This is how zero downtime reindexing process is achieved with Symfony and FOSElasticaBundle.
 
 With the [Marvel](https://www.elastic.co/products/marvel) product we can follow the process on graphs:
 
-![Elastic Marvel](../../assets/posts/elastic_marvel.gif)
+![Marvel dashboard with the document count and indexing request rate charts during reindexing](../../assets/posts/elastic_marvel.gif)
 
 On Marvel **Shard allocation** dashboard you can see and (re)play history, automatically or step by step.
 This is really amazing:
 
-![Elastic Marvel](../../assets/posts/elastic_marvel_history.gif)
+![Marvel shard allocation view replaying the shard history across two nodes](../../assets/posts/elastic_marvel_history.gif)
 
 ## Conclusion
 

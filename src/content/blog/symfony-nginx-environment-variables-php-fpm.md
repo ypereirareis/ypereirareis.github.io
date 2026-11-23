@@ -10,8 +10,6 @@ It's [a common thing](http://symfony.com/doc/current/cookbook/configuration/exte
 It allows to define specific configurations such as database host username and password, api entrypoint, ...
 without saving that information into files and committing them,... it's a bad practice and could lead to security problems.
 
-![Symfony](../../assets/posts/symfony.gif)
-
 ## Apache
 
 With Apache you can forward variables with this kind of configuration inside your host

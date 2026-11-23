@@ -6,8 +6,6 @@ updatedDate: 2020-04-09
 tags: [architecture, platform]
 ---
 
-![PHP-FPM](../../assets/posts/docker.svg)
-
 ## TLDR: questions answered in this article.
 
 - How to improve docker .env configuration for security?

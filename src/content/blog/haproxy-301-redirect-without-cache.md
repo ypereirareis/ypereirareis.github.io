@@ -6,8 +6,6 @@ updatedDate: 2020-04-09
 tags: [infrastructure]
 ---
 
-![Docker](../../assets/posts/haproxy.gif)
-
 ## Example configuration for haproxy.cfg
 
 ```bash

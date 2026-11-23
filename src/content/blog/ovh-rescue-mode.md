@@ -15,15 +15,15 @@ Log into your online OVH/kimsufi account then follow those instructions:
 
 - Click on the **NetBoot** button
 
-![Rescue](../../assets/posts/rescue1.gif)
+![Kimsufi server manager toolbar with the Reinstall, Reboot and NetBoot buttons](../../assets/posts/rescue1.gif)
 
 - Choose the Rescue Mode clicking on the **Rescue** button
 
-![Rescue](../../assets/posts/rescue2.gif)
+![NetBoot dialog to choose the boot mode: hard drive, network or rescue](../../assets/posts/rescue2.gif)
 
 - On the home page click on the **Reboot** button.
 
-![Rescue](../../assets/posts/rescue1.gif)
+![Kimsufi server manager toolbar with the Reinstall, Reboot and NetBoot buttons](../../assets/posts/rescue1.gif)
 
 Your server will be rebooted in the Rescue Mode and you will receive (by email) a temporary root access password to repair your server.
 
@@ -85,14 +85,14 @@ Log into your online OVH/kimsufi account then follow those instructions:
 
 - Click on the **NetBoot** button
 
-![Rescue](../../assets/posts/rescue1.gif)
+![Kimsufi server manager toolbar with the Reinstall, Reboot and NetBoot buttons](../../assets/posts/rescue1.gif)
 
 - Choose the **Hard drive** mode clicking on the correct button.
 
-![Rescue](../../assets/posts/rescue2.gif)
+![NetBoot dialog to choose the boot mode: hard drive, network or rescue](../../assets/posts/rescue2.gif)
 
 - On the home page click on the **Reboot** button.
 
-![Rescue](../../assets/posts/rescue1.gif)
+![Kimsufi server manager toolbar with the Reinstall, Reboot and NetBoot buttons](../../assets/posts/rescue1.gif)
 
 **Congratulations!**

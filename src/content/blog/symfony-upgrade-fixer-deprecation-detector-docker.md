@@ -10,8 +10,6 @@ If you want to upgrade your Symfony project to Symfony 3, you must check many di
 There is a page in the Symfony documentation that explains how to
 [upgrade a major version](http://symfony.com/doc/current/cookbook/upgrade/major_version.html).
 
-![Symfony](../../assets/posts/symfony.gif)
-
 There are 3 steps to follow to succeed:
 
 - Make your Code Deprecation Free

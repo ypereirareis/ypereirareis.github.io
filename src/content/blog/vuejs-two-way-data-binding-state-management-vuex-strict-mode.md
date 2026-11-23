@@ -6,8 +6,6 @@ updatedDate: 2020-04-09
 tags: [development]
 ---
 
-![Docker](../../assets/posts/vuejs.jpg)
-
 **In the following code samples we are using ES6/ES2015/Babel.**
 
 ## Two way data binding with VueJS and Vuex

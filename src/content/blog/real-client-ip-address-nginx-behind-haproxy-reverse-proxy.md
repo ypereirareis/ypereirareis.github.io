@@ -6,8 +6,6 @@ updatedDate: 2020-04-09
 tags: [infrastructure]
 ---
 
-![Docker](../../assets/posts/haproxy.gif)
-
 ## Define a header in haproxy configuration to set real client IP address
 
 In haproxy, you can get the client IP address from the request and pass it to another proxy or application with a header.

@@ -6,8 +6,6 @@ updatedDate: 2020-04-09
 tags: [infrastructure, security]
 ---
 
-![open ssh](../../assets/posts/openssh.gif)
-
 To use SSH tunnels, of course you need to have a few things:
 
 - A server accessible from your local machine/network through SSH (port 22 by default) and from the internet (80, 443,...).

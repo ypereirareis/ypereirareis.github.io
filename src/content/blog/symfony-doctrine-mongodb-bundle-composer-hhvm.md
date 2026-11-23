@@ -9,8 +9,6 @@ tags: [development, platform]
 When working with docker, a common thing is to use a specific docker image/container to run composer.
 And it can be a good thing to run [composer through HHVM](https://github.com/marmelab/docker-composer-hhvm) to increase performance.
 
-![Symfony](../../assets/posts/symfony.gif)
-
 ## Composer and DoctrineMongoDBBundle
 
 But if you try to install **DoctrineMongoDBBundle** thanks to this kind of composer container (php + composer + hhvm),

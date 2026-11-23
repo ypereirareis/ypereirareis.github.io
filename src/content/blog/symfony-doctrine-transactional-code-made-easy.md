@@ -9,8 +9,6 @@ tags: [development]
 When doing multiple database operations in a single http request, command line, method,...
 we often need to use a database transaction to keep data safe.
 
-![Symfony](../../assets/posts/symfony.gif)
-
 ## Example in an Action of a Controller
 
 ```php
@@ -72,7 +70,6 @@ protected function transactionalExec(callable $func)
         $conn->rollback();
         $success = false;
     }
-
 
     return $success;
 }

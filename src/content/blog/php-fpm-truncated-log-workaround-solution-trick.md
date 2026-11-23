@@ -6,8 +6,6 @@ updatedDate: 2020-04-09
 tags: [operations, platform]
 ---
 
-![PHP-FPM](../../assets/posts/php-fpm.gif)
-
 ## PHP-FPM truncated logs problem
 
 [BUG] - [https://bugs.php.net/bug.php?id=71880](https://bugs.php.net/bug.php?id=71880)

@@ -11,8 +11,6 @@ Docker allows us to pass environment variables into running containers, and ther
 - Command options `-e` and `--env`
 - Variables files `--env-file`
 
-![Docker](../../assets/posts/docker.gif)
-
 ## Access to docker container environment variables
 
 ### Command line

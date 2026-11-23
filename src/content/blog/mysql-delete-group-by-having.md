@@ -6,8 +6,6 @@ updatedDate: 2020-04-09
 tags: [development]
 ---
 
-![Docker](../../assets/posts/mysql.jpg)
-
 ## MySQL Delete with Group By and Having clauses.
 
 To achieve this exploit with a single simple MySQL command, we are using two useful functions:

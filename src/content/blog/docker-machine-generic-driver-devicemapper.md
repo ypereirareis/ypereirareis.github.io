@@ -9,8 +9,6 @@ tags: [infrastructure]
 [docker-machine](https://docs.docker.com/machine/) is a really powerful tool to control your remote docker daemons.
 Let's see how to configure everything to manage your remote containers easily from your local host.
 
-![Docker](../../assets/posts/docker.gif)
-
 ## Remote server
 
 ### Docker machine user

@@ -6,8 +6,6 @@ updatedDate: 2020-04-09
 tags: [operations]
 ---
 
-![Docker](../../assets/posts/php-fpm.gif)
-
 ## PHP FPM
 
 **First of all we need to enable option `catch_workers_output` for fpm.**

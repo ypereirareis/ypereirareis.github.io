@@ -6,8 +6,6 @@ updatedDate: 2020-04-09
 tags: [infrastructure, architecture]
 ---
 
-![PHP-FPM](../../assets/posts/nginx.gif)
-
 ## TLDR: questions answered in this article.
 
 - How to avoid Nginx reload on php-fpm restart?
