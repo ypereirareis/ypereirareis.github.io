@@ -77,7 +77,7 @@ const ogImage = new URL(image, Astro.site);
 <meta property="og:type" content={type} />
 <meta property="og:site_name" content={SITE.title} />
 <meta property="og:locale" content={SITE.locale} />
-<meta property="og:title" content={title ?? SITE.title} />
+<meta property="og:title" content={type === "article" ? title : fullTitle} />
 <meta property="og:description" content={description} />
 <meta property="og:url" content={canonical} />
 <meta property="og:image" content={ogImage} />

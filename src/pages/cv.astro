@@ -10,6 +10,13 @@ if (!entry) throw new Error("Missing src/content/cv/cv.yaml");
 const cv = entry.data;
 
 const site = Astro.site ?? new URL(Astro.url.origin);
+const updatedLabel = cv.updated?.toLocaleDateString("en-GB", { month: "long", year: "numeric" });
+const profilePageJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  ...(cv.updated && { dateModified: cv.updated.toISOString() }),
+  mainEntity: personJsonLd(site),
+};
 // Meta description: about 160 characters, cut on a word boundary.
 const fullDescription = `${SITE.author}, ${cv.headline}. ${cv.summary}`;
 const description =
@@ -23,13 +30,25 @@ const formatPeriod = ({ start, end }: { start: string; end?: string | undefined 
 };
 ---
 
-<BaseLayout title="CV" withJobTitle description={description} jsonLd={[personJsonLd(site)]}>
+<BaseLayout
+  title="CV"
+  withJobTitle
+  description={description}
+  image="/og-cv.png"
+  imageAlt={`CV of ${SITE.author}, ${SITE.jobTitle}`}
+  jsonLd={[profilePageJsonLd]}
+>
   <header class="cv-header">
     <h1 class="page-title">
       <span class="role">{cv.headline}</span>
       <span class="name">{SITE.author}</span>
     </h1>
     <p class="lead">{cv.summary}</p>
+    {updatedLabel && (
+      <p class="updated muted">
+        Last updated: <time datetime={cv.updated?.toISOString().slice(0, 10)}>{updatedLabel}</time>
+      </p>
+    )}
   </header>
 
   <div class="layout">
@@ -151,6 +170,11 @@ const formatPeriod = ({ start, end }: { start: string; end?: string | undefined 
 
   .passions {
     grid-area: 3 / 1;
+  }
+
+  .updated {
+    margin-top: -0.5rem;
+    font-size: 0.9rem;
   }
 
   .print-hint {
