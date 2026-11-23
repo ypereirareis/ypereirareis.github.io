@@ -7,11 +7,5 @@
       "args": ["--no-sandbox"]
     }
   },
-  "urls": [
-    "http://localhost:4321/",
-    "http://localhost:4321/cv/",
-    "http://localhost:4321/posts/",
-    "http://localhost:4321/404.html",
-    "http://localhost:4321/posts/running-cron-jobs-docker-container-definitive-guide/"
-  ]
+  "urls": ["http://localhost:4322/404.html"]
 }

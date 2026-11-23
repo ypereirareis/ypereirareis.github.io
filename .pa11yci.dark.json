@@ -1,0 +1,17 @@
+{
+  "defaults": {
+    "standard": "WCAG2AA",
+    "runners": ["axe", "htmlcs"],
+    "timeout": 30000,
+    "chromeLaunchConfig": {
+      "args": ["--no-sandbox", "--force-dark-mode"]
+    }
+  },
+  "urls": [
+    "http://localhost:4322/",
+    "http://localhost:4322/cv/",
+    "http://localhost:4322/posts/",
+    "http://localhost:4322/404.html",
+    "http://localhost:4322/posts/running-cron-jobs-docker-container-definitive-guide/"
+  ]
+}

@@ -19,7 +19,9 @@
     "lint:format": "prettier --check .",
     "lint:md": "markdownlint-cli2",
     "format": "prettier --write .",
-    "test:a11y": "start-server-and-test 'sirv dist --port 4321 --quiet' http://localhost:4321 'pa11y-ci'",
+    "test:a11y": "start-server-and-test 'sirv dist --port 4322 --quiet' http://localhost:4322 'pnpm run test:a11y:light && pnpm run test:a11y:dark'",
+    "test:a11y:light": "pa11y-ci --sitemap http://localhost:4322/sitemap-0.xml --sitemap-find https://ypereirareis.github.io --sitemap-replace http://localhost:4322",
+    "test:a11y:dark": "pa11y-ci --config .pa11yci.dark.json",
     "test:lighthouse": "lhci autorun"
   },
   "dependencies": {

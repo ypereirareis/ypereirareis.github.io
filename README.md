@@ -124,7 +124,7 @@ What happens automatically on every build:
 4. The six required checks must pass: `Lint & type check`, `Commit messages`, `Build`, `Accessibility`, `Lighthouse`, `Links`.
 5. Merge with "Squash and merge". The CI then rebuilds, re-checks and deploys the site.
 
-New pages must be added to `lighthouserc.json` and `.pa11yci.json` so they are audited, and every new setting documented in `docs/index.md`.
+pa11y audits every page of the sitemap automatically; add new pages to `lighthouserc.json` (and to `.pa11yci.dark.json` for a new kind of page). Document every new setting in `docs/index.md`, and see [`docs/accessibility.md`](docs/accessibility.md) for the manual accessibility checklist.
 
 ## CI/CD
 
