@@ -46,6 +46,15 @@
   --gutter: clamp(1rem, 4vw, 2rem);
 }
 
+/* Theme forced with the header toggle; otherwise the system preference applies. */
+:root[data-theme="light"] {
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+}
+
 [data-hue="indigo"] {
   --hue-fg: var(--hue-indigo-fg);
   --hue-bg: var(--hue-indigo-bg);
@@ -111,6 +120,11 @@ body {
   max-width: var(--container);
   margin-inline: auto;
   padding-inline: var(--gutter);
+}
+
+/* Pages limited to the reading width, like a post (home, posts index). */
+.container.narrow {
+  max-width: calc(var(--measure) + 2 * var(--gutter));
 }
 
 main {
@@ -211,12 +225,13 @@ pre {
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  margin: 3rem 0 1.25rem;
+  margin: 3.5rem 0 1.5rem;
+  font-size: 1.75rem;
 }
 
 .section-title::before {
   content: "";
-  width: 1.25rem;
+  width: 1.5rem;
   height: 2px;
   background: var(--accent);
 }
@@ -372,7 +387,8 @@ a.chip:hover {
 }
 
 @media print {
-  :root {
+  :root,
+  :root[data-theme] {
     color-scheme: light;
   }
 

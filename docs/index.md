@@ -25,18 +25,19 @@ Every setting lives in code and is applied at build time: change the value, open
 
 `src/site.config.ts`
 
-| Setting                     | Default                                                                                                                                     | Effect                                                                                               |
-| --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `SITE.title`                | `Yannick Pereira-Reis`                                                                                                                      | Header, page titles, RSS title, Open Graph site name                                                 |
-| `SITE.author`               | `Yannick Pereira-Reis`                                                                                                                      | Name under the main title, footer, JSON-LD `Person`                                                  |
-| `SITE.jobTitle`             | `Platform Engineer`                                                                                                                         | Main title of the home page, default page title, Open Graph image                                    |
-| `SITE.description`          | Platform engineer…                                                                                                                          | Default meta description and RSS description                                                         |
-| `SITE.locale` / `SITE.lang` | `en_US` / `en`                                                                                                                              | `og:locale` and `<html lang>`                                                                        |
-| `SITE.links`                | GitHub, LinkedIn                                                                                                                            | Footer, CV contact block, JSON-LD `sameAs`                                                           |
-| `NAV`                       | Home, CV, Posts                                                                                                                             | Header menu (order and labels)                                                                       |
-| `INTRO_POINTS`              | 6 points                                                                                                                                    | Bullet points under the main title of the home page (`**text**` for bold)                            |
-| `FOCUS_AREAS`               | Staff Engineering & Enablement, Platform & GitOps, CI/CD & Automation, Operations & Observability, Security & Identity, Engineering Quality | "What I do or did" cards on the home page, in this order: title, short text, hue and detailed points |
-| `TOPICS`                    | development, architecture, infrastructure, platform, operations, security                                                                   | Allowed post topics (see [Writing a post](#writing-a-post))                                          |
+| Setting                     | Default                                                                                                                                     | Effect                                                                                                       |
+| --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
+| `SITE.title`                | `Yannick Pereira-Reis`                                                                                                                      | Header, page titles, RSS title, Open Graph site name                                                         |
+| `SITE.author`               | `Yannick Pereira-Reis`                                                                                                                      | Name under the main title, footer, JSON-LD `Person`                                                          |
+| `SITE.jobTitle`             | `Platform Engineer`                                                                                                                         | Main title of the home page, default page title, Open Graph image                                            |
+| `SITE.description`          | Platform engineer…                                                                                                                          | Default meta description and RSS description                                                                 |
+| `SITE.locale` / `SITE.lang` | `en_US` / `en`                                                                                                                              | `og:locale` and `<html lang>`                                                                                |
+| `SITE.links`                | GitHub, LinkedIn                                                                                                                            | Footer, CV contact block, JSON-LD `sameAs`                                                                   |
+| `SITE.repo`                 | this repository                                                                                                                             | GitHub icon in the header and "Source" link in the footer (kept out of `links`, which feed JSON-LD `sameAs`) |
+| `NAV`                       | Home, Posts, CV                                                                                                                             | Header menu (order and labels)                                                                               |
+| `INTRO_POINTS`              | 6 points                                                                                                                                    | Bullet points under the main title of the home page (`**text**` for bold)                                    |
+| `FOCUS_AREAS`               | Staff Engineering & Enablement, Platform & GitOps, CI/CD & Automation, Operations & Observability, Security & Identity, Engineering Quality | "What I do or did" cards on the home page, in this order: title, short text, hue and detailed points         |
+| `TOPICS`                    | development, architecture, infrastructure, platform, operations, security                                                                   | Allowed post topics (see [Writing a post](#writing-a-post))                                                  |
 
 ### Posts listing
 
@@ -61,14 +62,14 @@ Posts are sorted by `pubDate` (newest first) and split on every build: publishin
 
 `src/styles/global.css`
 
-| Token                                             | Default          | Effect                                                    |
-| ------------------------------------------------- | ---------------- | --------------------------------------------------------- |
-| `--container`                                     | `72rem`          | Maximum page width                                        |
-| `--measure`                                       | `44rem`          | Reading width (post content, intro texts)                 |
-| `--radius`                                        | `0`              | Corner radius (flat design: square corners)               |
-| `--primary`, `--header-bg`                        | indigo `#4338ca` | Links, buttons, header band (dark theme values included)  |
-| `--accent`                                        | amber `#f59e0b`  | Decorative only (bars, squares, avatar frame), never text |
-| `--hue-{indigo,cyan,emerald,amber,rose,violet}-*` | —                | One color per "What I do or did" card; CV skill chips     |
+| Token                                             | Default          | Effect                                                            |
+| ------------------------------------------------- | ---------------- | ----------------------------------------------------------------- |
+| `--container`                                     | `72rem`          | Maximum page width                                                |
+| `--measure`                                       | `44rem`          | Reading width: posts, home page and posts index (`narrow` layout) |
+| `--radius`                                        | `0`              | Corner radius (flat design: square corners)                       |
+| `--primary`, `--header-bg`                        | indigo `#4338ca` | Links, buttons, header band (dark theme values included)          |
+| `--accent`                                        | amber `#f59e0b`  | Decorative only (bars, squares), never text                       |
+| `--hue-{indigo,cyan,emerald,amber,rose,violet}-*` | —                | One color per "What I do or did" card; CV skill chips             |
 
 Any new color pair must reach a WCAG contrast of at least 4.5:1 (7:1 for body text) in both light and dark themes. The browser `theme-color` is set in `src/components/BaseHead.astro`, the favicon in `public/favicon.svg` and the Open Graph image colors in `src/pages/og.png.ts`.
 
@@ -113,6 +114,10 @@ draft: false # true = visible with `pnpm dev` only
 - Start headings at `##` (the title is the page `h1`) and do not skip levels.
 - Give every code block a language (` ```bash `, ` ```yaml `…) and wrap file names such as `www.conf` in backticks, otherwise they become links.
 - Put images next to the content in `src/assets/posts/` and reference them relatively (`../../assets/posts/image.png`): they are optimized at build time.
+
+## Theme toggle
+
+The header button switches between light and dark themes and stores the choice in `localStorage`; without a stored choice, or without JavaScript (the button is then hidden), the system preference applies. A tiny inline script in `BaseHead.astro` applies the stored theme before the first paint. It is the only client-side JavaScript of the site.
 
 ## SEO
 

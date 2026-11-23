@@ -11,19 +11,80 @@ const isActive = (href: string) => (href === "/" ? current === "/" : current.sta
       <span class="mark" aria-hidden="true"></span>
       {SITE.title}
     </a>
-    <nav aria-label="Main">
-      <ul>
-        {NAV.map(({ href, label }) => (
-          <li>
-            <a href={href} aria-current={isActive(href) ? "page" : undefined}>
-              {label}
-            </a>
-          </li>
-        ))}
-      </ul>
-    </nav>
+    <div class="right">
+      <nav aria-label="Main">
+        <ul>
+          {NAV.map(({ href, label }) => (
+            <li>
+              <a href={href} aria-current={isActive(href) ? "page" : undefined}>
+                {label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+      <div class="tools">
+        <a
+          class="tool"
+          href={SITE.repo}
+          aria-label="Source code of this site on GitHub"
+          title="Source code of this site on GitHub"
+        >
+          <svg viewBox="0 0 16 16" width="20" height="20" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"
+            ></path>
+          </svg>
+        </a>
+        <button class="tool theme-toggle" type="button" aria-label="Switch theme" hidden>
+          <svg class="icon-moon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+            <path fill="currentColor" d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"></path>
+          </svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+            <circle cx="12" cy="12" r="4.5" fill="currentColor"></circle>
+            <path
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="square"
+              d="M12 1.5v2.5M12 20v2.5M1.5 12H4M20 12h2.5M4.6 4.6l1.8 1.8M17.6 17.6l1.8 1.8M4.6 19.4l1.8-1.8M17.6 6.4l1.8-1.8"
+            ></path>
+          </svg>
+        </button>
+      </div>
+    </div>
   </div>
 </header>
+
+<script is:inline>
+  // Light/dark toggle: hidden without JavaScript (the system preference applies).
+  (() => {
+    const button = document.querySelector(".theme-toggle");
+    if (!button) return;
+    const root = document.documentElement;
+    const media = matchMedia("(prefers-color-scheme: dark)");
+    const current = () => root.dataset.theme ?? (media.matches ? "dark" : "light");
+    const render = () => {
+      const label = `Switch to ${current() === "dark" ? "light" : "dark"} theme`;
+      button.dataset.current = current();
+      button.setAttribute("aria-label", label);
+      button.title = label;
+    };
+    button.addEventListener("click", () => {
+      root.dataset.theme = current() === "dark" ? "light" : "dark";
+      try {
+        localStorage.setItem("theme", root.dataset.theme);
+      } catch {
+        // Storage unavailable: the choice lasts for this page only.
+      }
+      render();
+    });
+    media.addEventListener("change", render);
+    render();
+    button.hidden = false;
+  })();
+</script>
 
 <style>
   .site-header {
@@ -55,6 +116,13 @@ const isActive = (href: string) => (href === "/" ? current === "/" : current.sta
     background: var(--accent);
   }
 
+  .right {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem 1rem;
+  }
+
   ul {
     display: flex;
     gap: 0.25rem;
@@ -80,6 +148,42 @@ const isActive = (href: string) => (href === "/" ? current === "/" : current.sta
   nav a[aria-current="page"] {
     border-bottom-color: var(--accent);
     color: var(--header-text);
+  }
+
+  /* Tools group (repository link, theme toggle), separated from the navigation. */
+  .tools {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding-left: 1rem;
+    border-left: 1px solid rgb(255 255 255 / 0.3);
+  }
+
+  .tool {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    padding: 0;
+    border: 0;
+    background: none;
+    color: var(--header-muted);
+    cursor: pointer;
+  }
+
+  .tool[hidden] {
+    display: none;
+  }
+
+  .tool:hover {
+    color: var(--header-text);
+  }
+
+  .theme-toggle[data-current="dark"] .icon-moon,
+  .theme-toggle[data-current="light"] .icon-sun,
+  .theme-toggle:not([data-current]) .icon-sun {
+    display: none;
   }
 
   .site-header :focus-visible {
