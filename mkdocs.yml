@@ -6,6 +6,7 @@ docs_dir: docs
 nav:
   - Overview: index.md
   - Quality gates: quality-gates.md
+  - Accessibility: accessibility.md
   - Architecture decisions:
       - adr/0001-static-site-with-astro.md
       - adr/0002-single-ci-cd-pipeline.md

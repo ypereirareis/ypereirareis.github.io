@@ -220,6 +220,16 @@ pre {
   background-color: light-dark(var(--shiki-light-bg), var(--shiki-dark-bg));
 }
 
+/* github-light's orange (#E36209, 3.5:1 on white) fails WCAG AA: use a darker orange (5.2:1). */
+.astro-code span[style*="--shiki-light:#E36209"] {
+  --shiki-light: #b35000 !important;
+}
+
+/* github-dark's comments (#6A737D, 3.1:1 on #24292e) fail WCAG AA: use a lighter grey (5.3:1). */
+.astro-code span[style*="--shiki-dark:#6A737D"] {
+  --shiki-dark: #959da5 !important;
+}
+
 /* Section heading with a short amber bar. */
 .section-title {
   display: flex;

@@ -43,6 +43,7 @@ experience:
       - Implemented GraphQL APIs for native mobile and web clients.
       - Built Jenkins pipelines from dev to prod with parallelized test suites.
   - company: ZOL
+    url: https://zol.fr/
     role: Lead Developer & Scrum Master
     location: Lyon, France
     period: { start: "2015-03", end: "2017-05" }
@@ -57,12 +58,14 @@ experience:
     highlights:
       - Built a custom multi-channel e-commerce platform (Symfony, Akeneo, AngularJS, RabbitMQ, CouchDB, ELK).
   - company: PMSIpilot / Groupe PSIH
+    url: https://ospi.fr/
     role: Web Developer
     location: Lyon, France
     period: { start: "2013-06", end: "2014-08" }
     highlights:
       - Fullstack development of BI applications for hospitals (Symfony, AngularJS).
   - company: Sage
+    url: https://www.sage.com/
     role: R&D Engineer
     location: Lyon, France
     period: { start: "2013-01", end: "2013-06" }
