@@ -12,7 +12,7 @@ This repository builds [ypereirareis.github.io](https://ypereirareis.github.io),
 | `src/content.config.ts`  | Content schemas, enforced at build time                                 |
 | `src/lib/posts.ts`       | Post queries and listing settings                                       |
 | `src/pages/`             | Routes, RSS feed, `robots.txt`, generated images (`og.png`, touch icon) |
-| `src/components/`        | SEO head, header, footer, post index (list), topics, chips              |
+| `src/components/`        | SEO head, header, footer, post index (list), topics, brand icons        |
 | `src/styles/global.css`  | Design tokens and theme (system fonts, light/dark, print styles)        |
 | `public/`                | Static files copied as-is (`favicon.svg`)                               |
 | `.github/`               | CI/CD workflows, shared setup action, Dependabot                        |
@@ -29,8 +29,8 @@ Every setting lives in code and is applied at build time: change the value, open
 | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
 | `SITE.title`                | `Yannick Pereira-Reis`                                                                                                                      | Header, page titles, RSS title, Open Graph site name                                                         |
 | `SITE.author`               | `Yannick Pereira-Reis`                                                                                                                      | Name under the main title, footer, JSON-LD `Person`                                                          |
-| `SITE.jobTitle`             | `Platform Engineer`                                                                                                                         | Main title of the home page, default page title, Open Graph image                                            |
-| `SITE.description`          | Platform engineer…                                                                                                                          | Default meta description and RSS description                                                                 |
+| `SITE.jobTitle`             | `Cloud Platform Engineer`                                                                                                                   | Main title of the home page, default page title, Open Graph image                                            |
+| `SITE.description`          | Cloud Platform Engineer…                                                                                                                    | Default meta description and RSS description                                                                 |
 | `SITE.locale` / `SITE.lang` | `en_US` / `en`                                                                                                                              | `og:locale` and `<html lang>`                                                                                |
 | `SITE.links`                | GitHub, LinkedIn                                                                                                                            | Footer, CV contact block, JSON-LD `sameAs`                                                                   |
 | `SITE.repo`                 | this repository                                                                                                                             | GitHub icon in the header and "Source" link in the footer (kept out of `links`, which feed JSON-LD `sameAs`) |
@@ -52,11 +52,11 @@ Posts are sorted by `pubDate` (newest first) and split on every build: publishin
 
 ### Posts
 
-| Setting                | File                              | Default | Effect                                                                                                                                                                                                         |
-| ---------------------- | --------------------------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `OUTDATED_AFTER_YEARS` | `src/pages/posts/[...slug].astro` | `3`     | Posts whose last update (`updatedDate`, else `pubDate`) is older get an "outdated" notice                                                                                                                      |
-| Page `<title>`         | `src/components/BaseHead.astro`   | —       | Home: "Platform Engineer · Yannick Pereira-Reis"; pages with `withJobTitle` (CV): "{page} · Yannick Pereira-Reis, Platform Engineer"; posts: the post title only; other pages: "{page} · Yannick Pereira-Reis" |
-| Schema limits          | `src/content.config.ts`           | —       | `title` ≤ 130 chars, `description` 20–300 chars, 1–2 topics                                                                                                                                                    |
+| Setting                | File                              | Default | Effect                                                                                                                                                                                                                     |
+| ---------------------- | --------------------------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `OUTDATED_AFTER_YEARS` | `src/pages/posts/[...slug].astro` | `3`     | Posts whose last update (`updatedDate`, else `pubDate`) is older get an "outdated" notice                                                                                                                                  |
+| Page `<title>`         | `src/components/BaseHead.astro`   | —       | Home: "Cloud Platform Engineer · Yannick Pereira-Reis"; pages with `withJobTitle` (CV): "{page} · Yannick Pereira-Reis, Cloud Platform Engineer"; posts: the post title only; other pages: "{page} · Yannick Pereira-Reis" |
+| Schema limits          | `src/content.config.ts`           | —       | `title` ≤ 130 chars, `description` 20–300 chars, 1–2 topics                                                                                                                                                                |
 
 ### Theme
 
@@ -69,7 +69,7 @@ Posts are sorted by `pubDate` (newest first) and split on every build: publishin
 | `--radius`                                        | `0`              | Corner radius (flat design: square corners)                       |
 | `--primary`, `--header-bg`                        | indigo `#4338ca` | Links, buttons, header band (dark theme values included)          |
 | `--accent`                                        | amber `#f59e0b`  | Decorative only (bars, squares), never text                       |
-| `--hue-{indigo,cyan,emerald,amber,rose,violet}-*` | —                | One color per "What I do or did" card; CV skill chips             |
+| `--hue-{indigo,cyan,emerald,amber,rose,violet}-*` | —                | One color per "What I do or did" section                          |
 
 Any new color pair must reach a WCAG contrast of at least 4.5:1 (7:1 for body text) in both light and dark themes. The browser `theme-color` is set in `src/components/BaseHead.astro`, the favicon in `public/favicon.svg` and the Open Graph image colors in `src/pages/og.png.ts`.
 
