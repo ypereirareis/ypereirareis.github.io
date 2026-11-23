@@ -24,6 +24,8 @@ const cv = defineCollection({
   loader: glob({ base: "./src/content/cv", pattern: "**/*.{yaml,yml}" }),
   schema: z.object({
     headline: z.string(),
+    /** Last update of the CV, shown on the page and in structured data. */
+    updated: z.coerce.date().optional(),
     location: z.string(),
     summary: z.string(),
     experience: z.array(
