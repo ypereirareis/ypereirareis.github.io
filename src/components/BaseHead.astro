@@ -44,6 +44,15 @@ const ogImage = new URL("/og.png", Astro.site);
 <meta name="generator" content={Astro.generator} />
 
 <meta name="color-scheme" content="light dark" />
+<script is:inline>
+  // Apply the theme chosen with the header toggle before the first paint.
+  try {
+    const theme = localStorage.getItem("theme");
+    if (theme === "light" || theme === "dark") document.documentElement.dataset.theme = theme;
+  } catch {
+    // Storage unavailable: keep the system theme.
+  }
+</script>
 <meta name="theme-color" content="#4338ca" media="(prefers-color-scheme: light)" />
 <meta name="theme-color" content="#312e81" media="(prefers-color-scheme: dark)" />
 

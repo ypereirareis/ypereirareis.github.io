@@ -4,20 +4,25 @@ import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 import { SITE } from "../site.config";
 
-export type Props = HeadProps;
+export type Props = HeadProps & {
+  /** Limit the page content to the reading width, like a post. */
+  narrow?: boolean;
+};
+
+const { narrow = false, ...head } = Astro.props;
 ---
 
 <!doctype html>
 <html lang={SITE.lang}>
   <head>
-    <BaseHead {...Astro.props} />
+    <BaseHead {...head} />
   </head>
   <body>
     <a class="skip-link" href="#main">
       Skip to content
     </a>
     <Header />
-    <main id="main" class="container" tabindex="-1">
+    <main id="main" class:list={["container", { narrow }]} tabindex="-1">
       <slot />
     </main>
     <Footer />

@@ -1,6 +1,4 @@
 ---
-import { Image } from "astro:assets";
-import avatar from "../assets/avatar.jpg";
 import PostIndex from "../components/PostIndex.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { personJsonLd } from "../lib/jsonld";
@@ -19,7 +17,7 @@ const websiteJsonLd = {
 };
 ---
 
-<BaseLayout jsonLd={[personJsonLd(site), websiteJsonLd]}>
+<BaseLayout narrow jsonLd={[personJsonLd(site), websiteJsonLd]}>
   <section class="hero" aria-labelledby="intro-title">
     <div>
       <h1 id="intro-title" class="page-title">
@@ -66,26 +64,15 @@ const websiteJsonLd = {
         </li>
       </ul>
     </div>
-    <Image
-      src={avatar}
-      alt=""
-      width={176}
-      height={176}
-      widths={[176, 352]}
-      sizes="176px"
-      loading="eager"
-      fetchpriority="high"
-      class="avatar"
-    />
   </section>
 
   <section aria-labelledby="focus">
     <h2 id="focus" class="section-title">
       What I do or did
     </h2>
-    <ul class="grid focus-grid">
+    <div class="focus-list">
       {FOCUS_AREAS.map(({ title, text, hue, items }) => (
-        <li class="card focus" data-hue={hue}>
+        <section class="focus" data-hue={hue}>
           <h3>
             <span class="swatch" aria-hidden="true"></span>
             {title}
@@ -96,9 +83,9 @@ const websiteJsonLd = {
               <li>{item}</li>
             ))}
           </ul>
-        </li>
+        </section>
       ))}
-    </ul>
+    </div>
   </section>
 
   <section aria-labelledby="recent-posts">
@@ -118,10 +105,6 @@ const websiteJsonLd = {
 
 <style>
   .hero {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    align-items: center;
-    gap: 2rem 3rem;
     padding-bottom: 1rem;
   }
 
@@ -172,64 +155,42 @@ const websiteJsonLd = {
     text-decoration: underline;
   }
 
-  .avatar {
-    border: 2px solid var(--accent);
+  .focus-list {
+    display: grid;
+    gap: 2.25rem;
   }
 
   .focus h3 {
     display: flex;
     align-items: center;
-    gap: 0.6rem;
-    margin: 0 0 0.35rem;
-    font-size: 1.05rem;
+    gap: 0.7rem;
+    margin: 0 0 0.4rem;
+    font-size: 1.35rem;
   }
 
   .swatch {
     flex-shrink: 0;
-    width: 0.6rem;
-    height: 0.6rem;
+    width: 0.75rem;
+    height: 0.75rem;
     background: var(--hue-solid);
-  }
-
-  /* Two categories per row on wide screens, one on small screens. */
-  .focus-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  @media (max-width: 48rem) {
-    .focus-grid {
-      grid-template-columns: 1fr;
-    }
   }
 
   .focus .muted {
     margin: 0 0 0.75rem;
+    font-size: 1.1rem;
   }
 
   .points {
     margin: 0;
-    padding-left: 1.1rem;
+    padding-left: 1.2rem;
     list-style: disc;
-    font-size: 0.92rem;
   }
 
   .points li + li {
-    margin-top: 0.3rem;
+    margin-top: 0.35rem;
   }
 
   .all-posts {
     margin: 1rem 0 0;
-  }
-
-  @media (max-width: 40rem) {
-    .hero {
-      grid-template-columns: 1fr;
-    }
-
-    .avatar {
-      grid-row: 1;
-      width: 112px;
-      height: 112px;
-    }
   }
 </style>
