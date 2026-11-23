@@ -9,8 +9,6 @@ tags: [development]
 As you may know, [Doctrine](http://www.doctrine-project.org/) can be a very good ally, but if we do not use it correctly
 we can have big performance problems really easily and quickly.
 
-![Symfony](../../assets/posts/doctrine.gif)
-
 Let's take these two tables as an example:
 
 **Players**

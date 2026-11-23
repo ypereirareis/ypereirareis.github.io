@@ -14,8 +14,6 @@ Many solutions exist with MySQL:
 - `SELECT id FROM table` then `INTO table VALUES (...)` or `UPDATE table`
 - `INSERT INTO table SELECT id FROM table WHERE NOT EXISTS`
 
-![Symfony](../../assets/posts/mysql.jpg)
-
 ## Problems with the first three solutions
 
 ### Insert ignore

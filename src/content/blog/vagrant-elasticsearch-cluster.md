@@ -10,8 +10,6 @@ As a big fan of [elasticsearch](http://www.elasticsearch.org/), I very often use
 
 But, it's often very complicated to set up a full elasticsearch cluster for a POC, a simple test or a dev environment.
 
-![Elasticsearch](../../assets/posts/elastic.gif)
-
 On the other side, it's very easy to use the minimalist configuration set up by default when using elasticsearch, but it's quickly limited when we want to deal with problematics like:
 
 - Sharding on many physical nodes (routing, filters, rack, …).

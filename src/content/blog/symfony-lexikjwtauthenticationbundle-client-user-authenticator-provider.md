@@ -10,8 +10,6 @@ We can find on the internet many examples on how to implement a client consuming
 But impossible to find one based on Symfony and how to configure firewall, user provider, user authenticator and a user model.
 So let's see how to do it.
 
-![Symfony](../../assets/posts/symfony.gif)
-
 ## LexikJWTAuthenticationBundle Server side
 
 To create an API secured with LexikJWTAuthenticationBundle and JWT,

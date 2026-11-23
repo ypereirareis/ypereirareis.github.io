@@ -10,8 +10,6 @@ The DoctrineMongoDbBundle documentation is not really clear. The default configu
 and no authentication works pretty well (as described in the doc), but if we want to work with many authenticated connections,
 it's not really easy to set up because the doc does not explain the configuration clearly.
 
-![Symfony](../../assets/posts/symfony.gif)
-
 ## Connection string / server
 
 The server (connection string) section must contain several elements:

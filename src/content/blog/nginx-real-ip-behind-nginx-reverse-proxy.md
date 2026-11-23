@@ -8,8 +8,6 @@ tags: [infrastructure]
 
 Behind a reverse proxy, the user IP we get is often the reverse proxy IP itself. But for obvious reasons it's important to have access to the user real ip address.
 
-![Docker](../../assets/posts/nginx.gif)
-
 ## Nginx reverse proxy configuration
 
 _Tested for nginx/1.11.8_

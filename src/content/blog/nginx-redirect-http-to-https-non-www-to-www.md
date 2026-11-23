@@ -6,8 +6,6 @@ updatedDate: 2020-04-09
 tags: [infrastructure, security]
 ---
 
-![Docker](../../assets/posts/nginx.gif)
-
 ## Redirect HTTP to HTTPS (`http://www.example.com` to `https://example.com`)
 
 ```bash

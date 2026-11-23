@@ -10,8 +10,6 @@ Building docker images is pretty easy thanks to dockerfiles. But building **smal
 The cache mechanism is really powerful, but it's also the main problem when dealing with image size optimization.
 Let's take an example and let's see how to improve the dockerfile to improve the image size.
 
-![Docker](../../assets/posts/docker.gif)
-
 ## A Dockerfile as example
 
 ### Base image size

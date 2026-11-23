@@ -6,8 +6,6 @@ updatedDate: 2020-04-09
 tags: [architecture, infrastructure]
 ---
 
-![Docker](../../assets/posts/rabbitmq.jpg)
-
 ## TL;DR
 
 Docker based project to run a highly available RabbitMQ cluster:
@@ -19,8 +17,6 @@ A cluster is composed of at least two RabbitMQ nodes. These nodes need to be abl
 **I strongly advise you to always have an odd number of nodes in your cluster.**
 
 ## Load Balancing with HAProxy
-
-![Docker](../../assets/posts/haproxy.gif)
 
 When working with a cluster the goal is to have a highly available service.
 So we need to dispatch requests on every running node of the cluster, and avoid sending requests to failing nodes.
@@ -123,7 +119,7 @@ To have high availability you need more than one node, and of course you need lo
 Let's say that 3 nodes is a good start for a simple RabbitMQ cluster.
 And we need one more node for HAProxy.
 
-![RabbitMQ HA cluster architecture](../../assets/posts/rabbitmq-ha-cluster.png)
+![RabbitMQ high availability cluster: producers and consumers connect through HAProxy to three RabbitMQ nodes](../../assets/posts/rabbitmq-ha-cluster.png)
 
 ### Exchanges, Queues and messages mirroring and persistence
 

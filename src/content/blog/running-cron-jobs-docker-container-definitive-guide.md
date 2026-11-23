@@ -5,7 +5,7 @@ pubDate: 2020-04-09
 tags: [platform, operations]
 ---
 
-![Crontab](../../assets/posts/crontab.png)
+![Terminal output of cat /etc/crontab: the system-wide crontab with its hourly, daily, weekly and monthly jobs](../../assets/posts/crontab.png)
 
 ## TLDR: My cron jobs are not running in my docker container. I don't know why and it's impossible to find any logs anywhere.
 

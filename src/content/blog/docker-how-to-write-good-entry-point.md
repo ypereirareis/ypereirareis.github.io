@@ -6,8 +6,6 @@ updatedDate: 2020-04-09
 tags: [platform]
 ---
 
-![Docker](../../assets/posts/docker.gif)
-
 ## A good Docker entry point
 
 To create a good docker entry point for your image or your container, you must take care of a simple thing.

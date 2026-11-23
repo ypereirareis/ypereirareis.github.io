@@ -124,7 +124,7 @@ The header button switches between light and dark themes and stores the choice i
 - Canonical URL, Open Graph and Twitter Card tags on every page.
 - JSON-LD structured data: `Person`, `WebSite`, `BlogPosting` (topics as keywords), `BreadcrumbList`.
 - `sitemap-index.xml`, `robots.txt` and an RSS feed (topics as categories) generated at build time.
-- Default Open Graph image (`/og.png`) rendered at build time with sharp.
+- One Open Graph image per post (`/og/<slug>.png`: title, topics, date) and a default one (`/og.png`) for the other pages, rendered at build time with sharp. Posts also expose `article:tag` (topics) and `twitter:image`; every page allows large image previews (`max-image-preview:large`).
 
 ## Accessibility
 

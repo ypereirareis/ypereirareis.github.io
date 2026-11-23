@@ -326,6 +326,8 @@ a.chip:hover {
 .prose :where(img) {
   display: block;
   margin: 1.5rem auto;
+  /* Thin frame so screenshots with a white background stay readable in the dark theme. */
+  border: 1px solid var(--border);
 }
 
 .prose :where(blockquote) {

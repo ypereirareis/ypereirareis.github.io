@@ -6,7 +6,7 @@ updatedDate: 2020-04-09
 tags: [operations]
 ---
 
-![Prometheus](../../assets/posts/prometheus.jpg)
+![Graph of Prometheus metrics over time](../../assets/posts/prometheus.jpg)
 
 ## TLDR: questions answered in this article.
 
