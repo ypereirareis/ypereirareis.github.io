@@ -41,7 +41,7 @@
     "eslint-plugin-astro": "^3.2.1",
     "eslint-plugin-jsx-a11y-x": "^0.2.0",
     "globals": "^17.14.0",
-    "markdownlint-cli2": "^0.24.1",
+    "markdownlint-cli2": "^0.24.2",
     "pa11y-ci": "^5.0.0",
     "prettier": "^3.10.1",
     "prettier-plugin-astro": "^1.1.2",
